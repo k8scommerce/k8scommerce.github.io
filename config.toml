@@ -42,7 +42,7 @@ taxonomyPageHeader = ["tags", "categories"]
     name = "About"
     weight = 1
     pre = "<i class='fas fa-info-circle'></i>"
-    url = "/about"
+    url = "/about/"
   [[menu.main]]
     name = "Project Guidance"
     weight = 10
@@ -155,9 +155,9 @@ version = "0.0"
 url_latest_version = "https://example.com"
 
 # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
-github_repo = "https://github.com/google/docsy-example"
+github_repo = "https://github.com/k8scommerce/k8scommerce"
 # An optional link to a related project repo. For example, the sibling repository where your product code lives.
-github_project_repo = "https://github.com/google/docsy"
+# github_project_repo = "https://github.com/k8scommerce/k8scommerce"
 
 # Specify a value here if your content directory is not in your repo's root directory
 # github_subdir = ""

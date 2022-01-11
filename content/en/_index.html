@@ -4,23 +4,27 @@ linkTitle = "Docsy"
 
 +++
 
-{{< blocks/cover title="Welcome to K8sCommerce!" image_anchor="top" height="full" color="orange" >}}
-<div class="mx-auto">
-	<a class="btn btn-lg btn-primary mr-3 mb-4" href="{{< relref "/about" >}}">
-		Learn More <i class="fas fa-arrow-alt-circle-right ml-2"></i>
-	</a>
-	<a class="btn btn-lg btn-secondary mr-3 mb-4" href="https://github.com/k8scommerce/k8scommerce">
-		Download <i class="fab fa-github ml-2 "></i>
-	</a>
-	<p class="lead mt-5">A Hugo theme for creating great technical documentation sites</p>
-	{{< blocks/link-down color="info" >}}
-</div>
-{{< /blocks/cover >}}
+<!-- Hero section -->
+{{<blocks/cover title="K8sCommerce" image_anchor="center" color="dark">}}
+	<div class="mx-auto">
+		<p class="lead mt-5">The Cloud Native Ecommerce Open-Source Platform for Kubernetes</p>
+		<a class="btn btn-lg btn-primary mr-3 mb-4" href="{{< relref "/about">}}">
+			Get Started <i class="fas fa-arrow-alt-circle-right ml-2"></i>
+		</a>
+		<a class="btn btn-lg btn-secondary mr-3 mb-4" href="{{< relref "/community">}}">
+			Contribute <i class="fas fa-pencil-alt ml-2"></i>
+		</a>
+		<div class="mx-auto mt-5">
+			{{<blocks/link-down color="light">}}
+		</div>
+	</div>
+	{{
+</blocks/cover>}}
 
-
+<!-- 
 {{% blocks/lead color="primary" %}}
-K8sCommerce - Cloud Native Ecommerce 
-{{% /blocks/lead %}}
+
+{{% /blocks/lead %}} -->
 
 {{< blocks/section color="dark" type="features">}}
 {{% blocks/feature icon="fa-lightbulb" title="See Docsy in action!" url="/docs/examples/" %}}

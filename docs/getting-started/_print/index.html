@@ -6,7 +6,7 @@
 <link rel=canonical type=text/html href=https://k8scommerce.github.io/docs/getting-started/>
 <link rel=alternate type=application/rss+xml href=https://k8scommerce.github.io/docs/getting-started/index.xml>
 <meta name=robots content="noindex, nofollow">
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"WebSite","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/k8scommerce.github.io"},"articleSection":"docs","name":"Getting Started","headline":"Getting Started","description":"Getting Started Overview\n","inLanguage":"en-US","author":"","creator":"","publisher":"","accountablePerson":"","copyrightHolder":"","copyrightYear":"2022","datePublished":"2022-01-12 00:00:00 \u002b0000 UTC","dateModified":"2022-01-12 00:00:00 \u002b0000 UTC","url":"https:\/\/k8scommerce.github.io\/docs\/getting-started\/","wordCount":"0","keywords":["K8sCommerce"]}</script>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"WebSite","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/k8scommerce.github.io"},"articleSection":"docs","name":"Getting Started","headline":"Getting Started","description":"A good place to start\n","inLanguage":"en-US","author":"","creator":"","publisher":"","accountablePerson":"","copyrightHolder":"","copyrightYear":"2022","datePublished":"2022-01-12 00:00:00 \u002b0000 UTC","dateModified":"2022-01-12 00:00:00 \u002b0000 UTC","url":"https:\/\/k8scommerce.github.io\/docs\/getting-started\/","wordCount":"0","keywords":["K8sCommerce"]}</script>
 <link rel="shortcut icon" href=/favicons/favicon.ico>
 <link rel=apple-touch-icon href=/favicons/apple-touch-icon-180x180.png sizes=180x180>
 <link rel=icon type=image/png href=/favicons/favicon-16x16.png sizes=16x16>
@@ -16,18 +16,18 @@
 <meta name=msapplication-TileColor content="#4279f4">
 <meta name=theme-color content="#4279f4">
 <title>Getting Started | K8sCommerce</title>
-<meta name=description content="Getting Started Overview
+<meta name=description content="A good place to start
 ">
 <meta property="og:title" content="Getting Started">
-<meta property="og:description" content="Getting Started Overview
+<meta property="og:description" content="A good place to start
 ">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://k8scommerce.github.io/docs/getting-started/"><meta property="og:site_name" content="K8sCommerce">
 <meta itemprop=name content="Getting Started">
-<meta itemprop=description content="Getting Started Overview
+<meta itemprop=description content="A good place to start
 "><meta name=twitter:card content="summary">
 <meta name=twitter:title content="Getting Started">
-<meta name=twitter:description content="Getting Started Overview
+<meta name=twitter:description content="A good place to start
 ">
 <link rel=preload href=/scss/main.min.9b02fa86671b61c8dfe2940f9a0a4a2d3e19a9be4667c10266fc96604b2dd385.css as=style>
 <link href=/scss/main.min.9b02fa86671b61c8dfe2940f9a0a4a2d3e19a9be4667c10266fc96604b2dd385.css rel=stylesheet integrity>
@@ -81,7 +81,7 @@ This is the multi-page printable view of this section.
 </p>
 </div>
 <h1 class=title>Getting Started</h1>
-<div class=lead>Getting Started Overview</div>
+<div class=lead>A good place to start</div>
 <ul>
 <li>1: <a href=#pg-1d27b79709fd8b10a0c7f3c3b7a30735>What is K8sCommerce?</a></li>
 <li>2: <a href=#pg-9a0c4ecbede116bdae144481d703a435>Custom URLs</a></li>
@@ -106,7 +106,41 @@ This is the multi-page printable view of this section.
 </div>
 <div class=td-content>
 <h1 id=pg-1d27b79709fd8b10a0c7f3c3b7a30735>1 - What is K8sCommerce?</h1>
-<div class=lead>This page describes What is K8sCommerce?</div>
+<div class=lead>An overview of K8sCommerce and why it exists</div>
+<p>K8sCommerce is a headless ecommerce platform architected from the ground-up to be cloud native
+and run on Kubernetes. It is comprised of 14 microservices, 2 public/web facing via a JSON REST API,
+and 12 private/non-web facing RPC services.</p>
+<h3 id=json-rest-api-facing-services>JSON REST API Facing Services:</h3>
+<ul>
+<li>There are 2 <a href=/docs/microservices/public-facing-json>Public-Facing JSON Services</a>.
+<ul>
+<li>A <a href=/docs/microservices/public-facing-json/client>client</a> service that exposes all necessary <a href=/docs/rest-endpoints/client>client endpoints</a> to facilitate a headless storefront
+<ul>
+<li><a href=/docs/rest-endpoints/client/cart>Cart</a></li>
+<li><a href=/docs/rest-endpoints/client/customer>Customer</a></li>
+<li><a href=/docs/rest-endpoints/client/catalog>Catalog</a></li>
+<li><a href=/docs/rest-endpoints/client/payment>Payments</a></li>
+</ul>
+</li>
+<li>An <a href=/docs/microservices/public-facing-json/admin>admin</a> service that exposes all <a href=/docs/rest-endpoints/admin>administration endpoints</a> required to manage the K8sCommerce platform:
+<ul>
+<li><a href=/docs/rest-endpoints/admin/cart>Cart</a></li>
+<li><a href=/docs/rest-endpoints/admin/catalog>Catalog</a></li>
+<li><a href=/docs/rest-endpoints/admin/customer>Customer</a></li>
+<li><a href=/docs/rest-endpoints/admin/email>Email</a></li>
+<li><a href=/docs/rest-endpoints/admin/inventory>Inventory</a></li>
+<li><a href=/docs/rest-endpoints/admin/othersbought>Others Bought</a></li>
+<li><a href=/docs/rest-endpoints/admin/payment>Payment</a></li>
+<li><a href=/docs/rest-endpoints/admin/shipping>Shipping</a></li>
+<li><a href=/docs/rest-endpoints/admin/similarproducts>Similar Products</a></li>
+<li><a href=/docs/rest-endpoints/admin/store>Store</a></li>
+<li><a href=/docs/rest-endpoints/admin/user>User</a></li>
+<li><a href=/docs/rest-endpoints/admin/warehouse>Warehouse</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 </div>
 <div class=td-content style=page-break-before:always>
 <h1 id=pg-9a0c4ecbede116bdae144481d703a435>2 - Custom URLs</h1>
@@ -118,11 +152,11 @@ This is the multi-page printable view of this section.
 </div>
 <div class=td-content>
 <h1 id=pg-e78e7b76a4ddcbfd83ffe1e56a0dcffe>3.1 - K8sOperator</h1>
-<div class=lead>This page describes K8sOperator</div>
+<div class=lead>K8sOperator</div>
 </div>
 <div class=td-content style=page-break-before:always>
 <h1 id=pg-96e78608e2a784cffba6734a44b2177c>3.2 - Configuration</h1>
-<div class=lead>This page describes Configuration</div>
+<div class=lead>Configuration</div>
 </div>
 <div class=td-content style=page-break-before:always>
 <h1 id=pg-35010db26d4fa33df5565c936bce0603>4 - Rest API Example</h1>
@@ -134,13 +168,13 @@ This is the multi-page printable view of this section.
 </div>
 <div class=td-content>
 <h1 id=pg-de15f4c7a75e3fae94f837a5d0ead57e>5.1 - Prerequisites</h1>
-<div class=lead>This page describes Prerequisites</div>
+<div class=lead>Prerequisites</div>
 <h2 id=etcd>Etcd</h2>
 <h2 id=etcd-1>Etcd</h2>
 </div>
 <div class=td-content style=page-break-before:always>
 <h1 id=pg-da4266b453ab6adb0aa7906863edf3b1>5.2 - Running Locally</h1>
-<div class=lead>This page describes Running Locally</div>
+<div class=lead>Running Locally</div>
 <h2 id=local-etcd>Local Etcd</h2>
 <h2 id=docker>Docker</h2>
 <h2 id=makefile-commands>Makefile Commands</h2>

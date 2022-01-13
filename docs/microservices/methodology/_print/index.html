@@ -83,21 +83,33 @@ This is the multi-page printable view of this section.
 <h1 class=title>Methodology</h1>
 <div class=lead>Methodology Overview</div>
 <ul>
-<li>1: <a href=#pg-a69ee7f76f77b6fd617d55403a62a9e3>Go-Zero &amp;amp; goctl</a></li>
+<li>1: <a href=#pg-a69ee7f76f77b6fd617d55403a62a9e3>Go-Zero & goctl</a></li>
 <li>2: <a href=#pg-aae507c8d0c73ca8b859dd1e0522550c>Development Philosophy</a></li>
 </ul>
 <div class=content>
 </div>
 </div>
 <div class=td-content>
-<h1 id=pg-a69ee7f76f77b6fd617d55403a62a9e3>1 - Go-Zero &amp;amp; goctl</h1>
-<div class=lead>This page describes Go-Zero & goctl</div>
+<h1 id=pg-a69ee7f76f77b6fd617d55403a62a9e3>1 - Go-Zero & goctl</h1>
+<div class=lead>Go-Zero & goctl</div>
 <h2 id=go-zero>Go-Zero</h2>
 <h2 id=goctl>goctl</h2>
 </div>
 <div class=td-content style=page-break-before:always>
 <h1 id=pg-aae507c8d0c73ca8b859dd1e0522550c>2 - Development Philosophy</h1>
-<div class=lead>This page describes Development Philosophy</div>
+<div class=lead>Development Philosophy</div>
+<p>The K8sCommerce project embraces the development philosophy:</p>
+<blockquote>
+<p><em>&ldquo;Prefer tools over conventions."</em></p>
+</blockquote>
+<p>Employing code-generation tools as often as possible reduces repetitively writing foundational code such as CRUD operations, gRPC bindings, microservice boilerplate code. etc. This methodology shortens the developer&rsquo;s learning curve while reducing, and oftentimes eliminating, human-introduced bugs.</p>
+<p>Incorporating the following code-generation tools in our project has helped speed up development, integrations, and logic refinements, creating a desirable, streamlined, high-velocity development approach.</p>
+<ul>
+<li><a href=https://developers.google.com/protocol-buffers/>Google&rsquo;s protocol buffers (protoc)</a>: RPC client/server generation from .proto files with almost every language supported</li>
+<li><a href=https://github.com/zeromicro/go-zero>go-zero&rsquo;s goctl</a>: microservice framework generation from .proto and .api files</li>
+<li><a href=https://github.com/xo/xo>xo&rsquo;s xo</a>: Database CRUD object generation for relational databases, with primary key, foreign key, enum, and advanced composite primary key support.</li>
+</ul>
+<p>Preferring tools over conventions, combined with ever-growing documentation, empowers businesses to successfully integrate K8sCommerce&rsquo;s projects into their existing coding ecosystem in condensed timeframes.</p>
 </div>
 </main>
 </div>

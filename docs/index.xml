@@ -1,45 +1,377 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>K8sCommerce – Documentation</title><link>https://k8scommerce.github.io/docs/</link><description>Recent content in Documentation on K8sCommerce</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 12 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://k8scommerce.github.io/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: API Microservices</title><link>https://k8scommerce.github.io/docs/microservices/authoring/api-microservices/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/authoring/api-microservices/</guid><description/></item><item><title>Docs: Cart</title><link>https://k8scommerce.github.io/docs/microservices/non-public-rpc/cart/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/non-public-rpc/cart/</guid><description>
 &lt;h2 id="overview">Overview&lt;/h2>
 &lt;h2 id="dependencies">Dependencies&lt;/h2>
-&lt;h2 id="methods">Methods&lt;/h2></description></item><item><title>Docs: Cart</title><link>https://k8scommerce.github.io/docs/microservices/public-facing-json/admin/cart/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/public-facing-json/admin/cart/</guid><description/></item><item><title>Docs: Cart</title><link>https://k8scommerce.github.io/docs/microservices/public-facing-json/client/cart/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/public-facing-json/client/cart/</guid><description/></item><item><title>Docs: Cart</title><link>https://k8scommerce.github.io/docs/rest-api/client/cart/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/rest-api/client/cart/</guid><description/></item><item><title>Docs: Go-Zero &amp;amp; goctl</title><link>https://k8scommerce.github.io/docs/microservices/methodology/go-zero-and-goctl/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/methodology/go-zero-and-goctl/</guid><description>
+&lt;h2 id="methods">Methods&lt;/h2></description></item><item><title>Docs: Cart</title><link>https://k8scommerce.github.io/docs/rest-endpoints/admin/cart/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/rest-endpoints/admin/cart/</guid><description/></item><item><title>Docs: Cart</title><link>https://k8scommerce.github.io/docs/rest-endpoints/client/cart/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/rest-endpoints/client/cart/</guid><description>
+&lt;h3 id="creates-a-shopping-cart-for-the-associated-customerid">Creates a shopping cart for the associated customerId&lt;/h3>
+&lt;h4 id="route-definition">Route definition&lt;/h4>
+&lt;ul>
+&lt;li>Url: &lt;code>/v1/cart/:customerId&lt;/code>&lt;/li>
+&lt;li>Method: POST&lt;/li>
+&lt;li>Request: &lt;code>CreateCartRequest&lt;/code>&lt;/li>
+&lt;li>Response: &lt;code>CreateCartResponse&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h4 id="request-definition">Request definition&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-golang" data-lang="golang">&lt;span style="color:#204a87;font-weight:bold">type&lt;/span> &lt;span style="color:#000">CreateCartRequest&lt;/span> &lt;span style="color:#204a87;font-weight:bold">struct&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">CustomerId&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`path:&amp;#34;customerId&amp;#34;`&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="response-definition">Response definition&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-golang" data-lang="golang">&lt;span style="color:#204a87;font-weight:bold">type&lt;/span> &lt;span style="color:#000">CreateCartResponse&lt;/span> &lt;span style="color:#204a87;font-weight:bold">struct&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">Cart&lt;/span> &lt;span style="color:#000">Cart&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;cart&amp;#34;`&lt;/span>
+&lt;span style="color:#000">StatusCode&lt;/span> &lt;span style="color:#204a87;font-weight:bold">int64&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;sessionId&amp;#34;`&lt;/span>
+&lt;span style="color:#000">StatusMessage&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;sessionId&amp;#34;`&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">type&lt;/span> &lt;span style="color:#000">Cart&lt;/span> &lt;span style="color:#204a87;font-weight:bold">struct&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">Item&lt;/span> &lt;span style="color:#000;font-weight:bold">[]&lt;/span>&lt;span style="color:#000">Item&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;items&amp;#34;`&lt;/span>
+&lt;span style="color:#000">TotalPrice&lt;/span> &lt;span style="color:#204a87;font-weight:bold">float64&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;totalPrice&amp;#34;`&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="returns-a-shopping-cart-if-one-exists">returns a shopping cart if one exists&lt;/h3>
+&lt;h4 id="route-definition-1">Route definition&lt;/h4>
+&lt;ul>
+&lt;li>Url: /v1/cart/:customerId&lt;/li>
+&lt;li>Method: GET&lt;/li>
+&lt;li>Request: &lt;code>GetCartRequest&lt;/code>&lt;/li>
+&lt;li>Response: &lt;code>GetCartResponse&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h4 id="request-definition-1">Request definition&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-golang" data-lang="golang">&lt;span style="color:#204a87;font-weight:bold">type&lt;/span> &lt;span style="color:#000">GetCartRequest&lt;/span> &lt;span style="color:#204a87;font-weight:bold">struct&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">CustomerId&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`path:&amp;#34;customerId&amp;#34;`&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="response-definition-1">Response definition&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-golang" data-lang="golang">&lt;span style="color:#204a87;font-weight:bold">type&lt;/span> &lt;span style="color:#000">GetCartResponse&lt;/span> &lt;span style="color:#204a87;font-weight:bold">struct&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">Cart&lt;/span> &lt;span style="color:#000">Cart&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;cart&amp;#34;`&lt;/span>
+&lt;span style="color:#000">StatusCode&lt;/span> &lt;span style="color:#204a87;font-weight:bold">int64&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;sessionId&amp;#34;`&lt;/span>
+&lt;span style="color:#000">StatusMessage&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;sessionId&amp;#34;`&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">type&lt;/span> &lt;span style="color:#000">Cart&lt;/span> &lt;span style="color:#204a87;font-weight:bold">struct&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">Item&lt;/span> &lt;span style="color:#000;font-weight:bold">[]&lt;/span>&lt;span style="color:#000">Item&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;items&amp;#34;`&lt;/span>
+&lt;span style="color:#000">TotalPrice&lt;/span> &lt;span style="color:#204a87;font-weight:bold">float64&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;totalPrice&amp;#34;`&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Client</title><link>https://k8scommerce.github.io/docs/microservices/public-facing-json/client/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/public-facing-json/client/</guid><description>
+&lt;h2 id="cart">Cart&lt;/h2>
+&lt;h2 id="catalog">Catalog&lt;/h2>
+&lt;h2 id="customer">Customer&lt;/h2>
+&lt;h2 id="others-bought">Others Bought&lt;/h2>
+&lt;h2 id="payment">Payment&lt;/h2>
+&lt;h2 id="shipping">Shipping&lt;/h2>
+&lt;h2 id="similar-products">Similar Products&lt;/h2></description></item><item><title>Docs: Go-Zero &amp; goctl</title><link>https://k8scommerce.github.io/docs/microservices/methodology/go-zero-and-goctl/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/methodology/go-zero-and-goctl/</guid><description>
 &lt;h2 id="go-zero">Go-Zero&lt;/h2>
 &lt;h2 id="goctl">goctl&lt;/h2></description></item><item><title>Docs: K8sOperator</title><link>https://k8scommerce.github.io/docs/getting-started/kubernetes/k8soperator/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/getting-started/kubernetes/k8soperator/</guid><description/></item><item><title>Docs: Local Testing</title><link>https://k8scommerce.github.io/docs/administration/local-testing/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/administration/local-testing/</guid><description/></item><item><title>Docs: Prerequisites</title><link>https://k8scommerce.github.io/docs/getting-started/try-it/prerequisites/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/getting-started/try-it/prerequisites/</guid><description>
 &lt;h2 id="etcd">Etcd&lt;/h2>
-&lt;h2 id="etcd-1">Etcd&lt;/h2></description></item><item><title>Docs: Schema</title><link>https://k8scommerce.github.io/docs/database/schema/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/database/schema/</guid><description/></item><item><title>Docs: What is ESG</title><link>https://k8scommerce.github.io/docs/esg-considerations/what-is-esg/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/esg-considerations/what-is-esg/</guid><description/></item><item><title>Docs: What is K8sCommerce?</title><link>https://k8scommerce.github.io/docs/getting-started/what-is-k8scommerce/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/getting-started/what-is-k8scommerce/</guid><description/></item><item><title>Docs: Best Practices</title><link>https://k8scommerce.github.io/docs/esg-considerations/best-practices/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/esg-considerations/best-practices/</guid><description/></item><item><title>Docs: Catalog</title><link>https://k8scommerce.github.io/docs/microservices/non-public-rpc/catalog/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/non-public-rpc/catalog/</guid><description>
+&lt;h2 id="etcd-1">Etcd&lt;/h2></description></item><item><title>Docs: Schema</title><link>https://k8scommerce.github.io/docs/database/schema/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/database/schema/</guid><description/></item><item><title>Docs: What is ESG</title><link>https://k8scommerce.github.io/docs/esg-considerations/what-is-esg/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/esg-considerations/what-is-esg/</guid><description/></item><item><title>Docs: What is K8sCommerce?</title><link>https://k8scommerce.github.io/docs/getting-started/what-is-k8scommerce/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/getting-started/what-is-k8scommerce/</guid><description>
+&lt;p>K8sCommerce is a headless ecommerce platform architected from the ground-up to be cloud native
+and run on Kubernetes. It is comprised of 14 microservices, 2 public/web facing via a JSON REST API,
+and 12 private/non-web facing RPC services.&lt;/p>
+&lt;h3 id="json-rest-api-facing-services">JSON REST API Facing Services:&lt;/h3>
+&lt;ul>
+&lt;li>There are 2 &lt;a href="https://k8scommerce.github.io/docs/microservices/public-facing-json">Public-Facing JSON Services&lt;/a>.
+&lt;ul>
+&lt;li>A &lt;a href="https://k8scommerce.github.io/docs/microservices/public-facing-json/client">client&lt;/a> service that exposes all necessary &lt;a href="https://k8scommerce.github.io/docs/rest-endpoints/client">client endpoints&lt;/a> to facilitate a headless storefront
+&lt;ul>
+&lt;li>&lt;a href="https://k8scommerce.github.io/docs/rest-endpoints/client/cart">Cart&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://k8scommerce.github.io/docs/rest-endpoints/client/customer">Customer&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://k8scommerce.github.io/docs/rest-endpoints/client/catalog">Catalog&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://k8scommerce.github.io/docs/rest-endpoints/client/payment">Payments&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>An &lt;a href="https://k8scommerce.github.io/docs/microservices/public-facing-json/admin">admin&lt;/a> service that exposes all &lt;a href="https://k8scommerce.github.io/docs/rest-endpoints/admin">administration endpoints&lt;/a> required to manage the K8sCommerce platform:
+&lt;ul>
+&lt;li>&lt;a href="https://k8scommerce.github.io/docs/rest-endpoints/admin/cart">Cart&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://k8scommerce.github.io/docs/rest-endpoints/admin/catalog">Catalog&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://k8scommerce.github.io/docs/rest-endpoints/admin/customer">Customer&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://k8scommerce.github.io/docs/rest-endpoints/admin/email">Email&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://k8scommerce.github.io/docs/rest-endpoints/admin/inventory">Inventory&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://k8scommerce.github.io/docs/rest-endpoints/admin/othersbought">Others Bought&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://k8scommerce.github.io/docs/rest-endpoints/admin/payment">Payment&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://k8scommerce.github.io/docs/rest-endpoints/admin/shipping">Shipping&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://k8scommerce.github.io/docs/rest-endpoints/admin/similarproducts">Similar Products&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://k8scommerce.github.io/docs/rest-endpoints/admin/store">Store&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://k8scommerce.github.io/docs/rest-endpoints/admin/user">User&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://k8scommerce.github.io/docs/rest-endpoints/admin/warehouse">Warehouse&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul></description></item><item><title>Docs: Admin</title><link>https://k8scommerce.github.io/docs/microservices/public-facing-json/admin/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/public-facing-json/admin/</guid><description>
+&lt;h2 id="cart">Cart&lt;/h2>
+&lt;h2 id="catalog">Catalog&lt;/h2>
+&lt;h2 id="customer">Customer&lt;/h2>
+&lt;h2 id="email">Email&lt;/h2>
+&lt;h2 id="inventory">Inventory&lt;/h2>
+&lt;h2 id="others-bought">Others Bought&lt;/h2>
+&lt;h2 id="payment">Payment&lt;/h2>
+&lt;h2 id="shipping">Shipping&lt;/h2>
+&lt;h2 id="similar-products">Similar Products&lt;/h2>
+&lt;h2 id="store">Store&lt;/h2>
+&lt;h2 id="user">User&lt;/h2>
+&lt;h2 id="warehouse">Warehouse&lt;/h2></description></item><item><title>Docs: Best Practices</title><link>https://k8scommerce.github.io/docs/esg-considerations/best-practices/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/esg-considerations/best-practices/</guid><description/></item><item><title>Docs: Catalog</title><link>https://k8scommerce.github.io/docs/microservices/non-public-rpc/catalog/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/non-public-rpc/catalog/</guid><description>
 &lt;h2 id="overview">Overview&lt;/h2>
 &lt;h2 id="dependencies">Dependencies&lt;/h2>
-&lt;h2 id="methods">Methods&lt;/h2></description></item><item><title>Docs: Catalog</title><link>https://k8scommerce.github.io/docs/microservices/public-facing-json/admin/catalog/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/public-facing-json/admin/catalog/</guid><description/></item><item><title>Docs: Catalog</title><link>https://k8scommerce.github.io/docs/microservices/public-facing-json/client/catalog/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/public-facing-json/client/catalog/</guid><description/></item><item><title>Docs: Configuration</title><link>https://k8scommerce.github.io/docs/getting-started/kubernetes/configuration/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/getting-started/kubernetes/configuration/</guid><description/></item><item><title>Docs: Deployment</title><link>https://k8scommerce.github.io/docs/administration/deployment/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/administration/deployment/</guid><description>
-&lt;h2 id="static-hosting">Static Hosting&lt;/h2></description></item><item><title>Docs: Development Philosophy</title><link>https://k8scommerce.github.io/docs/microservices/methodology/development-philosophy/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/methodology/development-philosophy/</guid><description/></item><item><title>Docs: Migrations</title><link>https://k8scommerce.github.io/docs/database/migrations/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/database/migrations/</guid><description/></item><item><title>Docs: RPC Microservices</title><link>https://k8scommerce.github.io/docs/microservices/authoring/rpc-microservices/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/authoring/rpc-microservices/</guid><description/></item><item><title>Docs: Running Locally</title><link>https://k8scommerce.github.io/docs/getting-started/try-it/running-locally/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/getting-started/try-it/running-locally/</guid><description>
+&lt;h2 id="methods">Methods&lt;/h2></description></item><item><title>Docs: Catalog</title><link>https://k8scommerce.github.io/docs/rest-endpoints/admin/catalog/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/rest-endpoints/admin/catalog/</guid><description/></item><item><title>Docs: Catalog</title><link>https://k8scommerce.github.io/docs/rest-endpoints/client/catalog/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/rest-endpoints/client/catalog/</guid><description>
+&lt;h3 id="returns-all-categories">returns all categories&lt;/h3>
+&lt;h4 id="route-definition">Route definition&lt;/h4>
+&lt;ul>
+&lt;li>Url: /v1/categories&lt;/li>
+&lt;li>Method: GET&lt;/li>
+&lt;li>Request: &lt;code>GetAllCategoriesRequest&lt;/code>&lt;/li>
+&lt;li>Response: &lt;code>GetAllCategoriesResponse&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h4 id="request-definition">Request definition&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-golang" data-lang="golang">&lt;span style="color:#204a87;font-weight:bold">type&lt;/span> &lt;span style="color:#000">GetAllCategoriesRequest&lt;/span> &lt;span style="color:#204a87;font-weight:bold">struct&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="response-definition">Response definition&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-golang" data-lang="golang">&lt;span style="color:#204a87;font-weight:bold">type&lt;/span> &lt;span style="color:#000">GetAllCategoriesResponse&lt;/span> &lt;span style="color:#204a87;font-weight:bold">struct&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">Categories&lt;/span> &lt;span style="color:#000;font-weight:bold">[]&lt;/span>&lt;span style="color:#000">Category&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;categories,omitempty&amp;#34;`&lt;/span>
+&lt;span style="color:#000">StatusCode&lt;/span> &lt;span style="color:#204a87;font-weight:bold">int64&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;statusCode,omitempty&amp;#34;`&lt;/span>
+&lt;span style="color:#000">StatusMessage&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;statusMessage,omitempty&amp;#34;`&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="returns-a-category-by-url-slug">returns a category by url slug&lt;/h3>
+&lt;h4 id="route-definition-1">Route definition&lt;/h4>
+&lt;ul>
+&lt;li>Url: /v1/category/slug/:slug&lt;/li>
+&lt;li>Method: GET&lt;/li>
+&lt;li>Request: &lt;code>GetCategoryBySlugRequest&lt;/code>&lt;/li>
+&lt;li>Response: &lt;code>GetCategoryBySlugResponse&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h4 id="request-definition-1">Request definition&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-golang" data-lang="golang">&lt;span style="color:#204a87;font-weight:bold">type&lt;/span> &lt;span style="color:#000">GetCategoryBySlugRequest&lt;/span> &lt;span style="color:#204a87;font-weight:bold">struct&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">Slug&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;slug,omitempty&amp;#34;`&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="response-definition-1">Response definition&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-golang" data-lang="golang">&lt;span style="color:#204a87;font-weight:bold">type&lt;/span> &lt;span style="color:#000">GetCategoryBySlugResponse&lt;/span> &lt;span style="color:#204a87;font-weight:bold">struct&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">Category&lt;/span> &lt;span style="color:#000">Category&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;category,omitempty&amp;#34;`&lt;/span>
+&lt;span style="color:#000">StatusCode&lt;/span> &lt;span style="color:#204a87;font-weight:bold">int64&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;statusCode,omitempty&amp;#34;`&lt;/span>
+&lt;span style="color:#000">StatusMessage&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;statusMessage,omitempty&amp;#34;`&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">type&lt;/span> &lt;span style="color:#000">Category&lt;/span> &lt;span style="color:#204a87;font-weight:bold">struct&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">Id&lt;/span> &lt;span style="color:#204a87;font-weight:bold">int64&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;id&amp;#34;`&lt;/span>
+&lt;span style="color:#000">ParentId&lt;/span> &lt;span style="color:#204a87;font-weight:bold">int64&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;parentId&amp;#34;`&lt;/span>
+&lt;span style="color:#000">Slug&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;slug&amp;#34;`&lt;/span>
+&lt;span style="color:#000">Name&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;name&amp;#34;`&lt;/span>
+&lt;span style="color:#000">Description&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;description&amp;#34;`&lt;/span>
+&lt;span style="color:#000">MetaTitle&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;metaTitle&amp;#34;`&lt;/span>
+&lt;span style="color:#000">MetaDescription&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;metaDescription&amp;#34;`&lt;/span>
+&lt;span style="color:#000">MetaKeywords&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;metaKeywords&amp;#34;`&lt;/span>
+&lt;span style="color:#000">SortOrder&lt;/span> &lt;span style="color:#204a87;font-weight:bold">int32&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;sortOrder&amp;#34;`&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="returns-a-category-by-id">returns a category by id&lt;/h3>
+&lt;h4 id="route-definition-2">Route definition&lt;/h4>
+&lt;ul>
+&lt;li>Url: /v1/category/:id&lt;/li>
+&lt;li>Method: GET&lt;/li>
+&lt;li>Request: &lt;code>GetCategoryByIdRequest&lt;/code>&lt;/li>
+&lt;li>Response: &lt;code>GetCategoryByIdResponse&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h4 id="request-definition-2">Request definition&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-golang" data-lang="golang">&lt;span style="color:#204a87;font-weight:bold">type&lt;/span> &lt;span style="color:#000">GetCategoryByIdRequest&lt;/span> &lt;span style="color:#204a87;font-weight:bold">struct&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">Id&lt;/span> &lt;span style="color:#204a87;font-weight:bold">int64&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;id,omitempty&amp;#34;`&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="response-definition-2">Response definition&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-golang" data-lang="golang">&lt;span style="color:#204a87;font-weight:bold">type&lt;/span> &lt;span style="color:#000">GetCategoryByIdResponse&lt;/span> &lt;span style="color:#204a87;font-weight:bold">struct&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">Category&lt;/span> &lt;span style="color:#000">Category&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;category,omitempty&amp;#34;`&lt;/span>
+&lt;span style="color:#000">StatusCode&lt;/span> &lt;span style="color:#204a87;font-weight:bold">int64&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;statusCode,omitempty&amp;#34;`&lt;/span>
+&lt;span style="color:#000">StatusMessage&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;statusMessage,omitempty&amp;#34;`&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">type&lt;/span> &lt;span style="color:#000">Category&lt;/span> &lt;span style="color:#204a87;font-weight:bold">struct&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">Id&lt;/span> &lt;span style="color:#204a87;font-weight:bold">int64&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;id&amp;#34;`&lt;/span>
+&lt;span style="color:#000">ParentId&lt;/span> &lt;span style="color:#204a87;font-weight:bold">int64&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;parentId&amp;#34;`&lt;/span>
+&lt;span style="color:#000">Slug&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;slug&amp;#34;`&lt;/span>
+&lt;span style="color:#000">Name&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;name&amp;#34;`&lt;/span>
+&lt;span style="color:#000">Description&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;description&amp;#34;`&lt;/span>
+&lt;span style="color:#000">MetaTitle&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;metaTitle&amp;#34;`&lt;/span>
+&lt;span style="color:#000">MetaDescription&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;metaDescription&amp;#34;`&lt;/span>
+&lt;span style="color:#000">MetaKeywords&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;metaKeywords&amp;#34;`&lt;/span>
+&lt;span style="color:#000">SortOrder&lt;/span> &lt;span style="color:#204a87;font-weight:bold">int32&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;sortOrder&amp;#34;`&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="returns-a-product-by-sku">returns a product by sku&lt;/h3>
+&lt;h4 id="route-definition-3">Route definition&lt;/h4>
+&lt;ul>
+&lt;li>Url: /v1/product/sku/:sku&lt;/li>
+&lt;li>Method: GET&lt;/li>
+&lt;li>Request: &lt;code>GetProductBySkuRequest&lt;/code>&lt;/li>
+&lt;li>Response: &lt;code>Product&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h4 id="request-definition-3">Request definition&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-golang" data-lang="golang">&lt;span style="color:#204a87;font-weight:bold">type&lt;/span> &lt;span style="color:#000">GetProductBySkuRequest&lt;/span> &lt;span style="color:#204a87;font-weight:bold">struct&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">Sku&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`path:&amp;#34;sku&amp;#34;`&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="response-definition-3">Response definition&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-golang" data-lang="golang">&lt;span style="color:#204a87;font-weight:bold">type&lt;/span> &lt;span style="color:#000">Product&lt;/span> &lt;span style="color:#204a87;font-weight:bold">struct&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">Id&lt;/span> &lt;span style="color:#204a87;font-weight:bold">int64&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;id&amp;#34;`&lt;/span>
+&lt;span style="color:#000">Slug&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;slug&amp;#34;`&lt;/span>
+&lt;span style="color:#000">Name&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;name&amp;#34;`&lt;/span>
+&lt;span style="color:#000">ShortDescription&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;shortDescription&amp;#34;`&lt;/span>
+&lt;span style="color:#000">Description&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;description&amp;#34;`&lt;/span>
+&lt;span style="color:#000">MetaTitle&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;metaTitle,omitempty&amp;#34;`&lt;/span>
+&lt;span style="color:#000">MetaDescription&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;metaDescription,omitempty&amp;#34;`&lt;/span>
+&lt;span style="color:#000">MetaKeywords&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;metaKeywords,omitempty&amp;#34;`&lt;/span>
+&lt;span style="color:#000">Variants&lt;/span> &lt;span style="color:#000;font-weight:bold">[]&lt;/span>&lt;span style="color:#000">Variant&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;variants,omitempty&amp;#34;`&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="returns-a-product-by-url-slug">returns a product by url slug&lt;/h3>
+&lt;h4 id="route-definition-4">Route definition&lt;/h4>
+&lt;ul>
+&lt;li>Url: /v1/product/slug/:slug&lt;/li>
+&lt;li>Method: GET&lt;/li>
+&lt;li>Request: &lt;code>GetProductBySlugRequest&lt;/code>&lt;/li>
+&lt;li>Response: &lt;code>Product&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h4 id="request-definition-4">Request definition&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-golang" data-lang="golang">&lt;span style="color:#204a87;font-weight:bold">type&lt;/span> &lt;span style="color:#000">GetProductBySlugRequest&lt;/span> &lt;span style="color:#204a87;font-weight:bold">struct&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">Slug&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`path:&amp;#34;slug&amp;#34;`&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="response-definition-4">Response definition&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-golang" data-lang="golang">&lt;span style="color:#204a87;font-weight:bold">type&lt;/span> &lt;span style="color:#000">Product&lt;/span> &lt;span style="color:#204a87;font-weight:bold">struct&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">Id&lt;/span> &lt;span style="color:#204a87;font-weight:bold">int64&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;id&amp;#34;`&lt;/span>
+&lt;span style="color:#000">Slug&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;slug&amp;#34;`&lt;/span>
+&lt;span style="color:#000">Name&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;name&amp;#34;`&lt;/span>
+&lt;span style="color:#000">ShortDescription&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;shortDescription&amp;#34;`&lt;/span>
+&lt;span style="color:#000">Description&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;description&amp;#34;`&lt;/span>
+&lt;span style="color:#000">MetaTitle&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;metaTitle,omitempty&amp;#34;`&lt;/span>
+&lt;span style="color:#000">MetaDescription&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;metaDescription,omitempty&amp;#34;`&lt;/span>
+&lt;span style="color:#000">MetaKeywords&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;metaKeywords,omitempty&amp;#34;`&lt;/span>
+&lt;span style="color:#000">Variants&lt;/span> &lt;span style="color:#000;font-weight:bold">[]&lt;/span>&lt;span style="color:#000">Variant&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;variants,omitempty&amp;#34;`&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="returns-a-product-by-id">returns a product by id&lt;/h3>
+&lt;h4 id="route-definition-5">Route definition&lt;/h4>
+&lt;ul>
+&lt;li>Url: /v1/product/:id&lt;/li>
+&lt;li>Method: GET&lt;/li>
+&lt;li>Request: &lt;code>GetProductByIdRequest&lt;/code>&lt;/li>
+&lt;li>Response: &lt;code>Product&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h4 id="request-definition-5">Request definition&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-golang" data-lang="golang">&lt;span style="color:#204a87;font-weight:bold">type&lt;/span> &lt;span style="color:#000">GetProductByIdRequest&lt;/span> &lt;span style="color:#204a87;font-weight:bold">struct&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">Id&lt;/span> &lt;span style="color:#204a87;font-weight:bold">int64&lt;/span> &lt;span style="color:#4e9a06">`path:&amp;#34;id&amp;#34;`&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="response-definition-5">Response definition&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-golang" data-lang="golang">&lt;span style="color:#204a87;font-weight:bold">type&lt;/span> &lt;span style="color:#000">Product&lt;/span> &lt;span style="color:#204a87;font-weight:bold">struct&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">Id&lt;/span> &lt;span style="color:#204a87;font-weight:bold">int64&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;id&amp;#34;`&lt;/span>
+&lt;span style="color:#000">Slug&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;slug&amp;#34;`&lt;/span>
+&lt;span style="color:#000">Name&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;name&amp;#34;`&lt;/span>
+&lt;span style="color:#000">ShortDescription&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;shortDescription&amp;#34;`&lt;/span>
+&lt;span style="color:#000">Description&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;description&amp;#34;`&lt;/span>
+&lt;span style="color:#000">MetaTitle&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;metaTitle,omitempty&amp;#34;`&lt;/span>
+&lt;span style="color:#000">MetaDescription&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;metaDescription,omitempty&amp;#34;`&lt;/span>
+&lt;span style="color:#000">MetaKeywords&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;metaKeywords,omitempty&amp;#34;`&lt;/span>
+&lt;span style="color:#000">Variants&lt;/span> &lt;span style="color:#000;font-weight:bold">[]&lt;/span>&lt;span style="color:#000">Variant&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;variants,omitempty&amp;#34;`&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="returns-all-products-belonging-to-a-category-id">returns all products belonging to a category id&lt;/h3>
+&lt;h4 id="route-definition-6">Route definition&lt;/h4>
+&lt;ul>
+&lt;li>Url: /v1/products/category/:categoryId/:currentPage/:pageSize&lt;/li>
+&lt;li>Method: GET&lt;/li>
+&lt;li>Request: &lt;code>GetProductsByCategoryIdRequest&lt;/code>&lt;/li>
+&lt;li>Response: &lt;code>GetProductsByCategoryIdResponse&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h4 id="request-definition-6">Request definition&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-golang" data-lang="golang">&lt;span style="color:#204a87;font-weight:bold">type&lt;/span> &lt;span style="color:#000">GetProductsByCategoryIdRequest&lt;/span> &lt;span style="color:#204a87;font-weight:bold">struct&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">CategoryId&lt;/span> &lt;span style="color:#204a87;font-weight:bold">int64&lt;/span> &lt;span style="color:#4e9a06">`path:&amp;#34;categoryId&amp;#34;`&lt;/span>
+&lt;span style="color:#000">CurrentPage&lt;/span> &lt;span style="color:#204a87;font-weight:bold">int64&lt;/span> &lt;span style="color:#4e9a06">`path:&amp;#34;currentPage&amp;#34;`&lt;/span>
+&lt;span style="color:#000">PageSize&lt;/span> &lt;span style="color:#204a87;font-weight:bold">int64&lt;/span> &lt;span style="color:#4e9a06">`path:&amp;#34;pageSize&amp;#34;`&lt;/span>
+&lt;span style="color:#000">SortOn&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`form:&amp;#34;sortOn,optional&amp;#34;`&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="response-definition-6">Response definition&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-golang" data-lang="golang">&lt;span style="color:#204a87;font-weight:bold">type&lt;/span> &lt;span style="color:#000">GetProductsByCategoryIdResponse&lt;/span> &lt;span style="color:#204a87;font-weight:bold">struct&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">Products&lt;/span> &lt;span style="color:#000;font-weight:bold">[]&lt;/span>&lt;span style="color:#000">Product&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;products&amp;#34;`&lt;/span>
+&lt;span style="color:#000">TotalRecords&lt;/span> &lt;span style="color:#204a87;font-weight:bold">int64&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;totalRecords&amp;#34;`&lt;/span>
+&lt;span style="color:#000">TotalPages&lt;/span> &lt;span style="color:#204a87;font-weight:bold">int64&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;totalPages&amp;#34;`&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="returns-all-products">returns all products&lt;/h3>
+&lt;h4 id="route-definition-7">Route definition&lt;/h4>
+&lt;ul>
+&lt;li>Url: /v1/products/:currentPage/:pageSize&lt;/li>
+&lt;li>Method: GET&lt;/li>
+&lt;li>Request: &lt;code>GetAllProductsRequest&lt;/code>&lt;/li>
+&lt;li>Response: &lt;code>GetAllProductsResponse&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h4 id="request-definition-7">Request definition&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-golang" data-lang="golang">&lt;span style="color:#204a87;font-weight:bold">type&lt;/span> &lt;span style="color:#000">GetAllProductsRequest&lt;/span> &lt;span style="color:#204a87;font-weight:bold">struct&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">CurrentPage&lt;/span> &lt;span style="color:#204a87;font-weight:bold">int64&lt;/span> &lt;span style="color:#4e9a06">`path:&amp;#34;currentPage&amp;#34;`&lt;/span>
+&lt;span style="color:#000">PageSize&lt;/span> &lt;span style="color:#204a87;font-weight:bold">int64&lt;/span> &lt;span style="color:#4e9a06">`path:&amp;#34;pageSize&amp;#34;`&lt;/span>
+&lt;span style="color:#000">SortOn&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`form:&amp;#34;sortOn&amp;#34;`&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="response-definition-7">Response definition&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-golang" data-lang="golang">&lt;span style="color:#204a87;font-weight:bold">type&lt;/span> &lt;span style="color:#000">GetAllProductsResponse&lt;/span> &lt;span style="color:#204a87;font-weight:bold">struct&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">Products&lt;/span> &lt;span style="color:#000;font-weight:bold">[]&lt;/span>&lt;span style="color:#000">Product&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;products&amp;#34;`&lt;/span>
+&lt;span style="color:#000">TotalRecords&lt;/span> &lt;span style="color:#204a87;font-weight:bold">int64&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;totalRecords&amp;#34;`&lt;/span>
+&lt;span style="color:#000">TotalPages&lt;/span> &lt;span style="color:#204a87;font-weight:bold">int64&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;totalPages&amp;#34;`&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Configuration</title><link>https://k8scommerce.github.io/docs/getting-started/kubernetes/configuration/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/getting-started/kubernetes/configuration/</guid><description/></item><item><title>Docs: Deployment</title><link>https://k8scommerce.github.io/docs/administration/deployment/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/administration/deployment/</guid><description>
+&lt;h2 id="static-hosting">Static Hosting&lt;/h2></description></item><item><title>Docs: Development Philosophy</title><link>https://k8scommerce.github.io/docs/microservices/methodology/development-philosophy/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/methodology/development-philosophy/</guid><description>
+&lt;p>The K8sCommerce project embraces the development philosophy:&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;em>&amp;ldquo;Prefer tools over conventions.&amp;quot;&lt;/em>&lt;/p>
+&lt;/blockquote>
+&lt;p>Employing code-generation tools as often as possible reduces repetitively writing foundational code such as CRUD operations, gRPC bindings, microservice boilerplate code. etc. This methodology shortens the developer&amp;rsquo;s learning curve while reducing, and oftentimes eliminating, human-introduced bugs.&lt;/p>
+&lt;p>Incorporating the following code-generation tools in our project has helped speed up development, integrations, and logic refinements, creating a desirable, streamlined, high-velocity development approach.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://developers.google.com/protocol-buffers/">Google&amp;rsquo;s protocol buffers (protoc)&lt;/a>: RPC client/server generation from .proto files with almost every language supported&lt;/li>
+&lt;li>&lt;a href="https://github.com/zeromicro/go-zero">go-zero&amp;rsquo;s goctl&lt;/a>: microservice framework generation from .proto and .api files&lt;/li>
+&lt;li>&lt;a href="https://github.com/xo/xo">xo&amp;rsquo;s xo&lt;/a>: Database CRUD object generation for relational databases, with primary key, foreign key, enum, and advanced composite primary key support.&lt;/li>
+&lt;/ul>
+&lt;p>Preferring tools over conventions, combined with ever-growing documentation, empowers businesses to successfully integrate K8sCommerce&amp;rsquo;s projects into their existing coding ecosystem in condensed timeframes.&lt;/p></description></item><item><title>Docs: Migrations</title><link>https://k8scommerce.github.io/docs/database/migrations/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/database/migrations/</guid><description/></item><item><title>Docs: RPC Microservices</title><link>https://k8scommerce.github.io/docs/microservices/authoring/rpc-microservices/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/authoring/rpc-microservices/</guid><description/></item><item><title>Docs: Running Locally</title><link>https://k8scommerce.github.io/docs/getting-started/try-it/running-locally/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/getting-started/try-it/running-locally/</guid><description>
 &lt;h2 id="local-etcd">Local Etcd&lt;/h2>
 &lt;h2 id="docker">Docker&lt;/h2>
 &lt;h2 id="makefile-commands">Makefile Commands&lt;/h2></description></item><item><title>Docs: Backup</title><link>https://k8scommerce.github.io/docs/database/backup/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/database/backup/</guid><description/></item><item><title>Docs: Customer</title><link>https://k8scommerce.github.io/docs/microservices/non-public-rpc/customer/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/non-public-rpc/customer/</guid><description>
 &lt;h2 id="overview">Overview&lt;/h2>
 &lt;h2 id="dependencies">Dependencies&lt;/h2>
-&lt;h2 id="methods">Methods&lt;/h2></description></item><item><title>Docs: Customer</title><link>https://k8scommerce.github.io/docs/microservices/public-facing-json/admin/customer/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/public-facing-json/admin/customer/</guid><description/></item><item><title>Docs: Customer</title><link>https://k8scommerce.github.io/docs/microservices/public-facing-json/client/customer/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/public-facing-json/client/customer/</guid><description/></item><item><title>Docs: Email</title><link>https://k8scommerce.github.io/docs/microservices/non-public-rpc/email/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/non-public-rpc/email/</guid><description>
+&lt;h2 id="methods">Methods&lt;/h2></description></item><item><title>Docs: Customer</title><link>https://k8scommerce.github.io/docs/rest-endpoints/admin/customer/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/rest-endpoints/admin/customer/</guid><description/></item><item><title>Docs: Customer</title><link>https://k8scommerce.github.io/docs/rest-endpoints/client/customer/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/rest-endpoints/client/customer/</guid><description>
+&lt;h3 id="1-customer-endpoints">1. customer endpoints&lt;/h3>
+&lt;h4 id="route-definition">Route definition&lt;/h4>
+&lt;ul>
+&lt;li>Url: /v1/customer/login&lt;/li>
+&lt;li>Method: POST&lt;/li>
+&lt;li>Request: &lt;code>CustomerLoginRequest&lt;/code>&lt;/li>
+&lt;li>Response: &lt;code>CustomerLoginResponse&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h4 id="request-definition">Request definition&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-golang" data-lang="golang">&lt;span style="color:#204a87;font-weight:bold">type&lt;/span> &lt;span style="color:#000">CustomerLoginRequest&lt;/span> &lt;span style="color:#204a87;font-weight:bold">struct&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">Email&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;email&amp;#34;`&lt;/span>
+&lt;span style="color:#000">Password&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;password&amp;#34;`&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="response-definition">Response definition&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-golang" data-lang="golang">&lt;span style="color:#204a87;font-weight:bold">type&lt;/span> &lt;span style="color:#000">CustomerLoginResponse&lt;/span> &lt;span style="color:#204a87;font-weight:bold">struct&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">JwtToken&lt;/span> &lt;span style="color:#000">JwtToken&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;jwt&amp;#34;`&lt;/span>
+&lt;span style="color:#000">Customer&lt;/span> &lt;span style="color:#000">Customer&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;customer&amp;#34;`&lt;/span>
+&lt;span style="color:#000">StatusCode&lt;/span> &lt;span style="color:#204a87;font-weight:bold">int64&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;statusCode&amp;#34;`&lt;/span>
+&lt;span style="color:#000">StatusMessage&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;statusMessage&amp;#34;`&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">type&lt;/span> &lt;span style="color:#000">JwtToken&lt;/span> &lt;span style="color:#204a87;font-weight:bold">struct&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">AccessToken&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;access_token&amp;#34;`&lt;/span>
+&lt;span style="color:#000">AccessExpire&lt;/span> &lt;span style="color:#204a87;font-weight:bold">int64&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;access_expire&amp;#34;`&lt;/span>
+&lt;span style="color:#000">RefreshAfter&lt;/span> &lt;span style="color:#204a87;font-weight:bold">int64&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;refresh_after&amp;#34;`&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;span style="color:#204a87;font-weight:bold">type&lt;/span> &lt;span style="color:#000">Customer&lt;/span> &lt;span style="color:#204a87;font-weight:bold">struct&lt;/span> &lt;span style="color:#000;font-weight:bold">{&lt;/span>
+&lt;span style="color:#000">Id&lt;/span> &lt;span style="color:#204a87;font-weight:bold">int64&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;id&amp;#34;`&lt;/span>
+&lt;span style="color:#000">FirstName&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;firstName&amp;#34;`&lt;/span>
+&lt;span style="color:#000">LastName&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;lastName&amp;#34;`&lt;/span>
+&lt;span style="color:#000">Email&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;email&amp;#34;`&lt;/span>
+&lt;span style="color:#000">Password&lt;/span> &lt;span style="color:#204a87;font-weight:bold">string&lt;/span> &lt;span style="color:#4e9a06">`json:&amp;#34;password,omitempty&amp;#34;`&lt;/span>
+&lt;span style="color:#000;font-weight:bold">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Email</title><link>https://k8scommerce.github.io/docs/microservices/non-public-rpc/email/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/non-public-rpc/email/</guid><description>
 &lt;h2 id="overview">Overview&lt;/h2>
 &lt;h2 id="dependencies">Dependencies&lt;/h2>
-&lt;h2 id="methods">Methods&lt;/h2></description></item><item><title>Docs: Email</title><link>https://k8scommerce.github.io/docs/microservices/public-facing-json/admin/email/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/public-facing-json/admin/email/</guid><description/></item><item><title>Docs: Others Bought</title><link>https://k8scommerce.github.io/docs/microservices/public-facing-json/client/others-bought/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/public-facing-json/client/others-bought/</guid><description/></item><item><title>Docs: Inventory</title><link>https://k8scommerce.github.io/docs/microservices/non-public-rpc/inventory/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/non-public-rpc/inventory/</guid><description>
+&lt;h2 id="methods">Methods&lt;/h2></description></item><item><title>Docs: Email</title><link>https://k8scommerce.github.io/docs/rest-endpoints/admin/email/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/rest-endpoints/admin/email/</guid><description/></item><item><title>Docs: Others Bought</title><link>https://k8scommerce.github.io/docs/rest-endpoints/client/others-bought/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/rest-endpoints/client/others-bought/</guid><description/></item><item><title>Docs: Inventory</title><link>https://k8scommerce.github.io/docs/microservices/non-public-rpc/inventory/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/non-public-rpc/inventory/</guid><description>
 &lt;h2 id="overview">Overview&lt;/h2>
 &lt;h2 id="dependencies">Dependencies&lt;/h2>
-&lt;h2 id="methods">Methods&lt;/h2></description></item><item><title>Docs: Inventory</title><link>https://k8scommerce.github.io/docs/microservices/public-facing-json/admin/inventory/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/public-facing-json/admin/inventory/</guid><description/></item><item><title>Docs: Payment</title><link>https://k8scommerce.github.io/docs/microservices/public-facing-json/client/payment/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/public-facing-json/client/payment/</guid><description/></item><item><title>Docs: Others Bought</title><link>https://k8scommerce.github.io/docs/microservices/non-public-rpc/others-bought/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/non-public-rpc/others-bought/</guid><description>
+&lt;h2 id="methods">Methods&lt;/h2></description></item><item><title>Docs: Inventory</title><link>https://k8scommerce.github.io/docs/rest-endpoints/admin/inventory/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/rest-endpoints/admin/inventory/</guid><description/></item><item><title>Docs: Payment</title><link>https://k8scommerce.github.io/docs/rest-endpoints/client/payment/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/rest-endpoints/client/payment/</guid><description/></item><item><title>Docs: Others Bought</title><link>https://k8scommerce.github.io/docs/microservices/non-public-rpc/others-bought/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/non-public-rpc/others-bought/</guid><description>
 &lt;h2 id="overview">Overview&lt;/h2>
 &lt;h2 id="dependencies">Dependencies&lt;/h2>
-&lt;h2 id="methods">Methods&lt;/h2></description></item><item><title>Docs: Others Bought</title><link>https://k8scommerce.github.io/docs/microservices/public-facing-json/admin/others-bought/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/public-facing-json/admin/others-bought/</guid><description/></item><item><title>Docs: Shipping</title><link>https://k8scommerce.github.io/docs/microservices/public-facing-json/client/shipping/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/public-facing-json/client/shipping/</guid><description/></item><item><title>Docs: Payment</title><link>https://k8scommerce.github.io/docs/microservices/non-public-rpc/payment/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/non-public-rpc/payment/</guid><description>
+&lt;h2 id="methods">Methods&lt;/h2></description></item><item><title>Docs: Others Bought</title><link>https://k8scommerce.github.io/docs/rest-endpoints/admin/others-bought/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/rest-endpoints/admin/others-bought/</guid><description/></item><item><title>Docs: Shipping</title><link>https://k8scommerce.github.io/docs/rest-endpoints/client/shipping/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/rest-endpoints/client/shipping/</guid><description/></item><item><title>Docs: Payment</title><link>https://k8scommerce.github.io/docs/microservices/non-public-rpc/payment/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/non-public-rpc/payment/</guid><description>
 &lt;h2 id="overview">Overview&lt;/h2>
 &lt;h2 id="dependencies">Dependencies&lt;/h2>
-&lt;h2 id="methods">Methods&lt;/h2></description></item><item><title>Docs: Payment</title><link>https://k8scommerce.github.io/docs/microservices/public-facing-json/admin/payment/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/public-facing-json/admin/payment/</guid><description/></item><item><title>Docs: Similar Products</title><link>https://k8scommerce.github.io/docs/microservices/public-facing-json/client/similar-products/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/public-facing-json/client/similar-products/</guid><description/></item><item><title>Docs: Shipping</title><link>https://k8scommerce.github.io/docs/microservices/non-public-rpc/shipping/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/non-public-rpc/shipping/</guid><description>
+&lt;h2 id="methods">Methods&lt;/h2></description></item><item><title>Docs: Payment</title><link>https://k8scommerce.github.io/docs/rest-endpoints/admin/payment/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/rest-endpoints/admin/payment/</guid><description/></item><item><title>Docs: Similar Products</title><link>https://k8scommerce.github.io/docs/rest-endpoints/client/similar-products/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/rest-endpoints/client/similar-products/</guid><description/></item><item><title>Docs: Shipping</title><link>https://k8scommerce.github.io/docs/microservices/non-public-rpc/shipping/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/non-public-rpc/shipping/</guid><description>
 &lt;h2 id="overview">Overview&lt;/h2>
 &lt;h2 id="dependencies">Dependencies&lt;/h2>
-&lt;h2 id="methods">Methods&lt;/h2></description></item><item><title>Docs: Shipping</title><link>https://k8scommerce.github.io/docs/microservices/public-facing-json/admin/shipping/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/public-facing-json/admin/shipping/</guid><description/></item><item><title>Docs: Similar Products</title><link>https://k8scommerce.github.io/docs/microservices/non-public-rpc/similar-products/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/non-public-rpc/similar-products/</guid><description>
+&lt;h2 id="methods">Methods&lt;/h2></description></item><item><title>Docs: Shipping</title><link>https://k8scommerce.github.io/docs/rest-endpoints/admin/shipping/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/rest-endpoints/admin/shipping/</guid><description/></item><item><title>Docs: Similar Products</title><link>https://k8scommerce.github.io/docs/microservices/non-public-rpc/similar-products/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/non-public-rpc/similar-products/</guid><description>
 &lt;h2 id="overview">Overview&lt;/h2>
 &lt;h2 id="dependencies">Dependencies&lt;/h2>
-&lt;h2 id="methods">Methods&lt;/h2></description></item><item><title>Docs: Similar Products</title><link>https://k8scommerce.github.io/docs/microservices/public-facing-json/admin/similar-products/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/public-facing-json/admin/similar-products/</guid><description/></item><item><title>Docs: Store</title><link>https://k8scommerce.github.io/docs/microservices/non-public-rpc/store/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/non-public-rpc/store/</guid><description>
+&lt;h2 id="methods">Methods&lt;/h2></description></item><item><title>Docs: Similar Products</title><link>https://k8scommerce.github.io/docs/rest-endpoints/admin/similar-products/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/rest-endpoints/admin/similar-products/</guid><description/></item><item><title>Docs: Store</title><link>https://k8scommerce.github.io/docs/microservices/non-public-rpc/store/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/non-public-rpc/store/</guid><description>
 &lt;h2 id="overview">Overview&lt;/h2>
 &lt;h2 id="dependencies">Dependencies&lt;/h2>
-&lt;h2 id="methods">Methods&lt;/h2></description></item><item><title>Docs: Store</title><link>https://k8scommerce.github.io/docs/microservices/public-facing-json/admin/store/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/public-facing-json/admin/store/</guid><description/></item><item><title>Docs: User</title><link>https://k8scommerce.github.io/docs/microservices/non-public-rpc/user/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/non-public-rpc/user/</guid><description>
+&lt;h2 id="methods">Methods&lt;/h2></description></item><item><title>Docs: Store</title><link>https://k8scommerce.github.io/docs/rest-endpoints/admin/store/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/rest-endpoints/admin/store/</guid><description/></item><item><title>Docs: User</title><link>https://k8scommerce.github.io/docs/microservices/non-public-rpc/user/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/non-public-rpc/user/</guid><description>
 &lt;h2 id="overview">Overview&lt;/h2>
 &lt;h2 id="dependencies">Dependencies&lt;/h2>
-&lt;h2 id="methods">Methods&lt;/h2></description></item><item><title>Docs: User</title><link>https://k8scommerce.github.io/docs/microservices/public-facing-json/admin/user/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/public-facing-json/admin/user/</guid><description/></item><item><title>Docs: Warehouse</title><link>https://k8scommerce.github.io/docs/microservices/non-public-rpc/warehouse/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/non-public-rpc/warehouse/</guid><description>
+&lt;h2 id="methods">Methods&lt;/h2></description></item><item><title>Docs: User</title><link>https://k8scommerce.github.io/docs/rest-endpoints/admin/user/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/rest-endpoints/admin/user/</guid><description/></item><item><title>Docs: Warehouse</title><link>https://k8scommerce.github.io/docs/microservices/non-public-rpc/warehouse/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/non-public-rpc/warehouse/</guid><description>
 &lt;h2 id="overview">Overview&lt;/h2>
 &lt;h2 id="dependencies">Dependencies&lt;/h2>
-&lt;h2 id="methods">Methods&lt;/h2></description></item><item><title>Docs: Warehouse</title><link>https://k8scommerce.github.io/docs/microservices/public-facing-json/admin/warehouse/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/microservices/public-facing-json/admin/warehouse/</guid><description/></item></channel></rss>
+&lt;h2 id="methods">Methods&lt;/h2></description></item><item><title>Docs: Warehouse</title><link>https://k8scommerce.github.io/docs/rest-endpoints/admin/warehouse/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/rest-endpoints/admin/warehouse/</guid><description/></item></channel></rss>

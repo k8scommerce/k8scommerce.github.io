@@ -1,0 +1,6 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>K8sCommerce – Try it</title><link>https://k8scommerce.github.io/docs/getting-started/try-it/</link><description>Recent content in Try it on K8sCommerce</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 12 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://k8scommerce.github.io/docs/getting-started/try-it/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Prerequisites</title><link>https://k8scommerce.github.io/docs/getting-started/try-it/prerequisites/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/getting-started/try-it/prerequisites/</guid><description>
+&lt;h2 id="etcd">Etcd&lt;/h2>
+&lt;h2 id="etcd-1">Etcd&lt;/h2></description></item><item><title>Docs: Running Locally</title><link>https://k8scommerce.github.io/docs/getting-started/try-it/running-locally/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/getting-started/try-it/running-locally/</guid><description>
+&lt;h2 id="local-etcd">Local Etcd&lt;/h2>
+&lt;h2 id="docker">Docker&lt;/h2>
+&lt;h2 id="makefile-commands">Makefile Commands&lt;/h2></description></item></channel></rss>

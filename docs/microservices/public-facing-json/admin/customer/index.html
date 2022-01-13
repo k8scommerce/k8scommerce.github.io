@@ -1,0 +1,380 @@
+<!doctype html><html lang=en class=no-js>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=generator content="Hugo 0.91.2">
+<meta name=robots content="index, follow">
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"WebSite","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/k8scommerce.github.io"},"articleSection":"docs","name":"Customer","headline":"Customer","description":"This page describes Customer\n","inLanguage":"en-US","author":"","creator":"","publisher":"","accountablePerson":"","copyrightHolder":"","copyrightYear":"2022","datePublished":"2022-01-12 00:00:00 \u002b0000 UTC","dateModified":"2022-01-12 00:00:00 \u002b0000 UTC","url":"https:\/\/k8scommerce.github.io\/docs\/microservices\/public-facing-json\/admin\/customer\/","wordCount":"0","keywords":["K8sCommerce"]}</script>
+<link rel="shortcut icon" href=/favicons/favicon.ico>
+<link rel=apple-touch-icon href=/favicons/apple-touch-icon-180x180.png sizes=180x180>
+<link rel=icon type=image/png href=/favicons/favicon-16x16.png sizes=16x16>
+<link rel=icon type=image/png href=/favicons/favicon-32x32.png sizes=32x32>
+<link rel=manifest href=/favicons/manifest.json>
+<meta name=msapplication-config content="/favicons/browserconfig.xml">
+<meta name=msapplication-TileColor content="#4279f4">
+<meta name=theme-color content="#4279f4">
+<title>Customer | K8sCommerce</title>
+<meta name=description content="This page describes Customer
+">
+<meta property="og:title" content="Customer">
+<meta property="og:description" content="This page describes Customer
+">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://k8scommerce.github.io/docs/microservices/public-facing-json/admin/customer/"><meta property="article:section" content="docs">
+<meta property="article:published_time" content="2022-01-12T00:00:00+00:00">
+<meta property="article:modified_time" content="2022-01-12T18:06:45-07:00"><meta property="og:site_name" content="K8sCommerce">
+<meta itemprop=name content="Customer">
+<meta itemprop=description content="This page describes Customer
+"><meta itemprop=datePublished content="2022-01-12T00:00:00+00:00">
+<meta itemprop=dateModified content="2022-01-12T18:06:45-07:00">
+<meta itemprop=wordCount content="0">
+<meta itemprop=keywords content><meta name=twitter:card content="summary">
+<meta name=twitter:title content="Customer">
+<meta name=twitter:description content="This page describes Customer
+">
+<link rel=preload href=/scss/main.min.9b02fa86671b61c8dfe2940f9a0a4a2d3e19a9be4667c10266fc96604b2dd385.css as=style>
+<link href=/scss/main.min.9b02fa86671b61c8dfe2940f9a0a4a2d3e19a9be4667c10266fc96604b2dd385.css rel=stylesheet integrity>
+<script src=https://code.jquery.com/jquery-3.5.1.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-00000000-0','auto'),ga('send','pageview'))</script>
+<script async src=https://www.google-analytics.com/analytics.js></script>
+</head>
+<body class=td-page>
+<header>
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+<a class=navbar-brand href=/>
+<span class=navbar-logo></span><span class=font-weight-bold>K8sCommerce</span>
+</a>
+<div class="td-navbar-nav-scroll ml-md-auto" id=main_navbar>
+<ul class="navbar-nav mt-2 mt-lg-0">
+<li class="nav-item mr-4 mb-2 mb-lg-0">
+<a class=nav-link href=/features/><span>Features</span></a>
+</li>
+<li class="nav-item mr-4 mb-2 mb-lg-0">
+<a class=nav-link href=/docs/><span>Docs</span></a>
+</li>
+<li class="nav-item mr-4 mb-2 mb-lg-0">
+<a class=nav-link href=/resources/><span>Resources</span></a>
+</li>
+<li class="nav-item mr-4 mb-2 mb-lg-0">
+<a class=nav-link href=/community/><span>Community</span></a>
+</li>
+<li class="nav-item mr-4 mb-2 mb-lg-0">
+<a class=nav-link href=/blog/><span>Blog</span></a>
+</li>
+<li class="nav-item mr-4 mb-2 mb-lg-0">
+<a class=nav-link href=https://github.com/k8scommerce/k8scommerce target=_blank><i class="fab fa-github pr-2"></i><span></span></a>
+</li>
+</ul>
+</div>
+<div class="navbar-nav d-none d-lg-block"><input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off>
+</div>
+</nav>
+</header>
+<div class="container-fluid td-outer">
+<div class=td-main>
+<div class="row flex-xl-nowrap">
+<aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+<div id=td-sidebar-menu class=td-sidebar__inner>
+<form class="td-sidebar__search d-flex align-items-center">
+<input type=search class="form-control td-search-input" placeholder="&#xf002; Search this site…" aria-label="Search this site…" autocomplete=off>
+<button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type=button data-toggle=collapse data-target=#td-section-nav aria-controls=td-docs-nav aria-expanded=false aria-label="Toggle section navigation">
+</button>
+</form>
+<nav class="collapse td-sidebar-nav" id=td-section-nav>
+<ul class="td-sidebar-nav__section pr-md-3 ul-0">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-docs-li>
+<a href=/docs/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id=m-docs><span>Documentation</span></a>
+<ul class=ul-1>
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsgetting-started-li>
+<a href=/docs/getting-started/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsgetting-started><span>Getting Started</span></a>
+<ul class="ul-2 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docsgetting-startedwhat-is-k8scommerce-li>
+<a href=/docs/getting-started/what-is-k8scommerce/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsgetting-startedwhat-is-k8scommerce><span>What is K8sCommerce?</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docsgetting-startedcustom-urls-li>
+<a href=/docs/getting-started/custom-urls/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsgetting-startedcustom-urls><span>Custom URLs</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id=m-docsgetting-startedkubernetes-li>
+<a href=/docs/getting-started/kubernetes/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsgetting-startedkubernetes><span>Kubernetes</span></a>
+<ul class="ul-3 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docsgetting-startedkubernetesk8soperator-li>
+<a href=/docs/getting-started/kubernetes/k8soperator/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsgetting-startedkubernetesk8soperator><span>K8sOperator</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docsgetting-startedkubernetesconfiguration-li>
+<a href=/docs/getting-started/kubernetes/configuration/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsgetting-startedkubernetesconfiguration><span>Configuration</span></a>
+</li>
+</ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docsgetting-startedrest-api-example-li>
+<a href=/docs/getting-started/rest-api-example/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsgetting-startedrest-api-example><span>Rest API Example</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id=m-docsgetting-startedtry-it-li>
+<a href=/docs/getting-started/try-it/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsgetting-startedtry-it><span>Try it</span></a>
+<ul class="ul-3 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docsgetting-startedtry-itprerequisites-li>
+<a href=/docs/getting-started/try-it/prerequisites/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsgetting-startedtry-itprerequisites><span>Prerequisites</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docsgetting-startedtry-itrunning-locally-li>
+<a href=/docs/getting-started/try-it/running-locally/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsgetting-startedtry-itrunning-locally><span>Running Locally</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsesg-considerations-li>
+<a href=/docs/esg-considerations/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsesg-considerations><span>ESG Considerations</span></a>
+<ul class="ul-2 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docsesg-considerationswhat-is-esg-li>
+<a href=/docs/esg-considerations/what-is-esg/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsesg-considerationswhat-is-esg><span>What is ESG</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docsesg-considerationsbest-practices-li>
+<a href=/docs/esg-considerations/best-practices/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsesg-considerationsbest-practices><span>Best Practices</span></a>
+</li>
+</ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsadministration-li>
+<a href=/docs/administration/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsadministration><span>Administration</span></a>
+<ul class="ul-2 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docsadministrationlocal-testing-li>
+<a href=/docs/administration/local-testing/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsadministrationlocal-testing><span>Local Testing</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docsadministrationdeployment-li>
+<a href=/docs/administration/deployment/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsadministrationdeployment><span>Deployment</span></a>
+</li>
+</ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsarchitecture-li>
+<a href=/docs/architecture/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsarchitecture><span>Architecture</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsrest-api-li>
+<a href=/docs/rest-api/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsrest-api><span>Rest API</span></a>
+<ul class="ul-2 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docsrest-apiadmin-li>
+<a href=/docs/rest-api/admin/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsrest-apiadmin><span>Admin</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id=m-docsrest-apiclient-li>
+<a href=/docs/rest-api/client/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsrest-apiclient><span>Client</span></a>
+<ul class="ul-3 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docsrest-apiclientcart-li>
+<a href=/docs/rest-api/client/cart/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsrest-apiclientcart><span>Cart</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-docsmicroservices-li>
+<a href=/docs/microservices/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsmicroservices><span>Microservices</span></a>
+<ul class="ul-2 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsmicroservicesmethodology-li>
+<a href=/docs/microservices/methodology/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsmicroservicesmethodology><span>Methodology</span></a>
+<ul class="ul-3 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docsmicroservicesmethodologygo-zero-and-goctl-li>
+<a href=/docs/microservices/methodology/go-zero-and-goctl/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsmicroservicesmethodologygo-zero-and-goctl><span>Go-Zero &amp;amp; goctl</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docsmicroservicesmethodologydevelopment-philosophy-li>
+<a href=/docs/microservices/methodology/development-philosophy/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsmicroservicesmethodologydevelopment-philosophy><span>Development Philosophy</span></a>
+</li>
+</ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-docsmicroservicespublic-facing-json-li>
+<a href=/docs/microservices/public-facing-json/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsmicroservicespublic-facing-json><span>Public Facing JSON</span></a>
+<ul class="ul-3 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-docsmicroservicespublic-facing-jsonadmin-li>
+<a href=/docs/microservices/public-facing-json/admin/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsmicroservicespublic-facing-jsonadmin><span>Admin</span></a>
+<ul class="ul-4 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsmicroservicespublic-facing-jsonadmincart-li>
+<a href=/docs/microservices/public-facing-json/admin/cart/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsmicroservicespublic-facing-jsonadmincart><span>Cart</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsmicroservicespublic-facing-jsonadmincatalog-li>
+<a href=/docs/microservices/public-facing-json/admin/catalog/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsmicroservicespublic-facing-jsonadmincatalog><span>Catalog</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-docsmicroservicespublic-facing-jsonadmincustomer-li>
+<a href=/docs/microservices/public-facing-json/admin/customer/ class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-docsmicroservicespublic-facing-jsonadmincustomer><span class=td-sidebar-nav-active-item>Customer</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsmicroservicespublic-facing-jsonadminemail-li>
+<a href=/docs/microservices/public-facing-json/admin/email/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsmicroservicespublic-facing-jsonadminemail><span>Email</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsmicroservicespublic-facing-jsonadmininventory-li>
+<a href=/docs/microservices/public-facing-json/admin/inventory/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsmicroservicespublic-facing-jsonadmininventory><span>Inventory</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsmicroservicespublic-facing-jsonadminothers-bought-li>
+<a href=/docs/microservices/public-facing-json/admin/others-bought/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsmicroservicespublic-facing-jsonadminothers-bought><span>Others Bought</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsmicroservicespublic-facing-jsonadminpayment-li>
+<a href=/docs/microservices/public-facing-json/admin/payment/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsmicroservicespublic-facing-jsonadminpayment><span>Payment</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsmicroservicespublic-facing-jsonadminshipping-li>
+<a href=/docs/microservices/public-facing-json/admin/shipping/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsmicroservicespublic-facing-jsonadminshipping><span>Shipping</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsmicroservicespublic-facing-jsonadminsimilar-products-li>
+<a href=/docs/microservices/public-facing-json/admin/similar-products/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsmicroservicespublic-facing-jsonadminsimilar-products><span>Similar Products</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsmicroservicespublic-facing-jsonadminstore-li>
+<a href=/docs/microservices/public-facing-json/admin/store/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsmicroservicespublic-facing-jsonadminstore><span>Store</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsmicroservicespublic-facing-jsonadminuser-li>
+<a href=/docs/microservices/public-facing-json/admin/user/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsmicroservicespublic-facing-jsonadminuser><span>User</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsmicroservicespublic-facing-jsonadminwarehouse-li>
+<a href=/docs/microservices/public-facing-json/admin/warehouse/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsmicroservicespublic-facing-jsonadminwarehouse><span>Warehouse</span></a>
+</li>
+</ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsmicroservicespublic-facing-jsonclient-li>
+<a href=/docs/microservices/public-facing-json/client/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsmicroservicespublic-facing-jsonclient><span>Client</span></a>
+<ul class="ul-4 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docsmicroservicespublic-facing-jsonclientcart-li>
+<a href=/docs/microservices/public-facing-json/client/cart/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsmicroservicespublic-facing-jsonclientcart><span>Cart</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docsmicroservicespublic-facing-jsonclientcatalog-li>
+<a href=/docs/microservices/public-facing-json/client/catalog/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsmicroservicespublic-facing-jsonclientcatalog><span>Catalog</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docsmicroservicespublic-facing-jsonclientcustomer-li>
+<a href=/docs/microservices/public-facing-json/client/customer/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsmicroservicespublic-facing-jsonclientcustomer><span>Customer</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docsmicroservicespublic-facing-jsonclientothers-bought-li>
+<a href=/docs/microservices/public-facing-json/client/others-bought/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsmicroservicespublic-facing-jsonclientothers-bought><span>Others Bought</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docsmicroservicespublic-facing-jsonclientpayment-li>
+<a href=/docs/microservices/public-facing-json/client/payment/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsmicroservicespublic-facing-jsonclientpayment><span>Payment</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docsmicroservicespublic-facing-jsonclientshipping-li>
+<a href=/docs/microservices/public-facing-json/client/shipping/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsmicroservicespublic-facing-jsonclientshipping><span>Shipping</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docsmicroservicespublic-facing-jsonclientsimilar-products-li>
+<a href=/docs/microservices/public-facing-json/client/similar-products/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsmicroservicespublic-facing-jsonclientsimilar-products><span>Similar Products</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsmicroservicesnon-public-rpc-li>
+<a href=/docs/microservices/non-public-rpc/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsmicroservicesnon-public-rpc><span>Non-Public RPC</span></a>
+<ul class="ul-3 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docsmicroservicesnon-public-rpccart-li>
+<a href=/docs/microservices/non-public-rpc/cart/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsmicroservicesnon-public-rpccart><span>Cart</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docsmicroservicesnon-public-rpccatalog-li>
+<a href=/docs/microservices/non-public-rpc/catalog/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsmicroservicesnon-public-rpccatalog><span>Catalog</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docsmicroservicesnon-public-rpccustomer-li>
+<a href=/docs/microservices/non-public-rpc/customer/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsmicroservicesnon-public-rpccustomer><span>Customer</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docsmicroservicesnon-public-rpcemail-li>
+<a href=/docs/microservices/non-public-rpc/email/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsmicroservicesnon-public-rpcemail><span>Email</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docsmicroservicesnon-public-rpcinventory-li>
+<a href=/docs/microservices/non-public-rpc/inventory/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsmicroservicesnon-public-rpcinventory><span>Inventory</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docsmicroservicesnon-public-rpcothers-bought-li>
+<a href=/docs/microservices/non-public-rpc/others-bought/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsmicroservicesnon-public-rpcothers-bought><span>Others Bought</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docsmicroservicesnon-public-rpcpayment-li>
+<a href=/docs/microservices/non-public-rpc/payment/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsmicroservicesnon-public-rpcpayment><span>Payment</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docsmicroservicesnon-public-rpcshipping-li>
+<a href=/docs/microservices/non-public-rpc/shipping/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsmicroservicesnon-public-rpcshipping><span>Shipping</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docsmicroservicesnon-public-rpcsimilar-products-li>
+<a href=/docs/microservices/non-public-rpc/similar-products/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsmicroservicesnon-public-rpcsimilar-products><span>Similar Products</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docsmicroservicesnon-public-rpcstore-li>
+<a href=/docs/microservices/non-public-rpc/store/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsmicroservicesnon-public-rpcstore><span>Store</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docsmicroservicesnon-public-rpcuser-li>
+<a href=/docs/microservices/non-public-rpc/user/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsmicroservicesnon-public-rpcuser><span>User</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docsmicroservicesnon-public-rpcwarehouse-li>
+<a href=/docs/microservices/non-public-rpc/warehouse/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsmicroservicesnon-public-rpcwarehouse><span>Warehouse</span></a>
+</li>
+</ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsmicroservicesauthoring-li>
+<a href=/docs/microservices/authoring/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsmicroservicesauthoring><span>Authoring</span></a>
+<ul class="ul-3 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docsmicroservicesauthoringapi-microservices-li>
+<a href=/docs/microservices/authoring/api-microservices/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsmicroservicesauthoringapi-microservices><span>API Microservices</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docsmicroservicesauthoringrpc-microservices-li>
+<a href=/docs/microservices/authoring/rpc-microservices/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsmicroservicesauthoringrpc-microservices><span>RPC Microservices</span></a>
+</li>
+</ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsmicroservicessubstitution-li>
+<a href=/docs/microservices/substitution/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsmicroservicessubstitution><span>Substitution</span></a>
+</li>
+</ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id=m-docsevents-and-hooks-li>
+<a href=/docs/events-and-hooks/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsevents-and-hooks><span>Events and Hooks</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id=m-docsdatabase-li>
+<a href=/docs/database/ class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id=m-docsdatabase><span>Database</span></a>
+<ul class="ul-2 foldable">
+<li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docsdatabaseschema-li>
+<a href=/docs/database/schema/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsdatabaseschema><span>Schema</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docsdatabasemigrations-li>
+<a href=/docs/database/migrations/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsdatabasemigrations><span>Migrations</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id=m-docsdatabasebackup-li>
+<a href=/docs/database/backup/ class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id=m-docsdatabasebackup><span>Backup</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</aside>
+<aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+<div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+<a href=https://github.com/k8scommerce/k8scommerce/tree/master/content/en/docs/microservices/public-facing-json/admin/customer.md class=td-page-meta--view target=_blank rel=noopener><i class="fa fa-file-alt fa-fw"></i> View page source</a>
+<a href=https://github.com/k8scommerce/k8scommerce/edit/master/content/en/docs/microservices/public-facing-json/admin/customer.md class=td-page-meta--edit target=_blank rel=noopener><i class="fa fa-edit fa-fw"></i> Edit this page</a>
+<a href="https://github.com/k8scommerce/k8scommerce/new/master/content/en/docs/microservices/public-facing-json/admin/customer.md?filename=change-me.md&value=---%0Atitle%3A+%22Long+Page+Title%22%0AlinkTitle%3A+%22Short+Nav+Title%22%0Aweight%3A+100%0Adescription%3A+%3E-%0A+++++Page+description+for+heading+and+indexes.%0A---%0A%0A%23%23+Heading%0A%0AEdit+this+template+to+create+your+new+page.%0A%0A%2A+Give+it+a+good+name%2C+ending+in+%60.md%60+-+e.g.+%60getting-started.md%60%0A%2A+Edit+the+%22front+matter%22+section+at+the+top+of+the+page+%28weight+controls+how+its+ordered+amongst+other+pages+in+the+same+directory%3B+lowest+number+first%29.%0A%2A+Add+a+good+commit+message+at+the+bottom+of+the+page+%28%3C80+characters%3B+use+the+extended+description+field+for+more+detail%29.%0A%2A+Create+a+new+branch+so+you+can+preview+your+new+file+and+request+a+review+via+Pull+Request.%0A" class=td-page-meta--child target=_blank rel=noopener><i class="fa fa-edit fa-fw"></i> Create child page</a>
+<a href="https://github.com/k8scommerce/k8scommerce/issues/new?title=Customer" class=td-page-meta--issue target=_blank rel=noopener><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
+<a id=print href=https://k8scommerce.github.io/docs/microservices/public-facing-json/admin/_print/><i class="fa fa-print fa-fw"></i> Print entire section</a>
+</div>
+</aside>
+<main class="col-12 col-md-9 col-xl-8 pl-md-5" role=main>
+<nav aria-label=breadcrumb class=td-breadcrumbs>
+<ol class=breadcrumb>
+<li class=breadcrumb-item>
+<a href=https://k8scommerce.github.io/docs/>Documentation</a>
+</li>
+<li class=breadcrumb-item>
+<a href=https://k8scommerce.github.io/docs/microservices/>Microservices</a>
+</li>
+<li class=breadcrumb-item>
+<a href=https://k8scommerce.github.io/docs/microservices/public-facing-json/>Public Facing JSON</a>
+</li>
+<li class=breadcrumb-item>
+<a href=https://k8scommerce.github.io/docs/microservices/public-facing-json/admin/>Admin</a>
+</li>
+<li class="breadcrumb-item active" aria-current=page>
+<a href=https://k8scommerce.github.io/docs/microservices/public-facing-json/admin/customer/>Customer</a>
+</li>
+</ol>
+</nav>
+<div class=td-content>
+<h1>Customer</h1>
+<div class=lead>This page describes Customer</div>
+<header class=article-meta>
+</header>
+<style>.feedback--answer{display:inline-block}.feedback--answer-no{margin-left:1em}.feedback--response{display:none;margin-top:1em}.feedback--response__visible{display:block}</style>
+<div class="card mt-4 col-12 col-sm-6">
+<div class=card-body>
+<h3 class=card-title>Feedback</h3>
+<p class=card-text>Was this page helpful?</p>
+<button class="btn btn-primary feedback--answer feedback--answer-yes" style=width:5rem>Yes</button>
+<button class="btn btn-primary feedback--answer feedback--answer-no" style=width:5rem>No</button>
+<p class="feedback--response feedback--response-yes">
+Glad to hear it! Please <a href=https://github.com/k8scommerce/k8scommerce/issues/new>tell us how we can improve</a>.
+</p>
+<p class="feedback--response feedback--response-no">
+Sorry to hear that. Please <a href=https://github.com/k8scommerce/k8scommerce/issues/new>tell us how we can improve</a>.
+</p>
+</div>
+</div>
+<script>const yesButton=document.querySelector('.feedback--answer-yes'),noButton=document.querySelector('.feedback--answer-no'),yesResponse=document.querySelector('.feedback--response-yes'),noResponse=document.querySelector('.feedback--response-no'),disableButtons=()=>{yesButton.disabled=!0,noButton.disabled=!0},sendFeedback=b=>{if(typeof ga!='function')return;const a={command:'send',hitType:'event',category:'Helpful',action:'click',label:window.location.pathname,value:b};ga(a.command,a.hitType,a.category,a.action,a.label,a.value)};yesButton.addEventListener('click',()=>{yesResponse.classList.add('feedback--response__visible'),disableButtons(),sendFeedback(1)}),noButton.addEventListener('click',()=>{noResponse.classList.add('feedback--response__visible'),disableButtons(),sendFeedback(0)})</script>
+<br>
+<div class="text-muted mt-5 pt-3 border-top">
+Last modified January 12, 2022: <a href=https://github.com/k8scommerce/k8scommerce/commit/0a840711ae72524ca48b1aecd13c7462452cf0f3>preliminary documentation structure (0a84071)</a>
+</div>
+</div>
+</main>
+</div>
+</div>
+<footer class="bg-dark pt-3 row d-print-none">
+<div class="container-fluid mx-sm-5">
+<div class=row>
+<div class="col-6 col-sm-4 text-xs-center order-sm-2">
+<ul class="list-inline mb-0">
+<li class="list-inline-item mx-2 h3" data-toggle=tooltip data-placement=top title=Twitter aria-label=Twitter>
+<a class=text-white target=_blank rel=noopener href=https://twitter.com/K8sCommerce aria-label=Twitter>
+<i class="fab fa-twitter"></i>
+</a>
+</li>
+<li class="list-inline-item mx-2 h3" data-toggle=tooltip data-placement=top title="Stack Overflow" aria-label="Stack Overflow">
+<a class=text-white target=_blank rel=noopener href=https://example.org/stack aria-label="Stack Overflow">
+<i class="fab fa-stack-overflow"></i>
+</a>
+</li>
+</ul>
+</div>
+<div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+<ul class="list-inline mb-0">
+<li class="list-inline-item mx-2 h3" data-toggle=tooltip data-placement=top title=GitHub aria-label=GitHub>
+<a class=text-white target=_blank rel=noopener href=https://github.com/k8scommerce/k8scommerce aria-label=GitHub>
+<i class="fab fa-github"></i>
+</a>
+</li>
+<li class="list-inline-item mx-2 h3" data-toggle=tooltip data-placement=top title=Slack aria-label=Slack>
+<a class=text-white target=_blank rel=noopener href=https://example.org/slack aria-label=Slack>
+<i class="fab fa-slack"></i>
+</a>
+</li>
+</ul>
+</div>
+<div class="col-12 col-sm-5 text-center py-2 order-sm-2">
+<small class=text-white>&copy; 2022 K8sCommerce | Documentation Distributed under CC BY 4.0</small>
+<p><small class=ml-1><a href=https://policies.google.com/privacy target=_blank rel=noopener>Privacy Policy</a></small></p>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src=https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js integrity=sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN crossorigin=anonymous></script>
+<script src=https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA==" crossorigin=anonymous></script>
+<script src=/js/tabpane-persist.js></script>
+<script src=/js/main.min.d6010b01c7872d9d8c9f35618ff71755b01dbd6674ec1e9d2fc393ce60dca950.js integrity="sha256-1gELAceHLZ2MnzVhj/cXVbAdvWZ07B6dL8OTzmDcqVA=" crossorigin=anonymous></script>
+</body>
+</html>

@@ -31,10 +31,28 @@ D-Docs
         F-Deployment
             S-Static Hosting
     D-Architecture
-    D-Rest API
+    D-REST Endpoints
         D-Admin
+            F-Cart
+            F-Catalog
+            F-Customer
+            F-Email
+            F-Inventory
+            F-Others Bought
+            F-Payment
+            F-Shipping
+            F-Similar Products
+            F-Store
+            F-User
+            F-Warehouse
         D-Client
             F-Cart
+            F-Catalog
+            F-Customer
+            F-Others Bought
+            F-Payment
+            F-Shipping
+            F-Similar Products
     D-Microservices
         D-Methodology
             F-Go-Zero & goctl
@@ -42,27 +60,27 @@ D-Docs
                 S-goctl
             F-Development Philosophy
         D-Public Facing JSON
-            D-Client
-                F-Cart
-                F-Catalog
-                F-Customer
-                F-Others Bought
-                F-Payment
-                F-Shipping
-                F-Similar Products
-            D-Admin
-                F-Cart
-                F-Catalog
-                F-Customer
-                F-Email
-                F-Inventory
-                F-Others Bought
-                F-Payment
-                F-Shipping
-                F-Similar Products
-                F-Store
-                F-User
-                F-Warehouse
+            F-Client
+                S-Cart
+                S-Catalog
+                S-Customer
+                S-Others Bought
+                S-Payment
+                S-Shipping
+                S-Similar Products
+            F-Admin
+                S-Cart
+                S-Catalog
+                S-Customer
+                S-Email
+                S-Inventory
+                S-Others Bought
+                S-Payment
+                S-Shipping
+                S-Similar Products
+                S-Store
+                S-User
+                S-Warehouse
         D-Non-Public RPC
             F-Cart
                 S-Overview

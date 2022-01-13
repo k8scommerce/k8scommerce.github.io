@@ -4,7 +4,7 @@ linkTitle: "Inventory"
 weight: 50
 date: 2022-01-12
 description: >
-  This page describes Inventory
+  Inventory
 ---
 
 

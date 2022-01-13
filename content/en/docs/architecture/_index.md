@@ -9,4 +9,4 @@ description: >
 
 
 ## Platform Topography
-![K8sCommerce Overview](/images/diagrams/K8sCommerceOverview-no-title.drawio.png)
+![K8sCommerce Overview](/images/diagrams/en/K8sCommerceOverview-no-title.drawio.png)

@@ -1,6 +1,10 @@
 ---
-title: Blog
-layout: blog
+title: "Blog"
+linkTitle: "Blog"
+date: 2022-01-12
+description: >
+  Blog
 ---
 
-<!--add blocks of content here to add more sections to the community page -->
+
+

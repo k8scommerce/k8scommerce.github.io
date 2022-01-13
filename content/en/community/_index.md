@@ -1,5 +1,10 @@
 ---
-title: Community
+title: "Community"
+linkTitle: "Community"
+date: 2022-01-12
+description: >
+  Community
 ---
 
-<!--add blocks of content here to add more sections to the community page -->
+
+

@@ -21,55 +21,63 @@ enableMissingTranslationPlaceholders = true
 
 # You can add your own taxonomies
 [taxonomies]
-tag = "tags"
 category = "categories"
+tag = "tags"
 
 [params.taxonomy]
 # set taxonomyCloud = [] to hide taxonomy clouds
-taxonomyCloud = ["tags", "categories"] 
+taxonomyCloud = ["tags", "categories"]
 
 # If used, must have same lang as taxonomyCloud
-taxonomyCloudTitle = ["Tag Cloud", "Categories"] 
+taxonomyCloudTitle = ["Tag Cloud", "Categories"]
 
 # set taxonomyPageHeader = [] to hide taxonomies on the page headers
-taxonomyPageHeader = ["tags", "categories"] 
+taxonomyPageHeader = ["tags", "categories"]
 
 ###############################################################################
 # Hugo - Top-level navigation (horizontal)
 ###############################################################################
 [menu]
-  [[menu.main]]
-    name = "About"
-    weight = 1
-    pre = "<i class='fas fa-info-circle'></i>"
-    url = "/about/"
-  [[menu.main]]
-    name = "Project Guidance"
-    weight = 10
-    pre = "<i class='fas fa-compass pr-2'></i>"
-    url = "/guidance/"
-  [[menu.main]]
-    name = "Documentation"
-    weight = 20
-    pre = "<i class='fas fa-book pr-2'></i>"
-    url = "/docs/"
-  [[menu.main]]
-    name = "Blog"
-    weight = 30
-    pre = "<i class='fas fa-rss pr-2'></i>"
-    url = "/blog/"
-  [[menu.main]]
-    name = "Community"
-    weight = 40
-    pre = "<i class='fas fa-users'></i>"
-    url = "/community/"
-  [[menu.main]]
-    name = "GitHub"
-    weight = 50
-    pre = "<i class='fab fa-github pr-2'></i>"
-    url = "https://github.com/k8scommerce/k8scommerce"
+# [[menu.main]]
+#   name = "Project Guidance"
+#   weight = 10
+#   pre = "<i class='fas fa-compass pr-2'></i>"
+#   url = "/guidance/"
+[[menu.main]]
+name = "Features"
+weight = 10
+# pre = "<i class='fas fa-users'></i>"
+url = "/features/"
 
+[[menu.main]]
+name = "Docs"
+weight = 20
+# pre = "<i class='fas fa-book pr-2'></i>"
+url = "/docs/"
 
+[[menu.main]]
+name = "Resources"
+weight = 40
+# pre = "<i class='fas fa-users'></i>"
+url = "/resources/"
+
+[[menu.main]]
+name = "Community"
+weight = 50
+# pre = "<i class='fas fa-users'></i>"
+url = "/community/"
+
+[[menu.main]]
+name = "Blog"
+# pre = "<i class='fas fa-rss pr-2'></i>"
+url = "/blog/"
+weight = 60
+
+[[menu.main]]
+# name = "GitHub"
+pre = "<i class='fab fa-github pr-2'></i>"
+url = "https://github.com/k8scommerce/k8scommerce"
+weight = 100
 
 # Highlighting config
 pygmentsCodeFences = true
@@ -86,16 +94,16 @@ blog = "/:section/:year/:month/:day/:slug/"
 
 ## Configuration for BlackFriday markdown parser: https://github.com/russross/blackfriday
 [blackfriday]
-plainIDAnchors = true
-hrefTargetBlank = true
 angledQuotes = false
+hrefTargetBlank = true
 latexDashes = true
+plainIDAnchors = true
 
 # Image processing configuration.
 [imaging]
-resampleFilter = "CatmullRom"
-quality = 75
 anchor = "smart"
+quality = 75
+resampleFilter = "CatmullRom"
 
 [services]
 [services.googleAnalytics]
@@ -106,22 +114,21 @@ id = "UA-00000000-0"
 
 [languages]
 [languages.en]
-title = "K8sCommerce"
 description = "Cloud Native Ecommerce"
-languageName ="English"
+languageName = "English"
+title = "K8sCommerce"
 # Weight used for sorting.
 weight = 1
 
-
 [markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
-  [markup.highlight]
-    # See a complete list of available styles at https://xyproto.github.io/splash/docs/all.html
-    style = "tango"
-    # Uncomment if you want your chosen highlight style used for code blocks without a specified language
-    # guessSyntax = "true"
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
+[markup.highlight]
+# See a complete list of available styles at https://xyproto.github.io/splash/docs/all.html
+style = "tango"
+# Uncomment if you want your chosen highlight style used for code blocks without a specified language
+guessSyntax = "true"
 
 # Everything below this are Site Params
 
@@ -185,11 +192,11 @@ breadcrumb_disable = false
 # Set to true to disable the About link in the site footer
 footer_about_disable = false
 # Set to false if you don't want to display a logo (/assets/icons/logo.svg) in the top navbar
-navbar_logo = true
+navbar_logo = false
 # Set to true if you don't want the top navbar to be translucent when over a `block/cover`, like on the homepage.
 navbar_translucent_over_cover_disable = false
 # Enable to show the side bar menu in its compact state.
-sidebar_menu_compact = false
+sidebar_menu_compact = true
 # Set to true to hide the sidebar search box (the top nav search box will still be displayed if search is enabled)
 sidebar_search_disable = false
 
@@ -200,8 +207,8 @@ sidebar_search_disable = false
 [params.ui.feedback]
 enable = true
 # The responses that the user sees after clicking "yes" (the page was helpful) or "no" (the page was not helpful).
-yes = 'Glad to hear it! Please <a href="https://github.com/k8scommerce/k8scommerce/issues/new">tell us how we can improve</a>.'
 no = 'Sorry to hear that. Please <a href="https://github.com/k8scommerce/k8scommerce/issues/new">tell us how we can improve</a>.'
+yes = 'Glad to hear it! Please <a href="https://github.com/k8scommerce/k8scommerce/issues/new">tell us how we can improve</a>.'
 
 # Adds a reading time to the top of each doc.
 # If you want this feature, but occasionally need to remove the Reading time from a single page, 
@@ -217,26 +224,26 @@ enable = false
 #   icon = "fa fa-envelope"
 #   desc = "Discussion and help from your fellow users"
 [[params.links.user]]
-  name ="Twitter"
-  url = "https://twitter.com/K8sCommerce"
-  icon = "fab fa-twitter"
-  desc = "Follow us on Twitter to get the latest news!"
+desc = "Follow us on Twitter to get the latest news!"
+icon = "fab fa-twitter"
+name = "Twitter"
+url = "https://twitter.com/K8sCommerce"
 [[params.links.user]]
-  name = "Stack Overflow"
-  url = "https://example.org/stack"
-  icon = "fab fa-stack-overflow"
-  desc = "Practical questions and curated answers"
+desc = "Practical questions and curated answers"
+icon = "fab fa-stack-overflow"
+name = "Stack Overflow"
+url = "https://example.org/stack"
 # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
 [[params.links.developer]]
-  name = "GitHub"
-  url = "https://github.com/k8scommerce/k8scommerce"
-  icon = "fab fa-github"
-  desc = "Development takes place here!"
+desc = "Development takes place here!"
+icon = "fab fa-github"
+name = "GitHub"
+url = "https://github.com/k8scommerce/k8scommerce"
 [[params.links.developer]]
-  name = "Slack"
-  url = "https://example.org/slack"
-  icon = "fab fa-slack"
-  desc = "Chat with other project developers"
+desc = "Chat with other project developers"
+icon = "fab fa-slack"
+name = "Slack"
+url = "https://example.org/slack"
 # [[params.links.developer]]
 #   name = "Developer mailing list"
 #   url = "https://example.org/mail"

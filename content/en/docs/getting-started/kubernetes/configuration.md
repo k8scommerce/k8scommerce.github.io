@@ -1,9 +1,18 @@
 ---
 title: "Configuration"
 linkTitle: "Configuration"
-weight: 20
+weight: 30
 date: 2022-01-12
 description: >
-  Configuration
+  This page describes Configuration
 ---
+
+
+## Custom URLs
+
+
+## Client Gateway URL
+
+
+## Admin Gateway URL
 

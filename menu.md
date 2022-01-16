@@ -8,21 +8,34 @@ D-Features
     S-Custom Shopping Experiences
     S-Multiple Stores
 D-Docs
+    F-What is K8sCommerce?
     D-Getting Started
-        F-What is K8sCommerce?
-	    D-Try it
-	        F-Prerequisites
+        D-Running Locally
+            F-Prerequisites
                 S-Etcd
-                S-Etcd
-	        F-Running Locally
-	            S-Local Etcd
-	            S-Docker
+                S-Docker
+                S-Custom URLs
+                S-Client Gateway URL
+                S-Admin Gateway URL
+            F-Local Startup
                 S-Makefile Commands
-	    D-Kubernetes
-            F-K8sOperator
+                S-Test Data
+            F-Administration App Access
+        F-Kubernetes
+            F-K8sCommerce Operator
+            F-Prerequisites
+                S-Environment
+                S-Database
+                S-YAML Configuration
             F-Configuration
-        D-Custom URLs
-        D-Rest API Example
+                S-Custom URLs
+                S-Client Gateway URL
+                S-Admin Gateway URL
+            F-Operator Deployment
+                S-kubctl Commands
+        F-Rest API Example
+            S-CURL
+            S-HTTPie
     D-ESG Considerations
         F-What is ESG
         F-Best Practices
@@ -31,36 +44,37 @@ D-Docs
         F-Deployment
             S-Static Hosting
     D-Architecture
-    D-REST Endpoints
-        D-Admin
-            F-Cart
-            F-Catalog
-            F-Customer
-            F-Email
-            F-Inventory
-            F-Others Bought
-            F-Payment
-            F-Shipping
-            F-Similar Products
-            F-Store
-            F-User
-            F-Warehouse
-        D-Client
-            F-Cart
-            F-Catalog
-            F-Customer
-            F-Others Bought
-            F-Payment
-            F-Shipping
-            F-Similar Products
+    D-REST Gateway Endpoints
+        D-v1
+            D-Admin Gateway
+                F-Cart
+                F-Catalog
+                F-Customer
+                F-Email
+                F-Inventory
+                F-OthersBought
+                F-Payment
+                F-Shipping
+                F-SimilarProducts
+                F-Store
+                F-User
+                F-Warehouse
+            D-Client Gateway
+                F-Cart
+                F-Catalog
+                F-Customer
+                F-OthersBought
+                F-Payment
+                F-Shipping
+                F-SimilarProducts
     D-Microservices
         D-Methodology
             F-Go-Zero & goctl
                 S-Go-Zero
                 S-goctl
             F-Development Philosophy
-        D-Public Facing JSON
-            F-Client
+        D-Gateway Services
+            F-Client Gateway
                 S-Cart
                 S-Catalog
                 S-Customer
@@ -68,7 +82,7 @@ D-Docs
                 S-Payment
                 S-Shipping
                 S-Similar Products
-            F-Admin
+            F-Admin Gateway
                 S-Cart
                 S-Catalog
                 S-Customer
@@ -81,7 +95,7 @@ D-Docs
                 S-Store
                 S-User
                 S-Warehouse
-        D-Non-Public RPC
+        D-RPC Services
             F-Cart
                 S-Overview
                 S-Dependencies

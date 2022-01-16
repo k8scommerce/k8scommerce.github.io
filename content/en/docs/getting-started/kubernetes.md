@@ -1,11 +1,9 @@
 ---
 title: "Kubernetes"
 linkTitle: "Kubernetes"
-date: 2022-01-12
 weight: 20
+date: 2022-01-12
 description: >
-  Kubernetes Overview
+  This page describes Kubernetes
 ---
-
-
 

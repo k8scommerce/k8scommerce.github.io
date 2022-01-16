@@ -1,0 +1,3379 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>K8sCommerce – Admin Gateway</title><link>https://k8scommerce.github.io/docs/rest-gateway-endpoints/v1/admin-gateway/</link><description>Recent content in Admin Gateway on K8sCommerce</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 12 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://k8scommerce.github.io/docs/rest-gateway-endpoints/v1/admin-gateway/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Cart</title><link>https://k8scommerce.github.io/docs/rest-gateway-endpoints/v1/admin-gateway/cart/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/rest-gateway-endpoints/v1/admin-gateway/cart/</guid><description>
+&lt;h2 id="cart-endpoints">Cart Endpoints&lt;/h2>
+&lt;h3 id="admin">admin&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Method&lt;/th>
+&lt;th>URI&lt;/th>
+&lt;th>Name&lt;/th>
+&lt;th>Summary&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>POST&lt;/td>
+&lt;td>/v1/cart/{customerId}&lt;/td>
+&lt;td>&lt;a href="#add-item-to-cart">add item to cart&lt;/a>&lt;/td>
+&lt;td>Add Item to Cart&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>DELETE&lt;/td>
+&lt;td>/v1/cart/{customerId}&lt;/td>
+&lt;td>&lt;a href="#clear-cart">clear cart&lt;/a>&lt;/td>
+&lt;td>Clear Cart&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>GET&lt;/td>
+&lt;td>/v1/cart/{customerId}&lt;/td>
+&lt;td>&lt;a href="#get-cart">get cart&lt;/a>&lt;/td>
+&lt;td>Get Cart&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>DELETE&lt;/td>
+&lt;td>/v1/cart/{customerId}/{sku}&lt;/td>
+&lt;td>&lt;a href="#remove-cart-item">remove cart item&lt;/a>&lt;/td>
+&lt;td>Remove Item&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>PUT&lt;/td>
+&lt;td>/v1/cart/{customerId}/{sku}&lt;/td>
+&lt;td>&lt;a href="#update-cart-item-quantity">update cart item quantity&lt;/a>&lt;/td>
+&lt;td>Update Item Quantity&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="paths">Paths&lt;/h2>
+&lt;h3 id="span-idadd-item-to-cartspan-add-item-to-cart-additemtocart">&lt;span id="add-item-to-cart">&lt;/span> Add Item to Cart (&lt;em>addItemToCart&lt;/em>)&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-fallback" data-lang="fallback">POST /v1/cart/{customerId}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>adds an item to an existing cart&lt;/p>
+&lt;h4 id="parameters">Parameters&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Source&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th>Separator&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>customerId&lt;/td>
+&lt;td>&lt;code>path&lt;/code>&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>a customer&amp;rsquo;s id&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>body&lt;/td>
+&lt;td>&lt;code>body&lt;/code>&lt;/td>
+&lt;td>&lt;a href="#add-item-to-cart-request">AddItemToCartRequest&lt;/a>&lt;/td>
+&lt;td>&lt;code>models.AddItemToCartRequest&lt;/code>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="all-responses">All responses&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Code&lt;/th>
+&lt;th>Status&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th style="text-align:center">Has headers&lt;/th>
+&lt;th>Schema&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;a href="#add-item-to-cart-200">200&lt;/a>&lt;/td>
+&lt;td>OK&lt;/td>
+&lt;td>A successful response.&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td>&lt;a href="#add-item-to-cart-200-schema">schema&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="responses">Responses&lt;/h4>
+&lt;h5 id="span-idadd-item-to-cart-200span-200---a-successful-response">&lt;span id="add-item-to-cart-200">&lt;/span> 200 - A successful response.&lt;/h5>
+&lt;p>Status: OK&lt;/p>
+&lt;h6 id="span-idadd-item-to-cart-200-schemaspan-schema">&lt;span id="add-item-to-cart-200-schema">&lt;/span> Schema&lt;/h6>
+&lt;p>&lt;a href="#add-item-to-cart-response">AddItemToCartResponse&lt;/a>&lt;/p>
+&lt;h3 id="span-idclear-cartspan-clear-cart-clearcart">&lt;span id="clear-cart">&lt;/span> Clear Cart (&lt;em>clearCart&lt;/em>)&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-fallback" data-lang="fallback">DELETE /v1/cart/{customerId}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>clear a customer&amp;rsquo;s cart&lt;/p>
+&lt;h4 id="parameters-1">Parameters&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Source&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th>Separator&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>customerId&lt;/td>
+&lt;td>&lt;code>path&lt;/code>&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>a customer&amp;rsquo;s id&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>body&lt;/td>
+&lt;td>&lt;code>body&lt;/code>&lt;/td>
+&lt;td>&lt;a href="#clear-cart-request">ClearCartRequest&lt;/a>&lt;/td>
+&lt;td>&lt;code>models.ClearCartRequest&lt;/code>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="all-responses-1">All responses&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Code&lt;/th>
+&lt;th>Status&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th style="text-align:center">Has headers&lt;/th>
+&lt;th>Schema&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;a href="#clear-cart-200">200&lt;/a>&lt;/td>
+&lt;td>OK&lt;/td>
+&lt;td>A successful response.&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td>&lt;a href="#clear-cart-200-schema">schema&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="responses-1">Responses&lt;/h4>
+&lt;h5 id="span-idclear-cart-200span-200---a-successful-response">&lt;span id="clear-cart-200">&lt;/span> 200 - A successful response.&lt;/h5>
+&lt;p>Status: OK&lt;/p>
+&lt;h6 id="span-idclear-cart-200-schemaspan-schema">&lt;span id="clear-cart-200-schema">&lt;/span> Schema&lt;/h6>
+&lt;p>&lt;a href="#clear-cart-response">ClearCartResponse&lt;/a>&lt;/p>
+&lt;h3 id="span-idget-cartspan-get-cart-getcart">&lt;span id="get-cart">&lt;/span> Get Cart (&lt;em>getCart&lt;/em>)&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-fallback" data-lang="fallback">GET /v1/cart/{customerId}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>returns a shopping cart if one exists&lt;/p>
+&lt;h4 id="parameters-2">Parameters&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Source&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th>Separator&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>customerId&lt;/td>
+&lt;td>&lt;code>path&lt;/code>&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>a customer&amp;rsquo;s id&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="all-responses-2">All responses&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Code&lt;/th>
+&lt;th>Status&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th style="text-align:center">Has headers&lt;/th>
+&lt;th>Schema&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;a href="#get-cart-200">200&lt;/a>&lt;/td>
+&lt;td>OK&lt;/td>
+&lt;td>A successful response.&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td>&lt;a href="#get-cart-200-schema">schema&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="responses-2">Responses&lt;/h4>
+&lt;h5 id="span-idget-cart-200span-200---a-successful-response">&lt;span id="get-cart-200">&lt;/span> 200 - A successful response.&lt;/h5>
+&lt;p>Status: OK&lt;/p>
+&lt;h6 id="span-idget-cart-200-schemaspan-schema">&lt;span id="get-cart-200-schema">&lt;/span> Schema&lt;/h6>
+&lt;p>&lt;a href="#get-cart-response">GetCartResponse&lt;/a>&lt;/p>
+&lt;h3 id="span-idremove-cart-itemspan-remove-item-removecartitem">&lt;span id="remove-cart-item">&lt;/span> Remove Item (&lt;em>removeCartItem&lt;/em>)&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-fallback" data-lang="fallback">DELETE /v1/cart/{customerId}/{sku}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>removes an item from a customer&amp;rsquo;s cart&lt;/p>
+&lt;h4 id="parameters-3">Parameters&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Source&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th>Separator&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>customerId&lt;/td>
+&lt;td>&lt;code>path&lt;/code>&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>a customer&amp;rsquo;s id&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>sku&lt;/td>
+&lt;td>&lt;code>path&lt;/code>&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>an Item&amp;rsquo;s sku&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>body&lt;/td>
+&lt;td>&lt;code>body&lt;/code>&lt;/td>
+&lt;td>&lt;a href="#remove-cart-item-request">RemoveCartItemRequest&lt;/a>&lt;/td>
+&lt;td>&lt;code>models.RemoveCartItemRequest&lt;/code>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="all-responses-3">All responses&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Code&lt;/th>
+&lt;th>Status&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th style="text-align:center">Has headers&lt;/th>
+&lt;th>Schema&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;a href="#remove-cart-item-200">200&lt;/a>&lt;/td>
+&lt;td>OK&lt;/td>
+&lt;td>A successful response.&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td>&lt;a href="#remove-cart-item-200-schema">schema&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="responses-3">Responses&lt;/h4>
+&lt;h5 id="span-idremove-cart-item-200span-200---a-successful-response">&lt;span id="remove-cart-item-200">&lt;/span> 200 - A successful response.&lt;/h5>
+&lt;p>Status: OK&lt;/p>
+&lt;h6 id="span-idremove-cart-item-200-schemaspan-schema">&lt;span id="remove-cart-item-200-schema">&lt;/span> Schema&lt;/h6>
+&lt;p>&lt;a href="#remove-cart-item-response">RemoveCartItemResponse&lt;/a>&lt;/p>
+&lt;h3 id="span-idupdate-cart-item-quantityspan-update-item-quantity-updatecartitemquantity">&lt;span id="update-cart-item-quantity">&lt;/span> Update Item Quantity (&lt;em>updateCartItemQuantity&lt;/em>)&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-fallback" data-lang="fallback">PUT /v1/cart/{customerId}/{sku}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>updates a cart item&amp;rsquo;s quantity&lt;/p>
+&lt;h4 id="parameters-4">Parameters&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Source&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th>Separator&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>customerId&lt;/td>
+&lt;td>&lt;code>path&lt;/code>&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>a customer&amp;rsquo;s id&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>sku&lt;/td>
+&lt;td>&lt;code>path&lt;/code>&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>an item&amp;rsquo;s sku&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>body&lt;/td>
+&lt;td>&lt;code>body&lt;/code>&lt;/td>
+&lt;td>&lt;a href="#update-cart-item-quantity-request">UpdateCartItemQuantityRequest&lt;/a>&lt;/td>
+&lt;td>&lt;code>models.UpdateCartItemQuantityRequest&lt;/code>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="all-responses-4">All responses&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Code&lt;/th>
+&lt;th>Status&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th style="text-align:center">Has headers&lt;/th>
+&lt;th>Schema&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;a href="#update-cart-item-quantity-200">200&lt;/a>&lt;/td>
+&lt;td>OK&lt;/td>
+&lt;td>A successful response.&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td>&lt;a href="#update-cart-item-quantity-200-schema">schema&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="responses-4">Responses&lt;/h4>
+&lt;h5 id="span-idupdate-cart-item-quantity-200span-200---a-successful-response">&lt;span id="update-cart-item-quantity-200">&lt;/span> 200 - A successful response.&lt;/h5>
+&lt;p>Status: OK&lt;/p>
+&lt;h6 id="span-idupdate-cart-item-quantity-200-schemaspan-schema">&lt;span id="update-cart-item-quantity-200-schema">&lt;/span> Schema&lt;/h6>
+&lt;p>&lt;a href="#update-cart-item-quantity-response">UpdateCartItemQuantityResponse&lt;/a>&lt;/p>
+&lt;h2 id="models">Models&lt;/h2>
+&lt;h3 id="span-idadd-item-to-cart-requestspan-additemtocartrequest">&lt;span id="add-item-to-cart-request">&lt;/span> AddItemToCartRequest&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>customerId&lt;/td>
+&lt;td>int64 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>a customer&amp;rsquo;s id&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>item&lt;/td>
+&lt;td>&lt;a href="#item">Item&lt;/a>&lt;/td>
+&lt;td>&lt;code>Item&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>an Item object&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="span-idadd-item-to-cart-responsespan-additemtocartresponse">&lt;span id="add-item-to-cart-response">&lt;/span> AddItemToCartResponse&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>cart&lt;/td>
+&lt;td>&lt;a href="#cart">Cart&lt;/a>&lt;/td>
+&lt;td>&lt;code>Cart&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>a Cart object&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>status&lt;/td>
+&lt;td>&lt;a href="#response-status">ResponseStatus&lt;/a>&lt;/td>
+&lt;td>&lt;code>ResponseStatus&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>a ResponseStatus object&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="span-idcartspan-cart">&lt;span id="cart">&lt;/span> Cart&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>items&lt;/td>
+&lt;td>[]&lt;a href="#item">Item&lt;/a>&lt;/td>
+&lt;td>&lt;code>[]*Item&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>a collection of Item&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>totalPrice&lt;/td>
+&lt;td>double (formatted number)&lt;/td>
+&lt;td>&lt;code>float64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>the sum total of the cart&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="span-idclear-cart-requestspan-clearcartrequest">&lt;span id="clear-cart-request">&lt;/span> ClearCartRequest&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>customerId&lt;/td>
+&lt;td>int64 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>a customer&amp;rsquo;s id&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>status&lt;/td>
+&lt;td>&lt;a href="#response-status">ResponseStatus&lt;/a>&lt;/td>
+&lt;td>&lt;code>ResponseStatus&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>a ResponseStatus object&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="span-idclear-cart-responsespan-clearcartresponse">&lt;span id="clear-cart-response">&lt;/span> ClearCartResponse&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>status&lt;/td>
+&lt;td>&lt;a href="#response-status">ResponseStatus&lt;/a>&lt;/td>
+&lt;td>&lt;code>ResponseStatus&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>a ResponseStatus object&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="span-idget-cart-requestspan-getcartrequest">&lt;span id="get-cart-request">&lt;/span> GetCartRequest&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>customerId&lt;/td>
+&lt;td>int64 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>a customer&amp;rsquo;s id&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="span-idget-cart-responsespan-getcartresponse">&lt;span id="get-cart-response">&lt;/span> GetCartResponse&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>cart&lt;/td>
+&lt;td>&lt;a href="#cart">Cart&lt;/a>&lt;/td>
+&lt;td>&lt;code>Cart&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>a Cart object&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>status&lt;/td>
+&lt;td>&lt;a href="#response-status">ResponseStatus&lt;/a>&lt;/td>
+&lt;td>&lt;code>ResponseStatus&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>a ResponseStatus object&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="span-iditemspan-item">&lt;span id="item">&lt;/span> Item&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>expiresAt&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>when this item expires in the cart&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>price&lt;/td>
+&lt;td>double (formatted number)&lt;/td>
+&lt;td>&lt;code>float64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>the item&amp;rsquo;s price&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>quantity&lt;/td>
+&lt;td>int32 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int32&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>how many of identical items&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>sku&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>an item&amp;rsquo;s variant sku number&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="span-idremove-cart-item-requestspan-removecartitemrequest">&lt;span id="remove-cart-item-request">&lt;/span> RemoveCartItemRequest&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>customerId&lt;/td>
+&lt;td>int64 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>a customer&amp;rsquo;s id&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>quanity&lt;/td>
+&lt;td>int32 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int32&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>a new quantity&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>sku&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>an item&amp;rsquo;s variant sku number&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="span-idremove-cart-item-responsespan-removecartitemresponse">&lt;span id="remove-cart-item-response">&lt;/span> RemoveCartItemResponse&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>cart&lt;/td>
+&lt;td>&lt;a href="#cart">Cart&lt;/a>&lt;/td>
+&lt;td>&lt;code>Cart&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>a Cart object&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>status&lt;/td>
+&lt;td>&lt;a href="#response-status">ResponseStatus&lt;/a>&lt;/td>
+&lt;td>&lt;code>ResponseStatus&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>a ResponseStatus object&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="span-idresponse-statusspan-responsestatus">&lt;span id="response-status">&lt;/span> ResponseStatus&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>statusCode&lt;/td>
+&lt;td>int64 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>RFC http status code, ie. 204, etc - https:go.dev/src/net/http/status.go&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>statusMessage&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>status message&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="span-idupdate-cart-item-quantity-requestspan-updatecartitemquantityrequest">&lt;span id="update-cart-item-quantity-request">&lt;/span> UpdateCartItemQuantityRequest&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>customerId&lt;/td>
+&lt;td>int64 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>a customer&amp;rsquo;s id&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>quanity&lt;/td>
+&lt;td>int32 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int32&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>a new quantity&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>sku&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>an item&amp;rsquo;s variant sku number&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="span-idupdate-cart-item-quantity-responsespan-updatecartitemquantityresponse">&lt;span id="update-cart-item-quantity-response">&lt;/span> UpdateCartItemQuantityResponse&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>cart&lt;/td>
+&lt;td>&lt;a href="#cart">Cart&lt;/a>&lt;/td>
+&lt;td>&lt;code>Cart&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>a Cart object&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>status&lt;/td>
+&lt;td>&lt;a href="#response-status">ResponseStatus&lt;/a>&lt;/td>
+&lt;td>&lt;code>ResponseStatus&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>a ResponseStatus object&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>Docs: Catalog</title><link>https://k8scommerce.github.io/docs/rest-gateway-endpoints/v1/admin-gateway/catalog/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/rest-gateway-endpoints/v1/admin-gateway/catalog/</guid><description>
+&lt;h2 id="catalog-endpoints">Catalog Endpoints&lt;/h2>
+&lt;h3 id="admin">admin&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Method&lt;/th>
+&lt;th>URI&lt;/th>
+&lt;th>Name&lt;/th>
+&lt;th>Summary&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>POST&lt;/td>
+&lt;td>/v1/category&lt;/td>
+&lt;td>&lt;a href="#create-category">create category&lt;/a>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>POST&lt;/td>
+&lt;td>/v1/product&lt;/td>
+&lt;td>&lt;a href="#create-product">create product&lt;/a>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>DELETE&lt;/td>
+&lt;td>/v1/category/{id}&lt;/td>
+&lt;td>&lt;a href="#delete-category">delete category&lt;/a>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>DELETE&lt;/td>
+&lt;td>/v1/product/{id}&lt;/td>
+&lt;td>&lt;a href="#delete-product">delete product&lt;/a>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>GET&lt;/td>
+&lt;td>/v1/categories&lt;/td>
+&lt;td>&lt;a href="#get-all-categories">get all categories&lt;/a>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>GET&lt;/td>
+&lt;td>/v1/products/{currentPage}/{pageSize}&lt;/td>
+&lt;td>&lt;a href="#get-all-products">get all products&lt;/a>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>GET&lt;/td>
+&lt;td>/v1/category/{id}&lt;/td>
+&lt;td>&lt;a href="#get-category-by-id">get category by Id&lt;/a>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>GET&lt;/td>
+&lt;td>/v1/category/slug/{slug}&lt;/td>
+&lt;td>&lt;a href="#get-category-by-slug">get category by slug&lt;/a>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>GET&lt;/td>
+&lt;td>/v1/product/{id}&lt;/td>
+&lt;td>&lt;a href="#get-product-by-id">get product by Id&lt;/a>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>GET&lt;/td>
+&lt;td>/v1/product/sku/{sku}&lt;/td>
+&lt;td>&lt;a href="#get-product-by-sku">get product by sku&lt;/a>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>GET&lt;/td>
+&lt;td>/v1/product/slug/{slug}&lt;/td>
+&lt;td>&lt;a href="#get-product-by-slug">get product by slug&lt;/a>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>GET&lt;/td>
+&lt;td>/v1/products/category/{categoryId}/{currentPage}/{pageSize}&lt;/td>
+&lt;td>&lt;a href="#get-products-by-category-id">get products by category Id&lt;/a>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>PUT&lt;/td>
+&lt;td>/v1/category/{id}&lt;/td>
+&lt;td>&lt;a href="#update-category">update category&lt;/a>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>PUT&lt;/td>
+&lt;td>/v1/product/{id}&lt;/td>
+&lt;td>&lt;a href="#update-product">update product&lt;/a>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="paths">Paths&lt;/h2>
+&lt;h3 id="span-idcreate-categoryspan-create-category-createcategory">&lt;span id="create-category">&lt;/span> create category (&lt;em>createCategory&lt;/em>)&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-fallback" data-lang="fallback">POST /v1/category
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="parameters">Parameters&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Source&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th>Separator&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>body&lt;/td>
+&lt;td>&lt;code>body&lt;/code>&lt;/td>
+&lt;td>&lt;a href="#create-category-request">CreateCategoryRequest&lt;/a>&lt;/td>
+&lt;td>&lt;code>models.CreateCategoryRequest&lt;/code>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="all-responses">All responses&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Code&lt;/th>
+&lt;th>Status&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th style="text-align:center">Has headers&lt;/th>
+&lt;th>Schema&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;a href="#create-category-200">200&lt;/a>&lt;/td>
+&lt;td>OK&lt;/td>
+&lt;td>A successful response.&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td>&lt;a href="#create-category-200-schema">schema&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="responses">Responses&lt;/h4>
+&lt;h5 id="span-idcreate-category-200span-200---a-successful-response">&lt;span id="create-category-200">&lt;/span> 200 - A successful response.&lt;/h5>
+&lt;p>Status: OK&lt;/p>
+&lt;h6 id="span-idcreate-category-200-schemaspan-schema">&lt;span id="create-category-200-schema">&lt;/span> Schema&lt;/h6>
+&lt;p>&lt;a href="#create-category-response">CreateCategoryResponse&lt;/a>&lt;/p>
+&lt;h3 id="span-idcreate-productspan-create-product-createproduct">&lt;span id="create-product">&lt;/span> create product (&lt;em>createProduct&lt;/em>)&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-fallback" data-lang="fallback">POST /v1/product
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="parameters-1">Parameters&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Source&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th>Separator&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>body&lt;/td>
+&lt;td>&lt;code>body&lt;/code>&lt;/td>
+&lt;td>&lt;a href="#create-product-request">CreateProductRequest&lt;/a>&lt;/td>
+&lt;td>&lt;code>models.CreateProductRequest&lt;/code>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="all-responses-1">All responses&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Code&lt;/th>
+&lt;th>Status&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th style="text-align:center">Has headers&lt;/th>
+&lt;th>Schema&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;a href="#create-product-200">200&lt;/a>&lt;/td>
+&lt;td>OK&lt;/td>
+&lt;td>A successful response.&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td>&lt;a href="#create-product-200-schema">schema&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="responses-1">Responses&lt;/h4>
+&lt;h5 id="span-idcreate-product-200span-200---a-successful-response">&lt;span id="create-product-200">&lt;/span> 200 - A successful response.&lt;/h5>
+&lt;p>Status: OK&lt;/p>
+&lt;h6 id="span-idcreate-product-200-schemaspan-schema">&lt;span id="create-product-200-schema">&lt;/span> Schema&lt;/h6>
+&lt;p>&lt;a href="#create-product-response">CreateProductResponse&lt;/a>&lt;/p>
+&lt;h3 id="span-iddelete-categoryspan-delete-category-deletecategory">&lt;span id="delete-category">&lt;/span> delete category (&lt;em>deleteCategory&lt;/em>)&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-fallback" data-lang="fallback">DELETE /v1/category/{id}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="parameters-2">Parameters&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Source&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th>Separator&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>id&lt;/td>
+&lt;td>&lt;code>path&lt;/code>&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>body&lt;/td>
+&lt;td>&lt;code>body&lt;/code>&lt;/td>
+&lt;td>&lt;a href="#delete-category-request">DeleteCategoryRequest&lt;/a>&lt;/td>
+&lt;td>&lt;code>models.DeleteCategoryRequest&lt;/code>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="all-responses-2">All responses&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Code&lt;/th>
+&lt;th>Status&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th style="text-align:center">Has headers&lt;/th>
+&lt;th>Schema&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;a href="#delete-category-200">200&lt;/a>&lt;/td>
+&lt;td>OK&lt;/td>
+&lt;td>A successful response.&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td>&lt;a href="#delete-category-200-schema">schema&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="responses-2">Responses&lt;/h4>
+&lt;h5 id="span-iddelete-category-200span-200---a-successful-response">&lt;span id="delete-category-200">&lt;/span> 200 - A successful response.&lt;/h5>
+&lt;p>Status: OK&lt;/p>
+&lt;h6 id="span-iddelete-category-200-schemaspan-schema">&lt;span id="delete-category-200-schema">&lt;/span> Schema&lt;/h6>
+&lt;p>&lt;a href="#delete-category-response">DeleteCategoryResponse&lt;/a>&lt;/p>
+&lt;h3 id="span-iddelete-productspan-delete-product-deleteproduct">&lt;span id="delete-product">&lt;/span> delete product (&lt;em>deleteProduct&lt;/em>)&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-fallback" data-lang="fallback">DELETE /v1/product/{id}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="parameters-3">Parameters&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Source&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th>Separator&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>id&lt;/td>
+&lt;td>&lt;code>path&lt;/code>&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>body&lt;/td>
+&lt;td>&lt;code>body&lt;/code>&lt;/td>
+&lt;td>&lt;a href="#delete-product-request">DeleteProductRequest&lt;/a>&lt;/td>
+&lt;td>&lt;code>models.DeleteProductRequest&lt;/code>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="all-responses-3">All responses&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Code&lt;/th>
+&lt;th>Status&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th style="text-align:center">Has headers&lt;/th>
+&lt;th>Schema&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;a href="#delete-product-200">200&lt;/a>&lt;/td>
+&lt;td>OK&lt;/td>
+&lt;td>A successful response.&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td>&lt;a href="#delete-product-200-schema">schema&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="responses-3">Responses&lt;/h4>
+&lt;h5 id="span-iddelete-product-200span-200---a-successful-response">&lt;span id="delete-product-200">&lt;/span> 200 - A successful response.&lt;/h5>
+&lt;p>Status: OK&lt;/p>
+&lt;h6 id="span-iddelete-product-200-schemaspan-schema">&lt;span id="delete-product-200-schema">&lt;/span> Schema&lt;/h6>
+&lt;p>&lt;a href="#delete-product-response">DeleteProductResponse&lt;/a>&lt;/p>
+&lt;h3 id="span-idget-all-categoriesspan-get-all-categories-getallcategories">&lt;span id="get-all-categories">&lt;/span> get all categories (&lt;em>getAllCategories&lt;/em>)&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-fallback" data-lang="fallback">GET /v1/categories
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="all-responses-4">All responses&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Code&lt;/th>
+&lt;th>Status&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th style="text-align:center">Has headers&lt;/th>
+&lt;th>Schema&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;a href="#get-all-categories-200">200&lt;/a>&lt;/td>
+&lt;td>OK&lt;/td>
+&lt;td>A successful response.&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td>&lt;a href="#get-all-categories-200-schema">schema&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="responses-4">Responses&lt;/h4>
+&lt;h5 id="span-idget-all-categories-200span-200---a-successful-response">&lt;span id="get-all-categories-200">&lt;/span> 200 - A successful response.&lt;/h5>
+&lt;p>Status: OK&lt;/p>
+&lt;h6 id="span-idget-all-categories-200-schemaspan-schema">&lt;span id="get-all-categories-200-schema">&lt;/span> Schema&lt;/h6>
+&lt;p>&lt;a href="#get-all-categories-response">GetAllCategoriesResponse&lt;/a>&lt;/p>
+&lt;h3 id="span-idget-all-productsspan-get-all-products-getallproducts">&lt;span id="get-all-products">&lt;/span> get all products (&lt;em>getAllProducts&lt;/em>)&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-fallback" data-lang="fallback">GET /v1/products/{currentPage}/{pageSize}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="parameters-4">Parameters&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Source&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th>Separator&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>currentPage&lt;/td>
+&lt;td>&lt;code>path&lt;/code>&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>pageSize&lt;/td>
+&lt;td>&lt;code>path&lt;/code>&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>sortOn&lt;/td>
+&lt;td>&lt;code>query&lt;/code>&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="all-responses-5">All responses&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Code&lt;/th>
+&lt;th>Status&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th style="text-align:center">Has headers&lt;/th>
+&lt;th>Schema&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;a href="#get-all-products-200">200&lt;/a>&lt;/td>
+&lt;td>OK&lt;/td>
+&lt;td>A successful response.&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td>&lt;a href="#get-all-products-200-schema">schema&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="responses-5">Responses&lt;/h4>
+&lt;h5 id="span-idget-all-products-200span-200---a-successful-response">&lt;span id="get-all-products-200">&lt;/span> 200 - A successful response.&lt;/h5>
+&lt;p>Status: OK&lt;/p>
+&lt;h6 id="span-idget-all-products-200-schemaspan-schema">&lt;span id="get-all-products-200-schema">&lt;/span> Schema&lt;/h6>
+&lt;p>&lt;a href="#get-all-products-response">GetAllProductsResponse&lt;/a>&lt;/p>
+&lt;h3 id="span-idget-category-by-idspan-get-category-by-id-getcategorybyid">&lt;span id="get-category-by-id">&lt;/span> get category by Id (&lt;em>getCategoryById&lt;/em>)&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-fallback" data-lang="fallback">GET /v1/category/{id}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="parameters-5">Parameters&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Source&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th>Separator&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>id&lt;/td>
+&lt;td>&lt;code>path&lt;/code>&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>id&lt;/td>
+&lt;td>&lt;code>query&lt;/code>&lt;/td>
+&lt;td>int64 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int64&lt;/code>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="all-responses-6">All responses&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Code&lt;/th>
+&lt;th>Status&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th style="text-align:center">Has headers&lt;/th>
+&lt;th>Schema&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;a href="#get-category-by-id-200">200&lt;/a>&lt;/td>
+&lt;td>OK&lt;/td>
+&lt;td>A successful response.&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td>&lt;a href="#get-category-by-id-200-schema">schema&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="responses-6">Responses&lt;/h4>
+&lt;h5 id="span-idget-category-by-id-200span-200---a-successful-response">&lt;span id="get-category-by-id-200">&lt;/span> 200 - A successful response.&lt;/h5>
+&lt;p>Status: OK&lt;/p>
+&lt;h6 id="span-idget-category-by-id-200-schemaspan-schema">&lt;span id="get-category-by-id-200-schema">&lt;/span> Schema&lt;/h6>
+&lt;p>&lt;a href="#get-category-by-id-response">GetCategoryByIDResponse&lt;/a>&lt;/p>
+&lt;h3 id="span-idget-category-by-slugspan-get-category-by-slug-getcategorybyslug">&lt;span id="get-category-by-slug">&lt;/span> get category by slug (&lt;em>getCategoryBySlug&lt;/em>)&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-fallback" data-lang="fallback">GET /v1/category/slug/{slug}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="parameters-6">Parameters&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Source&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th>Separator&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>slug&lt;/td>
+&lt;td>&lt;code>path&lt;/code>&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>slug&lt;/td>
+&lt;td>&lt;code>query&lt;/code>&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="all-responses-7">All responses&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Code&lt;/th>
+&lt;th>Status&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th style="text-align:center">Has headers&lt;/th>
+&lt;th>Schema&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;a href="#get-category-by-slug-200">200&lt;/a>&lt;/td>
+&lt;td>OK&lt;/td>
+&lt;td>A successful response.&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td>&lt;a href="#get-category-by-slug-200-schema">schema&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="responses-7">Responses&lt;/h4>
+&lt;h5 id="span-idget-category-by-slug-200span-200---a-successful-response">&lt;span id="get-category-by-slug-200">&lt;/span> 200 - A successful response.&lt;/h5>
+&lt;p>Status: OK&lt;/p>
+&lt;h6 id="span-idget-category-by-slug-200-schemaspan-schema">&lt;span id="get-category-by-slug-200-schema">&lt;/span> Schema&lt;/h6>
+&lt;p>&lt;a href="#get-category-by-slug-response">GetCategoryBySlugResponse&lt;/a>&lt;/p>
+&lt;h3 id="span-idget-product-by-idspan-get-product-by-id-getproductbyid">&lt;span id="get-product-by-id">&lt;/span> get product by Id (&lt;em>getProductById&lt;/em>)&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-fallback" data-lang="fallback">GET /v1/product/{id}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="parameters-7">Parameters&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Source&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th>Separator&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>id&lt;/td>
+&lt;td>&lt;code>path&lt;/code>&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="all-responses-8">All responses&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Code&lt;/th>
+&lt;th>Status&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th style="text-align:center">Has headers&lt;/th>
+&lt;th>Schema&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;a href="#get-product-by-id-200">200&lt;/a>&lt;/td>
+&lt;td>OK&lt;/td>
+&lt;td>A successful response.&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td>&lt;a href="#get-product-by-id-200-schema">schema&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="responses-8">Responses&lt;/h4>
+&lt;h5 id="span-idget-product-by-id-200span-200---a-successful-response">&lt;span id="get-product-by-id-200">&lt;/span> 200 - A successful response.&lt;/h5>
+&lt;p>Status: OK&lt;/p>
+&lt;h6 id="span-idget-product-by-id-200-schemaspan-schema">&lt;span id="get-product-by-id-200-schema">&lt;/span> Schema&lt;/h6>
+&lt;p>&lt;a href="#product">Product&lt;/a>&lt;/p>
+&lt;h3 id="span-idget-product-by-skuspan-get-product-by-sku-getproductbysku">&lt;span id="get-product-by-sku">&lt;/span> get product by sku (&lt;em>getProductBySku&lt;/em>)&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-fallback" data-lang="fallback">GET /v1/product/sku/{sku}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="parameters-8">Parameters&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Source&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th>Separator&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>sku&lt;/td>
+&lt;td>&lt;code>path&lt;/code>&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="all-responses-9">All responses&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Code&lt;/th>
+&lt;th>Status&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th style="text-align:center">Has headers&lt;/th>
+&lt;th>Schema&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;a href="#get-product-by-sku-200">200&lt;/a>&lt;/td>
+&lt;td>OK&lt;/td>
+&lt;td>A successful response.&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td>&lt;a href="#get-product-by-sku-200-schema">schema&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="responses-9">Responses&lt;/h4>
+&lt;h5 id="span-idget-product-by-sku-200span-200---a-successful-response">&lt;span id="get-product-by-sku-200">&lt;/span> 200 - A successful response.&lt;/h5>
+&lt;p>Status: OK&lt;/p>
+&lt;h6 id="span-idget-product-by-sku-200-schemaspan-schema">&lt;span id="get-product-by-sku-200-schema">&lt;/span> Schema&lt;/h6>
+&lt;p>&lt;a href="#product">Product&lt;/a>&lt;/p>
+&lt;h3 id="span-idget-product-by-slugspan-get-product-by-slug-getproductbyslug">&lt;span id="get-product-by-slug">&lt;/span> get product by slug (&lt;em>getProductBySlug&lt;/em>)&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-fallback" data-lang="fallback">GET /v1/product/slug/{slug}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="parameters-9">Parameters&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Source&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th>Separator&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>slug&lt;/td>
+&lt;td>&lt;code>path&lt;/code>&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="all-responses-10">All responses&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Code&lt;/th>
+&lt;th>Status&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th style="text-align:center">Has headers&lt;/th>
+&lt;th>Schema&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;a href="#get-product-by-slug-200">200&lt;/a>&lt;/td>
+&lt;td>OK&lt;/td>
+&lt;td>A successful response.&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td>&lt;a href="#get-product-by-slug-200-schema">schema&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="responses-10">Responses&lt;/h4>
+&lt;h5 id="span-idget-product-by-slug-200span-200---a-successful-response">&lt;span id="get-product-by-slug-200">&lt;/span> 200 - A successful response.&lt;/h5>
+&lt;p>Status: OK&lt;/p>
+&lt;h6 id="span-idget-product-by-slug-200-schemaspan-schema">&lt;span id="get-product-by-slug-200-schema">&lt;/span> Schema&lt;/h6>
+&lt;p>&lt;a href="#product">Product&lt;/a>&lt;/p>
+&lt;h3 id="span-idget-products-by-category-idspan-get-products-by-category-id-getproductsbycategoryid">&lt;span id="get-products-by-category-id">&lt;/span> get products by category Id (&lt;em>getProductsByCategoryId&lt;/em>)&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-fallback" data-lang="fallback">GET /v1/products/category/{categoryId}/{currentPage}/{pageSize}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="parameters-10">Parameters&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Source&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th>Separator&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>categoryId&lt;/td>
+&lt;td>&lt;code>path&lt;/code>&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>currentPage&lt;/td>
+&lt;td>&lt;code>path&lt;/code>&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>pageSize&lt;/td>
+&lt;td>&lt;code>path&lt;/code>&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>sortOn&lt;/td>
+&lt;td>&lt;code>query&lt;/code>&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="all-responses-11">All responses&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Code&lt;/th>
+&lt;th>Status&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th style="text-align:center">Has headers&lt;/th>
+&lt;th>Schema&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;a href="#get-products-by-category-id-200">200&lt;/a>&lt;/td>
+&lt;td>OK&lt;/td>
+&lt;td>A successful response.&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td>&lt;a href="#get-products-by-category-id-200-schema">schema&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="responses-11">Responses&lt;/h4>
+&lt;h5 id="span-idget-products-by-category-id-200span-200---a-successful-response">&lt;span id="get-products-by-category-id-200">&lt;/span> 200 - A successful response.&lt;/h5>
+&lt;p>Status: OK&lt;/p>
+&lt;h6 id="span-idget-products-by-category-id-200-schemaspan-schema">&lt;span id="get-products-by-category-id-200-schema">&lt;/span> Schema&lt;/h6>
+&lt;p>&lt;a href="#get-products-by-category-id-response">GetProductsByCategoryIDResponse&lt;/a>&lt;/p>
+&lt;h3 id="span-idupdate-categoryspan-update-category-updatecategory">&lt;span id="update-category">&lt;/span> update category (&lt;em>updateCategory&lt;/em>)&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-fallback" data-lang="fallback">PUT /v1/category/{id}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="parameters-11">Parameters&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Source&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th>Separator&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>id&lt;/td>
+&lt;td>&lt;code>path&lt;/code>&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>body&lt;/td>
+&lt;td>&lt;code>body&lt;/code>&lt;/td>
+&lt;td>&lt;a href="#update-category-request">UpdateCategoryRequest&lt;/a>&lt;/td>
+&lt;td>&lt;code>models.UpdateCategoryRequest&lt;/code>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="all-responses-12">All responses&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Code&lt;/th>
+&lt;th>Status&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th style="text-align:center">Has headers&lt;/th>
+&lt;th>Schema&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;a href="#update-category-200">200&lt;/a>&lt;/td>
+&lt;td>OK&lt;/td>
+&lt;td>A successful response.&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td>&lt;a href="#update-category-200-schema">schema&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="responses-12">Responses&lt;/h4>
+&lt;h5 id="span-idupdate-category-200span-200---a-successful-response">&lt;span id="update-category-200">&lt;/span> 200 - A successful response.&lt;/h5>
+&lt;p>Status: OK&lt;/p>
+&lt;h6 id="span-idupdate-category-200-schemaspan-schema">&lt;span id="update-category-200-schema">&lt;/span> Schema&lt;/h6>
+&lt;p>&lt;a href="#update-category-response">UpdateCategoryResponse&lt;/a>&lt;/p>
+&lt;h3 id="span-idupdate-productspan-update-product-updateproduct">&lt;span id="update-product">&lt;/span> update product (&lt;em>updateProduct&lt;/em>)&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-fallback" data-lang="fallback">PUT /v1/product/{id}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="parameters-12">Parameters&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Source&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th>Separator&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>id&lt;/td>
+&lt;td>&lt;code>path&lt;/code>&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>body&lt;/td>
+&lt;td>&lt;code>body&lt;/code>&lt;/td>
+&lt;td>&lt;a href="#update-product-request">UpdateProductRequest&lt;/a>&lt;/td>
+&lt;td>&lt;code>models.UpdateProductRequest&lt;/code>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="all-responses-13">All responses&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Code&lt;/th>
+&lt;th>Status&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th style="text-align:center">Has headers&lt;/th>
+&lt;th>Schema&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;a href="#update-product-200">200&lt;/a>&lt;/td>
+&lt;td>OK&lt;/td>
+&lt;td>A successful response.&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td>&lt;a href="#update-product-200-schema">schema&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="responses-13">Responses&lt;/h4>
+&lt;h5 id="span-idupdate-product-200span-200---a-successful-response">&lt;span id="update-product-200">&lt;/span> 200 - A successful response.&lt;/h5>
+&lt;p>Status: OK&lt;/p>
+&lt;h6 id="span-idupdate-product-200-schemaspan-schema">&lt;span id="update-product-200-schema">&lt;/span> Schema&lt;/h6>
+&lt;p>&lt;a href="#update-product-response">UpdateProductResponse&lt;/a>&lt;/p>
+&lt;h2 id="models">Models&lt;/h2>
+&lt;h3 id="span-idcategoryspan-category">&lt;span id="category">&lt;/span> Category&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>description&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>description of category&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>id&lt;/td>
+&lt;td>int64 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>category id&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>metaDescription&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>metatag description for SEO&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>metaKeywords&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>metatag keywords for SEO&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>metaTitle&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>metatag title for SEO&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>name&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>name of category&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>parentId&lt;/td>
+&lt;td>int64 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>parent category id. references Category.Id&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>slug&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>slug name of the category&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>sortOrder&lt;/td>
+&lt;td>int32 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int32&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>sort order of menu items on the same level and same parent id&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="span-idcreate-category-requestspan-createcategoryrequest">&lt;span id="create-category-request">&lt;/span> CreateCategoryRequest&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>category&lt;/td>
+&lt;td>&lt;a href="#category">Category&lt;/a>&lt;/td>
+&lt;td>&lt;code>Category&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="span-idcreate-category-responsespan-createcategoryresponse">&lt;span id="create-category-response">&lt;/span> CreateCategoryResponse&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>category&lt;/td>
+&lt;td>&lt;a href="#category">Category&lt;/a>&lt;/td>
+&lt;td>&lt;code>Category&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>statusCode&lt;/td>
+&lt;td>int64 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>statusMessage&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="span-idcreate-product-requestspan-createproductrequest">&lt;span id="create-product-request">&lt;/span> CreateProductRequest&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>product:omitempty&lt;/td>
+&lt;td>&lt;a href="#product">Product&lt;/a>&lt;/td>
+&lt;td>&lt;code>Product&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="span-idcreate-product-responsespan-createproductresponse">&lt;span id="create-product-response">&lt;/span> CreateProductResponse&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>product:omitempty&lt;/td>
+&lt;td>&lt;a href="#product">Product&lt;/a>&lt;/td>
+&lt;td>&lt;code>Product&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>statusCode:omitempty&lt;/td>
+&lt;td>int64 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>statusMessage:omitempty&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="span-iddelete-category-requestspan-deletecategoryrequest">&lt;span id="delete-category-request">&lt;/span> DeleteCategoryRequest&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>id&lt;/td>
+&lt;td>int64 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="span-iddelete-category-responsespan-deletecategoryresponse">&lt;span id="delete-category-response">&lt;/span> DeleteCategoryResponse&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>statusCode&lt;/td>
+&lt;td>int64 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>statusMessage&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="span-iddelete-product-requestspan-deleteproductrequest">&lt;span id="delete-product-request">&lt;/span> DeleteProductRequest&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>path:omitempty&lt;/td>
+&lt;td>int64 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="span-iddelete-product-responsespan-deleteproductresponse">&lt;span id="delete-product-response">&lt;/span> DeleteProductResponse&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>statusCode:omitempty&lt;/td>
+&lt;td>int64 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>statusMessage:omitempty&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="span-idget-all-categories-responsespan-getallcategoriesresponse">&lt;span id="get-all-categories-response">&lt;/span> GetAllCategoriesResponse&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>categories&lt;/td>
+&lt;td>[]&lt;a href="#category">Category&lt;/a>&lt;/td>
+&lt;td>&lt;code>[]*Category&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>statusCode&lt;/td>
+&lt;td>int64 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>statusMessage&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="span-idget-all-products-requestspan-getallproductsrequest">&lt;span id="get-all-products-request">&lt;/span> GetAllProductsRequest&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>currentPage&lt;/td>
+&lt;td>int64 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>pageSize&lt;/td>
+&lt;td>int64 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>sortOn&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="span-idget-all-products-responsespan-getallproductsresponse">&lt;span id="get-all-products-response">&lt;/span> GetAllProductsResponse&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>products&lt;/td>
+&lt;td>[]&lt;a href="#product">Product&lt;/a>&lt;/td>
+&lt;td>&lt;code>[]*Product&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>totalPages&lt;/td>
+&lt;td>int64 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>totalRecords&lt;/td>
+&lt;td>int64 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="span-idget-category-by-id-requestspan-getcategorybyidrequest">&lt;span id="get-category-by-id-request">&lt;/span> GetCategoryByIdRequest&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>id&lt;/td>
+&lt;td>int64 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="span-idget-category-by-id-responsespan-getcategorybyidresponse">&lt;span id="get-category-by-id-response">&lt;/span> GetCategoryByIdResponse&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>category&lt;/td>
+&lt;td>&lt;a href="#category">Category&lt;/a>&lt;/td>
+&lt;td>&lt;code>Category&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>statusCode&lt;/td>
+&lt;td>int64 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>statusMessage&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="span-idget-category-by-slug-requestspan-getcategorybyslugrequest">&lt;span id="get-category-by-slug-request">&lt;/span> GetCategoryBySlugRequest&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>slug&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="span-idget-category-by-slug-responsespan-getcategorybyslugresponse">&lt;span id="get-category-by-slug-response">&lt;/span> GetCategoryBySlugResponse&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>category&lt;/td>
+&lt;td>&lt;a href="#category">Category&lt;/a>&lt;/td>
+&lt;td>&lt;code>Category&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>statusCode&lt;/td>
+&lt;td>int64 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>statusMessage&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="span-idget-product-by-id-requestspan-getproductbyidrequest">&lt;span id="get-product-by-id-request">&lt;/span> GetProductByIdRequest&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>id&lt;/td>
+&lt;td>int64 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="span-idget-product-by-sku-requestspan-getproductbyskurequest">&lt;span id="get-product-by-sku-request">&lt;/span> GetProductBySkuRequest&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>sku&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="span-idget-product-by-slug-requestspan-getproductbyslugrequest">&lt;span id="get-product-by-slug-request">&lt;/span> GetProductBySlugRequest&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>slug&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="span-idget-products-by-category-id-requestspan-getproductsbycategoryidrequest">&lt;span id="get-products-by-category-id-request">&lt;/span> GetProductsByCategoryIdRequest&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>categoryId&lt;/td>
+&lt;td>int64 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>currentPage&lt;/td>
+&lt;td>int64 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>pageSize&lt;/td>
+&lt;td>int64 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>sortOn&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="span-idget-products-by-category-id-responsespan-getproductsbycategoryidresponse">&lt;span id="get-products-by-category-id-response">&lt;/span> GetProductsByCategoryIdResponse&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>products&lt;/td>
+&lt;td>[]&lt;a href="#product">Product&lt;/a>&lt;/td>
+&lt;td>&lt;code>[]*Product&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>totalPages&lt;/td>
+&lt;td>int64 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>totalRecords&lt;/td>
+&lt;td>int64 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="span-idpricespan-price">&lt;span id="price">&lt;/span> Price&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>amount&lt;/td>
+&lt;td>double (formatted number)&lt;/td>
+&lt;td>&lt;code>float64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>price amount&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>compareAtAmount&lt;/td>
+&lt;td>double (formatted number)&lt;/td>
+&lt;td>&lt;code>float64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>price compare amount&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>currency&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>price currency. example: USD, CAN, etc.&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>displayAmount&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>price display amount&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>displayCompareAtAmount&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>price display compare amount&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>id&lt;/td>
+&lt;td>int64 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>price id&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="span-idproductspan-product">&lt;span id="product">&lt;/span> Product&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>description&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>category description&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>id&lt;/td>
+&lt;td>int64 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>product id&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>metaDescription&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>metatag description for SEO&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>metaKeywords&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>metatag keywords for SEO&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>metaTitle&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>metatag title for SEO&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>name&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>product name&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>shortDescription&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>product short description. used in category pages&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>slug&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>product slug&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>variants&lt;/td>
+&lt;td>[]&lt;a href="#variant">Variant&lt;/a>&lt;/td>
+&lt;td>&lt;code>[]*Variant&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>collection of Variant objects&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="span-idupdate-category-requestspan-updatecategoryrequest">&lt;span id="update-category-request">&lt;/span> UpdateCategoryRequest&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>category&lt;/td>
+&lt;td>&lt;a href="#category">Category&lt;/a>&lt;/td>
+&lt;td>&lt;code>Category&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>id&lt;/td>
+&lt;td>int64 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="span-idupdate-category-responsespan-updatecategoryresponse">&lt;span id="update-category-response">&lt;/span> UpdateCategoryResponse&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>category&lt;/td>
+&lt;td>&lt;a href="#category">Category&lt;/a>&lt;/td>
+&lt;td>&lt;code>Category&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>statusCode&lt;/td>
+&lt;td>int64 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>statusMessage&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="span-idupdate-product-requestspan-updateproductrequest">&lt;span id="update-product-request">&lt;/span> UpdateProductRequest&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>path:omitempty&lt;/td>
+&lt;td>int64 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>product:omitempty&lt;/td>
+&lt;td>&lt;a href="#product">Product&lt;/a>&lt;/td>
+&lt;td>&lt;code>Product&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="span-idupdate-product-responsespan-updateproductresponse">&lt;span id="update-product-response">&lt;/span> UpdateProductResponse&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>product:omitempty&lt;/td>
+&lt;td>&lt;a href="#product">Product&lt;/a>&lt;/td>
+&lt;td>&lt;code>Product&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>statusCode:omitempty&lt;/td>
+&lt;td>int64 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>statusMessage:omitempty&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="span-idvariantspan-variant">&lt;span id="variant">&lt;/span> Variant&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>depth&lt;/td>
+&lt;td>double (formatted number)&lt;/td>
+&lt;td>&lt;code>float64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>variant depth. used in calculating shipping&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>height&lt;/td>
+&lt;td>double (formatted number)&lt;/td>
+&lt;td>&lt;code>float64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>variant height. used in calculating shipping&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>id&lt;/td>
+&lt;td>int64 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>variant id&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>isDefault&lt;/td>
+&lt;td>boolean (formatted boolean)&lt;/td>
+&lt;td>&lt;code>bool&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>is default variant. each product must have exactly 1 default variant&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>price&lt;/td>
+&lt;td>&lt;a href="#price">Price&lt;/a>&lt;/td>
+&lt;td>&lt;code>Price&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>variant Price object&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>sku&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>variant sku. usually the product sku with appended identification tags&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>weight&lt;/td>
+&lt;td>double (formatted number)&lt;/td>
+&lt;td>&lt;code>float64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>variant weight. used in calculating shipping&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>width&lt;/td>
+&lt;td>double (formatted number)&lt;/td>
+&lt;td>&lt;code>float64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>variant width. used in calculating shipping&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>Docs: Customer</title><link>https://k8scommerce.github.io/docs/rest-gateway-endpoints/v1/admin-gateway/customer/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/rest-gateway-endpoints/v1/admin-gateway/customer/</guid><description>
+&lt;h2 id="customer-endpoints-customer-api-endpoints">Customer Endpoints# Customer API Endpoints&lt;/h2>
+&lt;p>admin gateway customer api endpoints&lt;/p>
+&lt;h2 id="version-1">Version: 1&lt;/h2>
+&lt;h3 id="security">Security&lt;/h3>
+&lt;p>&lt;strong>apiKey&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>apiKey&lt;/th>
+&lt;th>&lt;em>API Key&lt;/em>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Description&lt;/td>
+&lt;td>Enter JWT Bearer token &lt;strong>&lt;em>only&lt;/em>&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Name&lt;/td>
+&lt;td>Authorization&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>In&lt;/td>
+&lt;td>header&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="models">Models&lt;/h3>
+&lt;h4 id="customer">Customer&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Required&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>id&lt;/td>
+&lt;td>long&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>Yes&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>firstName&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>Yes&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>lastName&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>Yes&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>email&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>Yes&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>password&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>Yes&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>Docs: Email</title><link>https://k8scommerce.github.io/docs/rest-gateway-endpoints/v1/admin-gateway/email/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/rest-gateway-endpoints/v1/admin-gateway/email/</guid><description/></item><item><title>Docs: Inventory</title><link>https://k8scommerce.github.io/docs/rest-gateway-endpoints/v1/admin-gateway/inventory/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/rest-gateway-endpoints/v1/admin-gateway/inventory/</guid><description/></item><item><title>Docs: OthersBought</title><link>https://k8scommerce.github.io/docs/rest-gateway-endpoints/v1/admin-gateway/othersbought/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/rest-gateway-endpoints/v1/admin-gateway/othersbought/</guid><description/></item><item><title>Docs: Payment</title><link>https://k8scommerce.github.io/docs/rest-gateway-endpoints/v1/admin-gateway/payment/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/rest-gateway-endpoints/v1/admin-gateway/payment/</guid><description/></item><item><title>Docs: Shipping</title><link>https://k8scommerce.github.io/docs/rest-gateway-endpoints/v1/admin-gateway/shipping/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/rest-gateway-endpoints/v1/admin-gateway/shipping/</guid><description/></item><item><title>Docs: SimilarProducts</title><link>https://k8scommerce.github.io/docs/rest-gateway-endpoints/v1/admin-gateway/similarproducts/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/rest-gateway-endpoints/v1/admin-gateway/similarproducts/</guid><description/></item><item><title>Docs: Store</title><link>https://k8scommerce.github.io/docs/rest-gateway-endpoints/v1/admin-gateway/store/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/rest-gateway-endpoints/v1/admin-gateway/store/</guid><description/></item><item><title>Docs: User</title><link>https://k8scommerce.github.io/docs/rest-gateway-endpoints/v1/admin-gateway/user/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/rest-gateway-endpoints/v1/admin-gateway/user/</guid><description>
+&lt;h2 id="user-endpoints">User Endpoints&lt;/h2>
+&lt;h3 id="admin">admin&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Method&lt;/th>
+&lt;th>URI&lt;/th>
+&lt;th>Name&lt;/th>
+&lt;th>Summary&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>POST&lt;/td>
+&lt;td>/v1/user/login&lt;/td>
+&lt;td>&lt;a href="#login">login&lt;/a>&lt;/td>
+&lt;td>Login&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="paths">Paths&lt;/h2>
+&lt;h3 id="span-idloginspan-login-login">&lt;span id="login">&lt;/span> Login (&lt;em>login&lt;/em>)&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-fallback" data-lang="fallback">POST /v1/user/login
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>login for administration users&lt;/p>
+&lt;h4 id="parameters">Parameters&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Source&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th>Separator&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>body&lt;/td>
+&lt;td>&lt;code>body&lt;/code>&lt;/td>
+&lt;td>&lt;a href="#user-login-request">UserLoginRequest&lt;/a>&lt;/td>
+&lt;td>&lt;code>models.UserLoginRequest&lt;/code>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="all-responses">All responses&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Code&lt;/th>
+&lt;th>Status&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th style="text-align:center">Has headers&lt;/th>
+&lt;th>Schema&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;a href="#login-200">200&lt;/a>&lt;/td>
+&lt;td>OK&lt;/td>
+&lt;td>A successful response.&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td>&lt;a href="#login-200-schema">schema&lt;/a>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h4 id="responses">Responses&lt;/h4>
+&lt;h5 id="span-idlogin-200span-200---a-successful-response">&lt;span id="login-200">&lt;/span> 200 - A successful response.&lt;/h5>
+&lt;p>Status: OK&lt;/p>
+&lt;h6 id="span-idlogin-200-schemaspan-schema">&lt;span id="login-200-schema">&lt;/span> Schema&lt;/h6>
+&lt;p>&lt;a href="#user-login-response">UserLoginResponse&lt;/a>&lt;/p>
+&lt;h2 id="models">Models&lt;/h2>
+&lt;h3 id="span-idjwt-tokenspan-jwttoken">&lt;span id="jwt-token">&lt;/span> JwtToken&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>access_expire&lt;/td>
+&lt;td>int64 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>access_token&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>refresh_after&lt;/td>
+&lt;td>int64 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="span-iduserspan-user">&lt;span id="user">&lt;/span> User&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>email&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>firstName&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>id&lt;/td>
+&lt;td>int64 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>lastName&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>password&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="span-iduser-login-requestspan-userloginrequest">&lt;span id="user-login-request">&lt;/span> UserLoginRequest&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>email&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>password&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="span-iduser-login-responsespan-userloginresponse">&lt;span id="user-login-response">&lt;/span> UserLoginResponse&lt;/h3>
+&lt;p>&lt;strong>Properties&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Name&lt;/th>
+&lt;th>Type&lt;/th>
+&lt;th>Go type&lt;/th>
+&lt;th style="text-align:center">Required&lt;/th>
+&lt;th>Default&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;th>Example&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>jwt&lt;/td>
+&lt;td>&lt;a href="#jwt-token">JwtToken&lt;/a>&lt;/td>
+&lt;td>&lt;code>JwtToken&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>statusCode&lt;/td>
+&lt;td>int64 (formatted integer)&lt;/td>
+&lt;td>&lt;code>int64&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>statusMessage&lt;/td>
+&lt;td>string&lt;/td>
+&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>user&lt;/td>
+&lt;td>&lt;a href="#user">User&lt;/a>&lt;/td>
+&lt;td>&lt;code>User&lt;/code>&lt;/td>
+&lt;td style="text-align:center">✓&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table></description></item><item><title>Docs: Warehouse</title><link>https://k8scommerce.github.io/docs/rest-gateway-endpoints/v1/admin-gateway/warehouse/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/rest-gateway-endpoints/v1/admin-gateway/warehouse/</guid><description/></item></channel></rss>

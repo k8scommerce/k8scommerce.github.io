@@ -88,33 +88,33 @@ This is the multi-page printable view of this section.
 <li>1.1: <a href=#pg-a69ee7f76f77b6fd617d55403a62a9e3>Go-Zero & goctl</a></li>
 <li>1.2: <a href=#pg-aae507c8d0c73ca8b859dd1e0522550c>Development Philosophy</a></li>
 </ul>
-<li>2: <a href=#pg-6042daa5d76cab2ad182afc6b5a9ba6b>Public Facing JSON</a></li>
+<li>2: <a href=#pg-40f35308d58c005df986bb6f4a46c710>Authoring</a></li>
 <ul>
-<li>2.1: <a href=#pg-0d61ab88cabe9088ae237d0177dd88ee>Client</a></li>
-<li>2.2: <a href=#pg-e32eb596fa530dc285d3b9851560653a>Admin</a></li>
+<li>2.1: <a href=#pg-7060b2bf57c0ac61b8f8052d46384ff4>API Microservices</a></li>
+<li>2.2: <a href=#pg-7bee2a67ac2cebaafa512d6a5da4ddfa>RPC Microservices</a></li>
 </ul>
-<li>3: <a href=#pg-b8e72b554c217c2ef3efaa2d602b1a55>Non-Public RPC</a></li>
+<li>3: <a href=#pg-7bf943fba7856a8c2be2da053f5a0ecc>Substitution</a></li>
 <ul>
-<li>3.1: <a href=#pg-66c440727225ded56793c42d0083e134>Cart</a></li>
-<li>3.2: <a href=#pg-2b4372f447eb1248864e346950324d05>Catalog</a></li>
-<li>3.3: <a href=#pg-1030d0c515aa46e974b83d3d4be8d0f1>Customer</a></li>
-<li>3.4: <a href=#pg-7ea2d0c170fab62a48f72f239c146979>Email</a></li>
-<li>3.5: <a href=#pg-e24439a4845cc23f10a9abab4e548beb>Inventory</a></li>
-<li>3.6: <a href=#pg-309570758985cbd0aef16aef327f4cca>Others Bought</a></li>
-<li>3.7: <a href=#pg-6cd75e13b0afd04bbf367ef2fbf09c52>Payment</a></li>
-<li>3.8: <a href=#pg-4586431c4076753d312ba3a7059b3888>Shipping</a></li>
-<li>3.9: <a href=#pg-d35f345b3fa242babf3d3eb8d4141db5>Similar Products</a></li>
-<li>3.10: <a href=#pg-6aa87561170608c9be01ad4798783c3f>Store</a></li>
-<li>3.11: <a href=#pg-7fa72d126113d7c0007acc531993bbc0>User</a></li>
-<li>3.12: <a href=#pg-be2e9052c2df1c7753f9cc68f3e90264>Warehouse</a></li>
 </ul>
-<li>4: <a href=#pg-40f35308d58c005df986bb6f4a46c710>Authoring</a></li>
+<li>4: <a href=#pg-1872e4c61f7b7cae00e3854307712f13>Gateway Services</a></li>
 <ul>
-<li>4.1: <a href=#pg-7060b2bf57c0ac61b8f8052d46384ff4>API Microservices</a></li>
-<li>4.2: <a href=#pg-7bee2a67ac2cebaafa512d6a5da4ddfa>RPC Microservices</a></li>
+<li>4.1: <a href=#pg-9ee9fe31c1219ca033817c1946fd215c>Client Gateway</a></li>
+<li>4.2: <a href=#pg-7d072bb9dc02086848dc9c72606c89c2>Admin Gateway</a></li>
 </ul>
-<li>5: <a href=#pg-7bf943fba7856a8c2be2da053f5a0ecc>Substitution</a></li>
+<li>5: <a href=#pg-e52a94b3b420e50027909f5bf1a985be>RPC Services</a></li>
 <ul>
+<li>5.1: <a href=#pg-39ee82606c492a9ba13b203675b53c2d>Cart</a></li>
+<li>5.2: <a href=#pg-6aa375d96d9d5757bdd836f9490a7c65>Catalog</a></li>
+<li>5.3: <a href=#pg-e34f08032d12a75da6f2dc0089992ccb>Customer</a></li>
+<li>5.4: <a href=#pg-7e1ad15043fb8eeca12e0e7768de6f03>Email</a></li>
+<li>5.5: <a href=#pg-d564b696ed580fe5f8beffc2bc6a09e9>Inventory</a></li>
+<li>5.6: <a href=#pg-a9ed41f5460afc56f8c16e761b486685>Others Bought</a></li>
+<li>5.7: <a href=#pg-0deb150d9374eb14696776629f05af68>Payment</a></li>
+<li>5.8: <a href=#pg-05901e7963585d0892d72c54e0dec630>Shipping</a></li>
+<li>5.9: <a href=#pg-582d3c84e79ca7aec515a614f7fb7382>Similar Products</a></li>
+<li>5.10: <a href=#pg-89e3473c13e5e6ef18c6f9856196a606>Store</a></li>
+<li>5.11: <a href=#pg-3ad7a9715cd12593e810c5f91319dda5>User</a></li>
+<li>5.12: <a href=#pg-0edf07fa32950d35d2fb5b6ee713ed5e>Warehouse</a></li>
 </ul>
 </ul>
 <div class=content>
@@ -147,12 +147,28 @@ This is the multi-page printable view of this section.
 <p>Preferring tools over conventions, combined with ever-growing documentation, empowers businesses to successfully integrate K8sCommerce&rsquo;s projects into their existing coding ecosystem in condensed timeframes.</p>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-6042daa5d76cab2ad182afc6b5a9ba6b>2 - Public Facing JSON</h1>
-<div class=lead>Public Facing JSON Overview</div>
+<h1 id=pg-40f35308d58c005df986bb6f4a46c710>2 - Authoring</h1>
+<div class=lead>Authoring Overview</div>
 </div>
 <div class=td-content>
-<h1 id=pg-0d61ab88cabe9088ae237d0177dd88ee>2.1 - Client</h1>
-<div class=lead>Client</div>
+<h1 id=pg-7060b2bf57c0ac61b8f8052d46384ff4>2.1 - API Microservices</h1>
+<div class=lead>API Microservices</div>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-7bee2a67ac2cebaafa512d6a5da4ddfa>2.2 - RPC Microservices</h1>
+<div class=lead>RPC Microservices</div>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-7bf943fba7856a8c2be2da053f5a0ecc>3 - Substitution</h1>
+<div class=lead>Substitution Overview</div>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-1872e4c61f7b7cae00e3854307712f13>4 - Gateway Services</h1>
+<div class=lead>Gateway Services Overview</div>
+</div>
+<div class=td-content>
+<h1 id=pg-9ee9fe31c1219ca033817c1946fd215c>4.1 - Client Gateway</h1>
+<div class=lead>This page describes Client Gateway</div>
 <h2 id=cart>Cart</h2>
 <h2 id=catalog>Catalog</h2>
 <h2 id=customer>Customer</h2>
@@ -162,8 +178,8 @@ This is the multi-page printable view of this section.
 <h2 id=similar-products>Similar Products</h2>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-e32eb596fa530dc285d3b9851560653a>2.2 - Admin</h1>
-<div class=lead>Admin</div>
+<h1 id=pg-7d072bb9dc02086848dc9c72606c89c2>4.2 - Admin Gateway</h1>
+<div class=lead>This page describes Admin Gateway</div>
 <h2 id=cart>Cart</h2>
 <h2 id=catalog>Catalog</h2>
 <h2 id=customer>Customer</h2>
@@ -178,108 +194,92 @@ This is the multi-page printable view of this section.
 <h2 id=warehouse>Warehouse</h2>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-b8e72b554c217c2ef3efaa2d602b1a55>3 - Non-Public RPC</h1>
-<div class=lead>Non-Public RPC Overview</div>
+<h1 id=pg-e52a94b3b420e50027909f5bf1a985be>5 - RPC Services</h1>
+<div class=lead>RPC Services Overview</div>
 </div>
 <div class=td-content>
-<h1 id=pg-66c440727225ded56793c42d0083e134>3.1 - Cart</h1>
-<div class=lead>Cart</div>
+<h1 id=pg-39ee82606c492a9ba13b203675b53c2d>5.1 - Cart</h1>
+<div class=lead>This page describes Cart</div>
 <h2 id=overview>Overview</h2>
 <h2 id=dependencies>Dependencies</h2>
 <h2 id=methods>Methods</h2>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-2b4372f447eb1248864e346950324d05>3.2 - Catalog</h1>
-<div class=lead>Catalog</div>
+<h1 id=pg-6aa375d96d9d5757bdd836f9490a7c65>5.2 - Catalog</h1>
+<div class=lead>This page describes Catalog</div>
 <h2 id=overview>Overview</h2>
 <h2 id=dependencies>Dependencies</h2>
 <h2 id=methods>Methods</h2>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-1030d0c515aa46e974b83d3d4be8d0f1>3.3 - Customer</h1>
-<div class=lead>Customer</div>
+<h1 id=pg-e34f08032d12a75da6f2dc0089992ccb>5.3 - Customer</h1>
+<div class=lead>This page describes Customer</div>
 <h2 id=overview>Overview</h2>
 <h2 id=dependencies>Dependencies</h2>
 <h2 id=methods>Methods</h2>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-7ea2d0c170fab62a48f72f239c146979>3.4 - Email</h1>
-<div class=lead>Email</div>
+<h1 id=pg-7e1ad15043fb8eeca12e0e7768de6f03>5.4 - Email</h1>
+<div class=lead>This page describes Email</div>
 <h2 id=overview>Overview</h2>
 <h2 id=dependencies>Dependencies</h2>
 <h2 id=methods>Methods</h2>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-e24439a4845cc23f10a9abab4e548beb>3.5 - Inventory</h1>
-<div class=lead>Inventory</div>
+<h1 id=pg-d564b696ed580fe5f8beffc2bc6a09e9>5.5 - Inventory</h1>
+<div class=lead>This page describes Inventory</div>
 <h2 id=overview>Overview</h2>
 <h2 id=dependencies>Dependencies</h2>
 <h2 id=methods>Methods</h2>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-309570758985cbd0aef16aef327f4cca>3.6 - Others Bought</h1>
-<div class=lead>Others Bought</div>
+<h1 id=pg-a9ed41f5460afc56f8c16e761b486685>5.6 - Others Bought</h1>
+<div class=lead>This page describes Others Bought</div>
 <h2 id=overview>Overview</h2>
 <h2 id=dependencies>Dependencies</h2>
 <h2 id=methods>Methods</h2>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-6cd75e13b0afd04bbf367ef2fbf09c52>3.7 - Payment</h1>
-<div class=lead>Payment</div>
+<h1 id=pg-0deb150d9374eb14696776629f05af68>5.7 - Payment</h1>
+<div class=lead>This page describes Payment</div>
 <h2 id=overview>Overview</h2>
 <h2 id=dependencies>Dependencies</h2>
 <h2 id=methods>Methods</h2>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-4586431c4076753d312ba3a7059b3888>3.8 - Shipping</h1>
-<div class=lead>Shipping</div>
+<h1 id=pg-05901e7963585d0892d72c54e0dec630>5.8 - Shipping</h1>
+<div class=lead>This page describes Shipping</div>
 <h2 id=overview>Overview</h2>
 <h2 id=dependencies>Dependencies</h2>
 <h2 id=methods>Methods</h2>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-d35f345b3fa242babf3d3eb8d4141db5>3.9 - Similar Products</h1>
-<div class=lead>Similar Products</div>
+<h1 id=pg-582d3c84e79ca7aec515a614f7fb7382>5.9 - Similar Products</h1>
+<div class=lead>This page describes Similar Products</div>
 <h2 id=overview>Overview</h2>
 <h2 id=dependencies>Dependencies</h2>
 <h2 id=methods>Methods</h2>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-6aa87561170608c9be01ad4798783c3f>3.10 - Store</h1>
-<div class=lead>Store</div>
+<h1 id=pg-89e3473c13e5e6ef18c6f9856196a606>5.10 - Store</h1>
+<div class=lead>This page describes Store</div>
 <h2 id=overview>Overview</h2>
 <h2 id=dependencies>Dependencies</h2>
 <h2 id=methods>Methods</h2>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-7fa72d126113d7c0007acc531993bbc0>3.11 - User</h1>
-<div class=lead>User</div>
+<h1 id=pg-3ad7a9715cd12593e810c5f91319dda5>5.11 - User</h1>
+<div class=lead>This page describes User</div>
 <h2 id=overview>Overview</h2>
 <h2 id=dependencies>Dependencies</h2>
 <h2 id=methods>Methods</h2>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-be2e9052c2df1c7753f9cc68f3e90264>3.12 - Warehouse</h1>
-<div class=lead>Warehouse</div>
+<h1 id=pg-0edf07fa32950d35d2fb5b6ee713ed5e>5.12 - Warehouse</h1>
+<div class=lead>This page describes Warehouse</div>
 <h2 id=overview>Overview</h2>
 <h2 id=dependencies>Dependencies</h2>
 <h2 id=methods>Methods</h2>
-</div>
-<div class=td-content style=page-break-before:always>
-<h1 id=pg-40f35308d58c005df986bb6f4a46c710>4 - Authoring</h1>
-<div class=lead>Authoring Overview</div>
-</div>
-<div class=td-content>
-<h1 id=pg-7060b2bf57c0ac61b8f8052d46384ff4>4.1 - API Microservices</h1>
-<div class=lead>API Microservices</div>
-</div>
-<div class=td-content style=page-break-before:always>
-<h1 id=pg-7bee2a67ac2cebaafa512d6a5da4ddfa>4.2 - RPC Microservices</h1>
-<div class=lead>RPC Microservices</div>
-</div>
-<div class=td-content style=page-break-before:always>
-<h1 id=pg-7bf943fba7856a8c2be2da053f5a0ecc>5 - Substitution</h1>
-<div class=lead>Substitution Overview</div>
 </div>
 </main>
 </div>

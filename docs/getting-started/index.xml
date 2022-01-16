@@ -1,35 +1,3 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>K8sCommerce – Getting Started</title><link>https://k8scommerce.github.io/docs/getting-started/</link><description>Recent content in Getting Started on K8sCommerce</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 12 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://k8scommerce.github.io/docs/getting-started/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: What is K8sCommerce?</title><link>https://k8scommerce.github.io/docs/getting-started/what-is-k8scommerce/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/getting-started/what-is-k8scommerce/</guid><description>
-&lt;p>K8sCommerce is a headless ecommerce platform architected from the ground-up to be cloud native
-and run on Kubernetes. It is comprised of 14 microservices, 2 public/web facing via a JSON REST API,
-and 12 private/non-web facing RPC services.&lt;/p>
-&lt;h3 id="json-rest-api-facing-services">JSON REST API Facing Services:&lt;/h3>
-&lt;ul>
-&lt;li>There are 2 &lt;a href="https://k8scommerce.github.io/docs/microservices/public-facing-json">Public-Facing JSON Services&lt;/a>.
-&lt;ul>
-&lt;li>A &lt;a href="https://k8scommerce.github.io/docs/microservices/public-facing-json/client">client&lt;/a> service that exposes all necessary &lt;a href="https://k8scommerce.github.io/docs/rest-endpoints/client">client endpoints&lt;/a> to facilitate a headless storefront
-&lt;ul>
-&lt;li>&lt;a href="https://k8scommerce.github.io/docs/rest-endpoints/client/cart">Cart&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://k8scommerce.github.io/docs/rest-endpoints/client/customer">Customer&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://k8scommerce.github.io/docs/rest-endpoints/client/catalog">Catalog&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://k8scommerce.github.io/docs/rest-endpoints/client/payment">Payments&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>An &lt;a href="https://k8scommerce.github.io/docs/microservices/public-facing-json/admin">admin&lt;/a> service that exposes all &lt;a href="https://k8scommerce.github.io/docs/rest-endpoints/admin">administration endpoints&lt;/a> required to manage the K8sCommerce platform:
-&lt;ul>
-&lt;li>&lt;a href="https://k8scommerce.github.io/docs/rest-endpoints/admin/cart">Cart&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://k8scommerce.github.io/docs/rest-endpoints/admin/catalog">Catalog&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://k8scommerce.github.io/docs/rest-endpoints/admin/customer">Customer&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://k8scommerce.github.io/docs/rest-endpoints/admin/email">Email&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://k8scommerce.github.io/docs/rest-endpoints/admin/inventory">Inventory&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://k8scommerce.github.io/docs/rest-endpoints/admin/othersbought">Others Bought&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://k8scommerce.github.io/docs/rest-endpoints/admin/payment">Payment&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://k8scommerce.github.io/docs/rest-endpoints/admin/shipping">Shipping&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://k8scommerce.github.io/docs/rest-endpoints/admin/similarproducts">Similar Products&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://k8scommerce.github.io/docs/rest-endpoints/admin/store">Store&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://k8scommerce.github.io/docs/rest-endpoints/admin/user">User&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://k8scommerce.github.io/docs/rest-endpoints/admin/warehouse">Warehouse&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul></description></item><item><title>Docs: Custom URLs</title><link>https://k8scommerce.github.io/docs/getting-started/custom-urls/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/getting-started/custom-urls/</guid><description/></item><item><title>Docs: Kubernetes</title><link>https://k8scommerce.github.io/docs/getting-started/kubernetes/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/getting-started/kubernetes/</guid><description/></item><item><title>Docs: Rest API Example</title><link>https://k8scommerce.github.io/docs/getting-started/rest-api-example/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/getting-started/rest-api-example/</guid><description/></item><item><title>Docs: Try it</title><link>https://k8scommerce.github.io/docs/getting-started/try-it/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/getting-started/try-it/</guid><description/></item></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>K8sCommerce – Getting Started</title><link>https://k8scommerce.github.io/docs/getting-started/</link><description>Recent content in Getting Started on K8sCommerce</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 12 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://k8scommerce.github.io/docs/getting-started/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Running Locally</title><link>https://k8scommerce.github.io/docs/getting-started/running-locally/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/getting-started/running-locally/</guid><description/></item><item><title>Docs: Kubernetes</title><link>https://k8scommerce.github.io/docs/getting-started/kubernetes/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/getting-started/kubernetes/</guid><description/></item><item><title>Docs: Kubernetes</title><link>https://k8scommerce.github.io/docs/getting-started/kubernetes/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/getting-started/kubernetes/</guid><description/></item><item><title>Docs: Rest API Example</title><link>https://k8scommerce.github.io/docs/getting-started/rest-api-example/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/docs/getting-started/rest-api-example/</guid><description>
+&lt;h2 id="curl">CURL&lt;/h2>
+&lt;h2 id="httpie">HTTPie&lt;/h2></description></item></channel></rss>

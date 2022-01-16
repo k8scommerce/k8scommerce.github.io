@@ -83,101 +83,84 @@ This is the multi-page printable view of this section.
 <h1 class=title>Getting Started</h1>
 <div class=lead>A good place to start</div>
 <ul>
-<li>1: <a href=#pg-1d27b79709fd8b10a0c7f3c3b7a30735>What is K8sCommerce?</a></li>
-<li>2: <a href=#pg-9a0c4ecbede116bdae144481d703a435>Custom URLs</a></li>
+<li>1: <a href=#pg-da395224e2230ff6ce33153e97cef376>Running Locally</a></li>
 <ul>
+<li>1.1: <a href=#pg-98bfffb853d48df6966da0fed12e5091>Prerequisites</a></li>
+<li>1.2: <a href=#pg-78d3f4cf03ae94d248b559ae767bab47>Local Startup</a></li>
+<li>1.3: <a href=#pg-6149a830ea9f418972d7a62d42b50ede>Administration App Access</a></li>
 </ul>
+<li>2: <a href=#pg-49f79ee695c1c8df04d15815a872113f>Kubernetes</a></li>
 <li>3: <a href=#pg-f177fe81be2537ce2674229f3469c973>Kubernetes</a></li>
 <ul>
-<li>3.1: <a href=#pg-e78e7b76a4ddcbfd83ffe1e56a0dcffe>K8sOperator</a></li>
-<li>3.2: <a href=#pg-96e78608e2a784cffba6734a44b2177c>Configuration</a></li>
+<li>3.1: <a href=#pg-4790e339c9d4316f582360e3f7c0df60>K8sCommerce Operator</a></li>
+<li>3.2: <a href=#pg-39d414e3ec1ebab8cdd81a267e556395>Prerequisites</a></li>
+<li>3.3: <a href=#pg-96e78608e2a784cffba6734a44b2177c>Configuration</a></li>
+<li>3.4: <a href=#pg-5bed4543d9f1cd485a3e2b632e400bc0>Operator Deployment</a></li>
 </ul>
-<li>4: <a href=#pg-35010db26d4fa33df5565c936bce0603>Rest API Example</a></li>
-<ul>
-</ul>
-<li>5: <a href=#pg-447141b9ab15cac5d0a906358efe459d>Try it</a></li>
-<ul>
-<li>5.1: <a href=#pg-de15f4c7a75e3fae94f837a5d0ead57e>Prerequisites</a></li>
-<li>5.2: <a href=#pg-da4266b453ab6adb0aa7906863edf3b1>Running Locally</a></li>
-</ul>
+<li>4: <a href=#pg-b4206cac71a05a6b73d2762d4ddaa5de>Rest API Example</a></li>
 </ul>
 <div class=content>
 </div>
 </div>
 <div class=td-content>
-<h1 id=pg-1d27b79709fd8b10a0c7f3c3b7a30735>1 - What is K8sCommerce?</h1>
-<div class=lead>An overview of K8sCommerce and why it exists</div>
-<p>K8sCommerce is a headless ecommerce platform architected from the ground-up to be cloud native
-and run on Kubernetes. It is comprised of 14 microservices, 2 public/web facing via a JSON REST API,
-and 12 private/non-web facing RPC services.</p>
-<h3 id=json-rest-api-facing-services>JSON REST API Facing Services:</h3>
-<ul>
-<li>There are 2 <a href=/docs/microservices/public-facing-json>Public-Facing JSON Services</a>.
-<ul>
-<li>A <a href=/docs/microservices/public-facing-json/client>client</a> service that exposes all necessary <a href=/docs/rest-endpoints/client>client endpoints</a> to facilitate a headless storefront
-<ul>
-<li><a href=/docs/rest-endpoints/client/cart>Cart</a></li>
-<li><a href=/docs/rest-endpoints/client/customer>Customer</a></li>
-<li><a href=/docs/rest-endpoints/client/catalog>Catalog</a></li>
-<li><a href=/docs/rest-endpoints/client/payment>Payments</a></li>
-</ul>
-</li>
-<li>An <a href=/docs/microservices/public-facing-json/admin>admin</a> service that exposes all <a href=/docs/rest-endpoints/admin>administration endpoints</a> required to manage the K8sCommerce platform:
-<ul>
-<li><a href=/docs/rest-endpoints/admin/cart>Cart</a></li>
-<li><a href=/docs/rest-endpoints/admin/catalog>Catalog</a></li>
-<li><a href=/docs/rest-endpoints/admin/customer>Customer</a></li>
-<li><a href=/docs/rest-endpoints/admin/email>Email</a></li>
-<li><a href=/docs/rest-endpoints/admin/inventory>Inventory</a></li>
-<li><a href=/docs/rest-endpoints/admin/othersbought>Others Bought</a></li>
-<li><a href=/docs/rest-endpoints/admin/payment>Payment</a></li>
-<li><a href=/docs/rest-endpoints/admin/shipping>Shipping</a></li>
-<li><a href=/docs/rest-endpoints/admin/similarproducts>Similar Products</a></li>
-<li><a href=/docs/rest-endpoints/admin/store>Store</a></li>
-<li><a href=/docs/rest-endpoints/admin/user>User</a></li>
-<li><a href=/docs/rest-endpoints/admin/warehouse>Warehouse</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+<h1 id=pg-da395224e2230ff6ce33153e97cef376>1 - Running Locally</h1>
+<div class=lead>Running Locally Overview</div>
+</div>
+<div class=td-content>
+<h1 id=pg-98bfffb853d48df6966da0fed12e5091>1.1 - Prerequisites</h1>
+<div class=lead>This page describes Prerequisites</div>
+<h2 id=etcd>Etcd</h2>
+<h2 id=docker>Docker</h2>
+<h2 id=custom-urls>Custom URLs</h2>
+<h2 id=client-gateway-url>Client Gateway URL</h2>
+<h2 id=admin-gateway-url>Admin Gateway URL</h2>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-9a0c4ecbede116bdae144481d703a435>2 - Custom URLs</h1>
-<div class=lead>Custom URLs Overview</div>
+<h1 id=pg-78d3f4cf03ae94d248b559ae767bab47>1.2 - Local Startup</h1>
+<div class=lead>This page describes Local Startup</div>
+<h2 id=makefile-commands>Makefile Commands</h2>
+<h2 id=test-data>Test Data</h2>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-6149a830ea9f418972d7a62d42b50ede>1.3 - Administration App Access</h1>
+<div class=lead>This page describes Administration App Access</div>
+</div>
+<div class=td-content style=page-break-before:always>
+<h1 id=pg-49f79ee695c1c8df04d15815a872113f>2 - Kubernetes</h1>
+<div class=lead>This page describes Kubernetes</div>
 </div>
 <div class=td-content style=page-break-before:always>
 <h1 id=pg-f177fe81be2537ce2674229f3469c973>3 - Kubernetes</h1>
 <div class=lead>Kubernetes Overview</div>
 </div>
 <div class=td-content>
-<h1 id=pg-e78e7b76a4ddcbfd83ffe1e56a0dcffe>3.1 - K8sOperator</h1>
-<div class=lead>K8sOperator</div>
+<h1 id=pg-4790e339c9d4316f582360e3f7c0df60>3.1 - K8sCommerce Operator</h1>
+<div class=lead>This page describes K8sCommerce Operator</div>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-96e78608e2a784cffba6734a44b2177c>3.2 - Configuration</h1>
-<div class=lead>Configuration</div>
+<h1 id=pg-39d414e3ec1ebab8cdd81a267e556395>3.2 - Prerequisites</h1>
+<div class=lead>This page describes Prerequisites</div>
+<h2 id=environment>Environment</h2>
+<h2 id=database>Database</h2>
+<h2 id=yaml-configuration>YAML Configuration</h2>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-35010db26d4fa33df5565c936bce0603>4 - Rest API Example</h1>
-<div class=lead>Rest API Example Overview</div>
+<h1 id=pg-96e78608e2a784cffba6734a44b2177c>3.3 - Configuration</h1>
+<div class=lead>This page describes Configuration</div>
+<h2 id=custom-urls>Custom URLs</h2>
+<h2 id=client-gateway-url>Client Gateway URL</h2>
+<h2 id=admin-gateway-url>Admin Gateway URL</h2>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-447141b9ab15cac5d0a906358efe459d>5 - Try it</h1>
-<div class=lead>Try it Overview</div>
-</div>
-<div class=td-content>
-<h1 id=pg-de15f4c7a75e3fae94f837a5d0ead57e>5.1 - Prerequisites</h1>
-<div class=lead>Prerequisites</div>
-<h2 id=etcd>Etcd</h2>
-<h2 id=etcd-1>Etcd</h2>
+<h1 id=pg-5bed4543d9f1cd485a3e2b632e400bc0>3.4 - Operator Deployment</h1>
+<div class=lead>This page describes Operator Deployment</div>
+<h2 id=kubctl-commands>kubctl Commands</h2>
 </div>
 <div class=td-content style=page-break-before:always>
-<h1 id=pg-da4266b453ab6adb0aa7906863edf3b1>5.2 - Running Locally</h1>
-<div class=lead>Running Locally</div>
-<h2 id=local-etcd>Local Etcd</h2>
-<h2 id=docker>Docker</h2>
-<h2 id=makefile-commands>Makefile Commands</h2>
+<h1 id=pg-b4206cac71a05a6b73d2762d4ddaa5de>4 - Rest API Example</h1>
+<div class=lead>This page describes Rest API Example</div>
+<h2 id=curl>CURL</h2>
+<h2 id=httpie>HTTPie</h2>
 </div>
 </main>
 </div>

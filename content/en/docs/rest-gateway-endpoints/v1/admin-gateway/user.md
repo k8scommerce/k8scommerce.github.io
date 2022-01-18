@@ -4,7 +4,7 @@ linkTitle: "User"
 weight: 110
 date: 2022-01-12
 description: >
-  User API Endpoints
+  Content negotiation
 ---
 
 ## User Endpoints
@@ -66,6 +66,22 @@ Status: OK
 | access_expire | int64 (formatted integer)| `int64` | ✓ | |  |  |
 | access_token | string| `string` | ✓ | |  |  |
 | refresh_after | int64 (formatted integer)| `int64` | ✓ | |  |  |
+
+
+
+### <span id="response-status"></span> ResponseStatus
+
+
+  
+
+
+
+**Properties**
+
+| Name | Type | Go type | Required | Default | Description | Example |
+|------|------|---------|:--------:| ------- |-------------|---------|
+| statusCode | int64 (formatted integer)| `int64` | ✓ | | RFC http status code, ie. 204, etc - https:go.dev/src/net/http/status.go |  |
+| statusMessage | string| `string` | ✓ | | status message |  |
 
 
 

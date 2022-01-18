@@ -1,0 +1,57 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>K8sCommerce – Database</title>
+    <link>https://k8scommerce.github.io/en/docs/database/</link>
+    <description>Recent content in Database on K8sCommerce</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 12 Jan 2022 00:00:00 +0000</lastBuildDate>
+    
+	  <atom:link href="https://k8scommerce.github.io/en/docs/database/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>En: Schema</title>
+      <link>https://k8scommerce.github.io/en/docs/database/schema/</link>
+      <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://k8scommerce.github.io/en/docs/database/schema/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>En: Migrations</title>
+      <link>https://k8scommerce.github.io/en/docs/database/migrations/</link>
+      <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://k8scommerce.github.io/en/docs/database/migrations/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>En: Backup</title>
+      <link>https://k8scommerce.github.io/en/docs/database/backup/</link>
+      <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://k8scommerce.github.io/en/docs/database/backup/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -4,10 +4,7 @@ title = "K8sCommerce"
 enableRobotsTXT = true
 
 # Hugo allows theme composition (and inheritance). The precedence is from left to right.
-[module]
-replacements = "github.com/FortAwesome/Font-Awesome -> ., github.com/twbs/bootstrap -> ."
-[[module.imports]]
-path = "docsy"
+theme = ["docsy"]
 
 # Will give values to .Lastmod etc.
 enableGitInfo = true
@@ -252,3 +249,9 @@ url = "https://k8scommerce.slack.com"
 #   url = "https://example.org/mail"
 #   icon = "fa fa-envelope"
 #   desc = "Discuss development issues around the project"
+
+
+[module]
+replacements = "github.com/FortAwesome/Font-Awesome -> ., github.com/twbs/bootstrap -> ."
+[[module.imports]]
+path = "docsy"

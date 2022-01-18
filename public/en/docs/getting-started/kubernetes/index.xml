@@ -1,0 +1,77 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>K8sCommerce – Kubernetes</title>
+    <link>https://k8scommerce.github.io/en/docs/getting-started/kubernetes/</link>
+    <description>Recent content in Kubernetes on K8sCommerce</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 12 Jan 2022 00:00:00 +0000</lastBuildDate>
+    
+	  <atom:link href="https://k8scommerce.github.io/en/docs/getting-started/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>En: K8sCommerce Operator</title>
+      <link>https://k8scommerce.github.io/en/docs/getting-started/kubernetes/k8scommerce-operator/</link>
+      <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://k8scommerce.github.io/en/docs/getting-started/kubernetes/k8scommerce-operator/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+    <item>
+      <title>En: Prerequisites</title>
+      <link>https://k8scommerce.github.io/en/docs/getting-started/kubernetes/prerequisites/</link>
+      <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://k8scommerce.github.io/en/docs/getting-started/kubernetes/prerequisites/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;environment&#34;&gt;Environment&lt;/h2&gt;
+&lt;h2 id=&#34;database&#34;&gt;Database&lt;/h2&gt;
+&lt;h2 id=&#34;yaml-configuration&#34;&gt;YAML Configuration&lt;/h2&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>En: Configuration</title>
+      <link>https://k8scommerce.github.io/en/docs/getting-started/kubernetes/configuration/</link>
+      <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://k8scommerce.github.io/en/docs/getting-started/kubernetes/configuration/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;custom-urls&#34;&gt;Custom URLs&lt;/h2&gt;
+&lt;h2 id=&#34;client-gateway-url&#34;&gt;Client Gateway URL&lt;/h2&gt;
+&lt;h2 id=&#34;admin-gateway-url&#34;&gt;Admin Gateway URL&lt;/h2&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>En: Operator Deployment</title>
+      <link>https://k8scommerce.github.io/en/docs/getting-started/kubernetes/operator-deployment/</link>
+      <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://k8scommerce.github.io/en/docs/getting-started/kubernetes/operator-deployment/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;kubctl-commands&#34;&gt;kubctl Commands&lt;/h2&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

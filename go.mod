@@ -5,6 +5,7 @@ go 1.17
 require github.com/gosimple/slug v1.12.0
 
 require (
+	github.com/FortAwesome/Font-Awesome v4.7.0+incompatible // indirect
 	github.com/antlr/antlr4/runtime/Go/antlr v0.0.0-20220111164937-1b144fa7b40f // indirect
 	github.com/cpuguy83/go-md2man/v2 v2.0.1 // indirect
 	github.com/emicklei/proto v1.9.1 // indirect
@@ -19,6 +20,7 @@ require (
 	github.com/spaolacci/murmur3 v1.1.0 // indirect
 	github.com/tal-tech/go-zero v1.2.5 // indirect
 	github.com/tal-tech/go-zero/tools/goctl v1.2.6 // indirect
+	github.com/twbs/bootstrap v5.1.3+incompatible // indirect
 	github.com/urfave/cli v1.22.5 // indirect
 	github.com/zeromicro/antlr v0.0.1 // indirect
 	github.com/zeromicro/ddl-parser v0.0.0-20210712021150-63520aca7348 // indirect

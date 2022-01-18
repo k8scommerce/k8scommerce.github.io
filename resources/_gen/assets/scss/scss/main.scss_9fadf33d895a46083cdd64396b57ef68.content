@@ -13904,7 +13904,7 @@ nav.foldable-nav .with-child ul {
     .td-sidebar-toc {
       position: sticky;
       top: 4rem;
-      height: calc(100vh - 10rem);
+      height: calc(100vh - 4rem);
       overflow-y: auto; } }
 
 .td-page-meta a {

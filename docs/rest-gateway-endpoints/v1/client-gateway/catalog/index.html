@@ -4,7 +4,7 @@
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <meta name=generator content="Hugo 0.91.2">
 <meta name=robots content="index, follow">
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"WebSite","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/k8scommerce.github.io"},"articleSection":"docs","name":"Catalog","headline":"Catalog","description":"Catalog API Endpoints\n","inLanguage":"en-US","author":"","creator":"","publisher":"","accountablePerson":"","copyrightHolder":"","copyrightYear":"2022","datePublished":"2022-01-12 00:00:00 \u002b0000 UTC","dateModified":"2022-01-12 00:00:00 \u002b0000 UTC","url":"https:\/\/k8scommerce.github.io\/docs\/rest-gateway-endpoints\/v1\/client-gateway\/catalog\/","wordCount":"1338","keywords":["K8sCommerce"]}</script>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"WebSite","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/k8scommerce.github.io"},"articleSection":"docs","name":"Catalog","headline":"Catalog","description":"Content negotiation\n","inLanguage":"en-US","author":"","creator":"","publisher":"","accountablePerson":"","copyrightHolder":"","copyrightYear":"2022","datePublished":"2022-01-12 00:00:00 \u002b0000 UTC","dateModified":"2022-01-12 00:00:00 \u002b0000 UTC","url":"https:\/\/k8scommerce.github.io\/docs\/rest-gateway-endpoints\/v1\/client-gateway\/catalog\/","wordCount":"1254","keywords":["K8sCommerce"]}</script>
 <link rel="shortcut icon" href=/favicons/favicon.ico>
 <link rel=apple-touch-icon href=/favicons/apple-touch-icon-180x180.png sizes=180x180>
 <link rel=icon type=image/png href=/favicons/favicon-16x16.png sizes=16x16>
@@ -14,23 +14,23 @@
 <meta name=msapplication-TileColor content="#4279f4">
 <meta name=theme-color content="#4279f4">
 <title>Catalog | K8sCommerce</title>
-<meta name=description content="Catalog API Endpoints
+<meta name=description content="Content negotiation
 ">
 <meta property="og:title" content="Catalog">
-<meta property="og:description" content="Catalog API Endpoints
+<meta property="og:description" content="Content negotiation
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://k8scommerce.github.io/docs/rest-gateway-endpoints/v1/client-gateway/catalog/"><meta property="article:section" content="docs">
 <meta property="article:published_time" content="2022-01-12T00:00:00+00:00">
-<meta property="article:modified_time" content="2022-01-16T16:57:04-07:00"><meta property="og:site_name" content="K8sCommerce">
+<meta property="article:modified_time" content="2022-01-17T20:26:45-07:00"><meta property="og:site_name" content="K8sCommerce">
 <meta itemprop=name content="Catalog">
-<meta itemprop=description content="Catalog API Endpoints
+<meta itemprop=description content="Content negotiation
 "><meta itemprop=datePublished content="2022-01-12T00:00:00+00:00">
-<meta itemprop=dateModified content="2022-01-16T16:57:04-07:00">
-<meta itemprop=wordCount content="1338">
+<meta itemprop=dateModified content="2022-01-17T20:26:45-07:00">
+<meta itemprop=wordCount content="1254">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="Catalog">
-<meta name=twitter:description content="Catalog API Endpoints
+<meta name=twitter:description content="Content negotiation
 ">
 <link rel=preload href=/scss/main.min.9b02fa86671b61c8dfe2940f9a0a4a2d3e19a9be4667c10266fc96604b2dd385.css as=style>
 <link href=/scss/main.min.9b02fa86671b61c8dfe2940f9a0a4a2d3e19a9be4667c10266fc96604b2dd385.css rel=stylesheet integrity>
@@ -299,27 +299,18 @@
 <li><a href=#paths>Paths</a>
 <ul>
 <li><a href=#span-idget-all-categoriesspan-get-all-categories-getallcategories><span id=get-all-categories></span> Get All Categories (<em>getAllCategories</em>)</a></li>
-<li><a href=#span-idget-all-productsspan-getallproducts><span id=get-all-products></span> getAllProducts</a></li>
-<li><a href=#span-idget-category-by-idspan-getcategorybyid><span id=get-category-by-id></span> getCategoryById</a></li>
-<li><a href=#span-idget-category-by-slugspan-getcategorybyslug><span id=get-category-by-slug></span> getCategoryBySlug</a></li>
-<li><a href=#span-idget-product-by-idspan-getproductbyid><span id=get-product-by-id></span> getProductById</a></li>
-<li><a href=#span-idget-product-by-skuspan-getproductbysku><span id=get-product-by-sku></span> getProductBySku</a></li>
-<li><a href=#span-idget-product-by-slugspan-getproductbyslug><span id=get-product-by-slug></span> getProductBySlug</a></li>
-<li><a href=#span-idget-products-by-category-idspan-getproductsbycategoryid><span id=get-products-by-category-id></span> getProductsByCategoryId</a></li>
+<li><a href=#span-idget-all-productsspan-get-all-products-getallproducts><span id=get-all-products></span> Get All Products (<em>getAllProducts</em>)</a></li>
+<li><a href=#span-idget-category-by-idspan-get-category-by-id-getcategorybyid><span id=get-category-by-id></span> Get Category By Id (<em>getCategoryById</em>)</a></li>
+<li><a href=#span-idget-category-by-slugspan-get-category-by-slug-getcategorybyslug><span id=get-category-by-slug></span> Get Category By Slug (<em>getCategoryBySlug</em>)</a></li>
+<li><a href=#span-idget-product-by-idspan-get-product-by-id-getproductbyid><span id=get-product-by-id></span> Get Product By Id (<em>getProductById</em>)</a></li>
+<li><a href=#span-idget-product-by-skuspan-get-product-by-sku-getproductbysku><span id=get-product-by-sku></span> Get Product By Sku (<em>getProductBySku</em>)</a></li>
+<li><a href=#span-idget-product-by-slugspan-get-product-by-slug-getproductbyslug><span id=get-product-by-slug></span> Get Product By Slug (<em>getProductBySlug</em>)</a></li>
+<li><a href=#span-idget-products-by-category-idspan-get-products-by-category-id-getproductsbycategoryid><span id=get-products-by-category-id></span> Get Products By Category Id (<em>getProductsByCategoryId</em>)</a></li>
 </ul>
 </li>
 <li><a href=#models>Models</a>
 <ul>
 <li><a href=#span-idcategoryspan-category><span id=category></span> Category</a></li>
-<li><a href=#span-idcreate-category-requestspan-createcategoryrequest><span id=create-category-request></span> CreateCategoryRequest</a></li>
-<li><a href=#span-idcreate-category-responsespan-createcategoryresponse><span id=create-category-response></span> CreateCategoryResponse</a></li>
-<li><a href=#span-idcreate-product-requestspan-createproductrequest><span id=create-product-request></span> CreateProductRequest</a></li>
-<li><a href=#span-idcreate-product-responsespan-createproductresponse><span id=create-product-response></span> CreateProductResponse</a></li>
-<li><a href=#span-iddelete-category-requestspan-deletecategoryrequest><span id=delete-category-request></span> DeleteCategoryRequest</a></li>
-<li><a href=#span-iddelete-category-responsespan-deletecategoryresponse><span id=delete-category-response></span> DeleteCategoryResponse</a></li>
-<li><a href=#span-iddelete-product-requestspan-deleteproductrequest><span id=delete-product-request></span> DeleteProductRequest</a></li>
-<li><a href=#span-iddelete-product-responsespan-deleteproductresponse><span id=delete-product-response></span> DeleteProductResponse</a></li>
-<li><a href=#span-idget-all-categories-requestspan-getallcategoriesrequest><span id=get-all-categories-request></span> GetAllCategoriesRequest</a></li>
 <li><a href=#span-idget-all-categories-responsespan-getallcategoriesresponse><span id=get-all-categories-response></span> GetAllCategoriesResponse</a></li>
 <li><a href=#span-idget-all-products-requestspan-getallproductsrequest><span id=get-all-products-request></span> GetAllProductsRequest</a></li>
 <li><a href=#span-idget-all-products-responsespan-getallproductsresponse><span id=get-all-products-response></span> GetAllProductsResponse</a></li>
@@ -330,14 +321,13 @@
 <li><a href=#span-idget-product-by-id-requestspan-getproductbyidrequest><span id=get-product-by-id-request></span> GetProductByIdRequest</a></li>
 <li><a href=#span-idget-product-by-sku-requestspan-getproductbyskurequest><span id=get-product-by-sku-request></span> GetProductBySkuRequest</a></li>
 <li><a href=#span-idget-product-by-slug-requestspan-getproductbyslugrequest><span id=get-product-by-slug-request></span> GetProductBySlugRequest</a></li>
+<li><a href=#span-idget-product-responsespan-getproductresponse><span id=get-product-response></span> GetProductResponse</a></li>
 <li><a href=#span-idget-products-by-category-id-requestspan-getproductsbycategoryidrequest><span id=get-products-by-category-id-request></span> GetProductsByCategoryIdRequest</a></li>
 <li><a href=#span-idget-products-by-category-id-responsespan-getproductsbycategoryidresponse><span id=get-products-by-category-id-response></span> GetProductsByCategoryIdResponse</a></li>
+<li><a href=#span-idjwt-tokenspan-jwttoken><span id=jwt-token></span> JwtToken</a></li>
 <li><a href=#span-idpricespan-price><span id=price></span> Price</a></li>
 <li><a href=#span-idproductspan-product><span id=product></span> Product</a></li>
-<li><a href=#span-idupdate-category-requestspan-updatecategoryrequest><span id=update-category-request></span> UpdateCategoryRequest</a></li>
-<li><a href=#span-idupdate-category-responsespan-updatecategoryresponse><span id=update-category-response></span> UpdateCategoryResponse</a></li>
-<li><a href=#span-idupdate-product-requestspan-updateproductrequest><span id=update-product-request></span> UpdateProductRequest</a></li>
-<li><a href=#span-idupdate-product-responsespan-updateproductresponse><span id=update-product-response></span> UpdateProductResponse</a></li>
+<li><a href=#span-idresponse-statusspan-responsestatus><span id=response-status></span> ResponseStatus</a></li>
 <li><a href=#span-idvariantspan-variant><span id=variant></span> Variant</a></li>
 </ul>
 </li>
@@ -366,7 +356,7 @@
 </nav>
 <div class=td-content>
 <h1>Catalog</h1>
-<div class=lead>Catalog API Endpoints</div>
+<div class=lead>Content negotiation</div>
 <header class=article-meta>
 </header>
 <h2 id=catalog-endpoints>Catalog Endpoints</h2>
@@ -391,92 +381,50 @@
 <td>GET</td>
 <td>/v1/products/{currentPage}/{pageSize}</td>
 <td><a href=#get-all-products>get all products</a></td>
-<td>getAllProducts</td>
-</tr>
-<tr>
-<td>returns all products</td>
-<td></td>
-<td></td>
-<td></td>
+<td>Get All Products</td>
 </tr>
 <tr>
 <td>GET</td>
 <td>/v1/category/{id}</td>
 <td><a href=#get-category-by-id>get category by Id</a></td>
-<td>getCategoryById</td>
-</tr>
-<tr>
-<td>returns a category by id</td>
-<td></td>
-<td></td>
-<td></td>
+<td>Get Category By Id</td>
 </tr>
 <tr>
 <td>GET</td>
 <td>/v1/category/slug/{slug}</td>
 <td><a href=#get-category-by-slug>get category by slug</a></td>
-<td>getCategoryBySlug</td>
-</tr>
-<tr>
-<td>returns a category by url slug and storeId</td>
-<td></td>
-<td></td>
-<td></td>
+<td>Get Category By Slug</td>
 </tr>
 <tr>
 <td>GET</td>
 <td>/v1/product/{id}</td>
 <td><a href=#get-product-by-id>get product by Id</a></td>
-<td>getProductById</td>
-</tr>
-<tr>
-<td>returns a product by id</td>
-<td></td>
-<td></td>
-<td></td>
+<td>Get Product By Id</td>
 </tr>
 <tr>
 <td>GET</td>
 <td>/v1/product/sku/{sku}</td>
 <td><a href=#get-product-by-sku>get product by sku</a></td>
-<td>getProductBySku</td>
-</tr>
-<tr>
-<td>returns a product by sku</td>
-<td></td>
-<td></td>
-<td></td>
+<td>Get Product By Sku</td>
 </tr>
 <tr>
 <td>GET</td>
 <td>/v1/product/slug/{slug}</td>
 <td><a href=#get-product-by-slug>get product by slug</a></td>
-<td>getProductBySlug</td>
-</tr>
-<tr>
-<td>returns a product by url slug</td>
-<td></td>
-<td></td>
-<td></td>
+<td>Get Product By Slug</td>
 </tr>
 <tr>
 <td>GET</td>
-<td>/v1/products/category/{categoryId}/{currentPage}/{pageSize}</td>
+<td>/v1/products/{categoryId}/{currentPage}/{pageSize}</td>
 <td><a href=#get-products-by-category-id>get products by category Id</a></td>
-<td>getProductsByCategoryId</td>
-</tr>
-<tr>
-<td>returns all products belonging to a category id</td>
-<td></td>
-<td></td>
-<td></td>
+<td>Get Products By Category Id</td>
 </tr>
 </tbody>
 </table>
 <h2 id=paths>Paths</h2>
 <h3 id=span-idget-all-categoriesspan-get-all-categories-getallcategories><span id=get-all-categories></span> Get All Categories (<em>getAllCategories</em>)</h3>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>GET /v1/categories
-</code></pre></div><p>returns all categories by belonging to a store</p>
+</code></pre></div><p>returns all categories belonging to a store</p>
 <h4 id=all-responses>All responses</h4>
 <table>
 <thead>
@@ -503,11 +451,10 @@
 <p>Status: OK</p>
 <h6 id=span-idget-all-categories-200-schemaspan-schema><span id=get-all-categories-200-schema></span> Schema</h6>
 <p><a href=#get-all-categories-response>GetAllCategoriesResponse</a></p>
-<h3 id=span-idget-all-productsspan-getallproducts><span id=get-all-products></span> getAllProducts</h3>
-<pre><code>returns all products (*getAllProducts*)
-</code></pre>
+<h3 id=span-idget-all-productsspan-get-all-products-getallproducts><span id=get-all-products></span> Get All Products (<em>getAllProducts</em>)</h3>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>GET /v1/products/{currentPage}/{pageSize}
-</code></pre></div><h4 id=parameters>Parameters</h4>
+</code></pre></div><p>returns all products belonging to a store</p>
+<h4 id=parameters>Parameters</h4>
 <table>
 <thead>
 <tr>
@@ -530,7 +477,7 @@
 <td></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>current page number</td>
 </tr>
 <tr>
 <td>pageSize</td>
@@ -540,7 +487,7 @@
 <td></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>number of records per page</td>
 </tr>
 <tr>
 <td>sortOn</td>
@@ -548,7 +495,7 @@
 <td>string</td>
 <td><code>string</code></td>
 <td></td>
-<td style=text-align:center></td>
+<td style=text-align:center>✓</td>
 <td></td>
 <td></td>
 </tr>
@@ -580,11 +527,10 @@
 <p>Status: OK</p>
 <h6 id=span-idget-all-products-200-schemaspan-schema><span id=get-all-products-200-schema></span> Schema</h6>
 <p><a href=#get-all-products-response>GetAllProductsResponse</a></p>
-<h3 id=span-idget-category-by-idspan-getcategorybyid><span id=get-category-by-id></span> getCategoryById</h3>
-<pre><code>returns a category by id (*getCategoryById*)
-</code></pre>
+<h3 id=span-idget-category-by-idspan-get-category-by-id-getcategorybyid><span id=get-category-by-id></span> Get Category By Id (<em>getCategoryById</em>)</h3>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>GET /v1/category/{id}
-</code></pre></div><h4 id=parameters-1>Parameters</h4>
+</code></pre></div><p>returns all categories by id belonging to a store</p>
+<h4 id=parameters-1>Parameters</h4>
 <table>
 <thead>
 <tr>
@@ -604,6 +550,16 @@
 <td><code>path</code></td>
 <td>string</td>
 <td><code>string</code></td>
+<td></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>category id</td>
+</tr>
+<tr>
+<td>id</td>
+<td><code>query</code></td>
+<td>int64 (formatted integer)</td>
+<td><code>int64</code></td>
 <td></td>
 <td style=text-align:center>✓</td>
 <td></td>
@@ -637,11 +593,10 @@
 <p>Status: OK</p>
 <h6 id=span-idget-category-by-id-200-schemaspan-schema><span id=get-category-by-id-200-schema></span> Schema</h6>
 <p><a href=#get-category-by-id-response>GetCategoryByIDResponse</a></p>
-<h3 id=span-idget-category-by-slugspan-getcategorybyslug><span id=get-category-by-slug></span> getCategoryBySlug</h3>
-<pre><code>returns a category by url slug and storeId (*getCategoryBySlug*)
-</code></pre>
+<h3 id=span-idget-category-by-slugspan-get-category-by-slug-getcategorybyslug><span id=get-category-by-slug></span> Get Category By Slug (<em>getCategoryBySlug</em>)</h3>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>GET /v1/category/slug/{slug}
-</code></pre></div><h4 id=parameters-2>Parameters</h4>
+</code></pre></div><p>returns all categories by slug belonging to a store</p>
+<h4 id=parameters-2>Parameters</h4>
 <table>
 <thead>
 <tr>
@@ -664,7 +619,7 @@
 <td></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>category slug</td>
 </tr>
 </tbody>
 </table>
@@ -694,11 +649,10 @@
 <p>Status: OK</p>
 <h6 id=span-idget-category-by-slug-200-schemaspan-schema><span id=get-category-by-slug-200-schema></span> Schema</h6>
 <p><a href=#get-category-by-slug-response>GetCategoryBySlugResponse</a></p>
-<h3 id=span-idget-product-by-idspan-getproductbyid><span id=get-product-by-id></span> getProductById</h3>
-<pre><code>returns a product by id (*getProductById*)
-</code></pre>
+<h3 id=span-idget-product-by-idspan-get-product-by-id-getproductbyid><span id=get-product-by-id></span> Get Product By Id (<em>getProductById</em>)</h3>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>GET /v1/product/{id}
-</code></pre></div><h4 id=parameters-3>Parameters</h4>
+</code></pre></div><p>returns matching product by id</p>
+<h4 id=parameters-3>Parameters</h4>
 <table>
 <thead>
 <tr>
@@ -721,7 +675,7 @@
 <td></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>product id</td>
 </tr>
 </tbody>
 </table>
@@ -750,12 +704,11 @@
 <h5 id=span-idget-product-by-id-200span-200---a-successful-response><span id=get-product-by-id-200></span> 200 - A successful response.</h5>
 <p>Status: OK</p>
 <h6 id=span-idget-product-by-id-200-schemaspan-schema><span id=get-product-by-id-200-schema></span> Schema</h6>
-<p><a href=#product>Product</a></p>
-<h3 id=span-idget-product-by-skuspan-getproductbysku><span id=get-product-by-sku></span> getProductBySku</h3>
-<pre><code>returns a product by sku (*getProductBySku*)
-</code></pre>
+<p><a href=#get-product-response>GetProductResponse</a></p>
+<h3 id=span-idget-product-by-skuspan-get-product-by-sku-getproductbysku><span id=get-product-by-sku></span> Get Product By Sku (<em>getProductBySku</em>)</h3>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>GET /v1/product/sku/{sku}
-</code></pre></div><h4 id=parameters-4>Parameters</h4>
+</code></pre></div><p>returns all products by sku belonging to a store</p>
+<h4 id=parameters-4>Parameters</h4>
 <table>
 <thead>
 <tr>
@@ -778,7 +731,7 @@
 <td></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>product sku</td>
 </tr>
 </tbody>
 </table>
@@ -807,12 +760,11 @@
 <h5 id=span-idget-product-by-sku-200span-200---a-successful-response><span id=get-product-by-sku-200></span> 200 - A successful response.</h5>
 <p>Status: OK</p>
 <h6 id=span-idget-product-by-sku-200-schemaspan-schema><span id=get-product-by-sku-200-schema></span> Schema</h6>
-<p><a href=#product>Product</a></p>
-<h3 id=span-idget-product-by-slugspan-getproductbyslug><span id=get-product-by-slug></span> getProductBySlug</h3>
-<pre><code>returns a product by url slug (*getProductBySlug*)
-</code></pre>
+<p><a href=#get-product-response>GetProductResponse</a></p>
+<h3 id=span-idget-product-by-slugspan-get-product-by-slug-getproductbyslug><span id=get-product-by-slug></span> Get Product By Slug (<em>getProductBySlug</em>)</h3>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>GET /v1/product/slug/{slug}
-</code></pre></div><h4 id=parameters-5>Parameters</h4>
+</code></pre></div><p>returns matching product by slug</p>
+<h4 id=parameters-5>Parameters</h4>
 <table>
 <thead>
 <tr>
@@ -835,7 +787,7 @@
 <td></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>product slug</td>
 </tr>
 </tbody>
 </table>
@@ -864,12 +816,11 @@
 <h5 id=span-idget-product-by-slug-200span-200---a-successful-response><span id=get-product-by-slug-200></span> 200 - A successful response.</h5>
 <p>Status: OK</p>
 <h6 id=span-idget-product-by-slug-200-schemaspan-schema><span id=get-product-by-slug-200-schema></span> Schema</h6>
-<p><a href=#product>Product</a></p>
-<h3 id=span-idget-products-by-category-idspan-getproductsbycategoryid><span id=get-products-by-category-id></span> getProductsByCategoryId</h3>
-<pre><code>returns all products belonging to a category id (*getProductsByCategoryId*)
-</code></pre>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>GET /v1/products/category/{categoryId}/{currentPage}/{pageSize}
-</code></pre></div><h4 id=parameters-6>Parameters</h4>
+<p><a href=#get-product-response>GetProductResponse</a></p>
+<h3 id=span-idget-products-by-category-idspan-get-products-by-category-id-getproductsbycategoryid><span id=get-products-by-category-id></span> Get Products By Category Id (<em>getProductsByCategoryId</em>)</h3>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>GET /v1/products/{categoryId}/{currentPage}/{pageSize}
+</code></pre></div><p>returns all products by category id belonging to a store</p>
+<h4 id=parameters-6>Parameters</h4>
 <table>
 <thead>
 <tr>
@@ -892,7 +843,7 @@
 <td></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>category id</td>
 </tr>
 <tr>
 <td>currentPage</td>
@@ -902,7 +853,7 @@
 <td></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>current page number</td>
 </tr>
 <tr>
 <td>pageSize</td>
@@ -912,7 +863,7 @@
 <td></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>number of records per page</td>
 </tr>
 <tr>
 <td>sortOn</td>
@@ -1051,270 +1002,6 @@
 </tr>
 </tbody>
 </table>
-<h3 id=span-idcreate-category-requestspan-createcategoryrequest><span id=create-category-request></span> CreateCategoryRequest</h3>
-<p><strong>Properties</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Go type</th>
-<th style=text-align:center>Required</th>
-<th>Default</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>category</td>
-<td><a href=#category>Category</a></td>
-<td><code>Category</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id=span-idcreate-category-responsespan-createcategoryresponse><span id=create-category-response></span> CreateCategoryResponse</h3>
-<p><strong>Properties</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Go type</th>
-<th style=text-align:center>Required</th>
-<th>Default</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>category</td>
-<td><a href=#category>Category</a></td>
-<td><code>Category</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>statusCode</td>
-<td>int64 (formatted integer)</td>
-<td><code>int64</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>statusMessage</td>
-<td>string</td>
-<td><code>string</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id=span-idcreate-product-requestspan-createproductrequest><span id=create-product-request></span> CreateProductRequest</h3>
-<p><strong>Properties</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Go type</th>
-<th style=text-align:center>Required</th>
-<th>Default</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>product:omitempty</td>
-<td><a href=#product>Product</a></td>
-<td><code>Product</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id=span-idcreate-product-responsespan-createproductresponse><span id=create-product-response></span> CreateProductResponse</h3>
-<p><strong>Properties</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Go type</th>
-<th style=text-align:center>Required</th>
-<th>Default</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>product:omitempty</td>
-<td><a href=#product>Product</a></td>
-<td><code>Product</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>statusCode:omitempty</td>
-<td>int64 (formatted integer)</td>
-<td><code>int64</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>statusMessage:omitempty</td>
-<td>string</td>
-<td><code>string</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id=span-iddelete-category-requestspan-deletecategoryrequest><span id=delete-category-request></span> DeleteCategoryRequest</h3>
-<p><strong>Properties</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Go type</th>
-<th style=text-align:center>Required</th>
-<th>Default</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>id</td>
-<td>int64 (formatted integer)</td>
-<td><code>int64</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id=span-iddelete-category-responsespan-deletecategoryresponse><span id=delete-category-response></span> DeleteCategoryResponse</h3>
-<p><strong>Properties</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Go type</th>
-<th style=text-align:center>Required</th>
-<th>Default</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>statusCode</td>
-<td>int64 (formatted integer)</td>
-<td><code>int64</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>statusMessage</td>
-<td>string</td>
-<td><code>string</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id=span-iddelete-product-requestspan-deleteproductrequest><span id=delete-product-request></span> DeleteProductRequest</h3>
-<p><strong>Properties</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Go type</th>
-<th style=text-align:center>Required</th>
-<th>Default</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>path:omitempty</td>
-<td>int64 (formatted integer)</td>
-<td><code>int64</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id=span-iddelete-product-responsespan-deleteproductresponse><span id=delete-product-response></span> DeleteProductResponse</h3>
-<p><strong>Properties</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Go type</th>
-<th style=text-align:center>Required</th>
-<th>Default</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>statusCode:omitempty</td>
-<td>int64 (formatted integer)</td>
-<td><code>int64</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>statusMessage:omitempty</td>
-<td>string</td>
-<td><code>string</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id=span-idget-all-categories-requestspan-getallcategoriesrequest><span id=get-all-categories-request></span> GetAllCategoriesRequest</h3>
-<p><a href=#interface>interface{}</a></p>
 <h3 id=span-idget-all-categories-responsespan-getallcategoriesresponse><span id=get-all-categories-response></span> GetAllCategoriesResponse</h3>
 <p><strong>Properties</strong></p>
 <table>
@@ -1336,25 +1023,16 @@
 <td><code>[]*Category</code></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>statusCode</td>
-<td>int64 (formatted integer)</td>
-<td><code>int64</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
+<td>a collection of Category</td>
 <td></td>
 </tr>
 <tr>
-<td>statusMessage</td>
-<td>string</td>
-<td><code>string</code></td>
+<td>status</td>
+<td><a href=#response-status>ResponseStatus</a></td>
+<td><code>ResponseStatus</code></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>a ResponseStatus object</td>
 <td></td>
 </tr>
 </tbody>
@@ -1396,7 +1074,7 @@
 <td>sortOn</td>
 <td>string</td>
 <td><code>string</code></td>
-<td style=text-align:center></td>
+<td style=text-align:center>✓</td>
 <td></td>
 <td></td>
 <td></td>
@@ -1425,6 +1103,15 @@
 <td style=text-align:center>✓</td>
 <td></td>
 <td></td>
+<td></td>
+</tr>
+<tr>
+<td>status</td>
+<td><a href=#response-status>ResponseStatus</a></td>
+<td><code>ResponseStatus</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>a ResponseStatus object</td>
 <td></td>
 </tr>
 <tr>
@@ -1498,21 +1185,12 @@
 <td></td>
 </tr>
 <tr>
-<td>statusCode</td>
-<td>int64 (formatted integer)</td>
-<td><code>int64</code></td>
+<td>status</td>
+<td><a href=#response-status>ResponseStatus</a></td>
+<td><code>ResponseStatus</code></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>statusMessage</td>
-<td>string</td>
-<td><code>string</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
+<td>a ResponseStatus object</td>
 <td></td>
 </tr>
 </tbody>
@@ -1538,7 +1216,7 @@
 <td><code>string</code></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>slug name of the category</td>
 <td></td>
 </tr>
 </tbody>
@@ -1568,21 +1246,12 @@
 <td></td>
 </tr>
 <tr>
-<td>statusCode</td>
-<td>int64 (formatted integer)</td>
-<td><code>int64</code></td>
+<td>status</td>
+<td><a href=#response-status>ResponseStatus</a></td>
+<td><code>ResponseStatus</code></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>statusMessage</td>
-<td>string</td>
-<td><code>string</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
+<td>a ResponseStatus object</td>
 <td></td>
 </tr>
 </tbody>
@@ -1660,7 +1329,42 @@
 <td><code>string</code></td>
 <td style=text-align:center>✓</td>
 <td></td>
+<td>slug name of the category</td>
 <td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=span-idget-product-responsespan-getproductresponse><span id=get-product-response></span> GetProductResponse</h3>
+<p><strong>Properties</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Go type</th>
+<th style=text-align:center>Required</th>
+<th>Default</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>product</td>
+<td><a href=#product>Product</a></td>
+<td><code>Product</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>slug name of the category</td>
+<td></td>
+</tr>
+<tr>
+<td>status</td>
+<td><a href=#response-status>ResponseStatus</a></td>
+<td><code>ResponseStatus</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>a ResponseStatus object</td>
 <td></td>
 </tr>
 </tbody>
@@ -1743,6 +1447,15 @@
 <td></td>
 </tr>
 <tr>
+<td>status</td>
+<td><a href=#response-status>ResponseStatus</a></td>
+<td><code>ResponseStatus</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>a ResponseStatus object</td>
+<td></td>
+</tr>
+<tr>
 <td>totalPages</td>
 <td>int64 (formatted integer)</td>
 <td><code>int64</code></td>
@@ -1753,6 +1466,50 @@
 </tr>
 <tr>
 <td>totalRecords</td>
+<td>int64 (formatted integer)</td>
+<td><code>int64</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=span-idjwt-tokenspan-jwttoken><span id=jwt-token></span> JwtToken</h3>
+<p><strong>Properties</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Go type</th>
+<th style=text-align:center>Required</th>
+<th>Default</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>access_expire</td>
+<td>int64 (formatted integer)</td>
+<td><code>int64</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>access_token</td>
+<td>string</td>
+<td><code>string</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>refresh_after</td>
 <td>int64 (formatted integer)</td>
 <td><code>int64</code></td>
 <td style=text-align:center>✓</td>
@@ -1931,7 +1688,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id=span-idupdate-category-requestspan-updatecategoryrequest><span id=update-category-request></span> UpdateCategoryRequest</h3>
+<h3 id=span-idresponse-statusspan-responsestatus><span id=response-status></span> ResponseStatus</h3>
 <p><strong>Properties</strong></p>
 <table>
 <thead>
@@ -1946,57 +1703,13 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>category</td>
-<td><a href=#category>Category</a></td>
-<td><code>Category</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>id</td>
-<td>int64 (formatted integer)</td>
-<td><code>int64</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id=span-idupdate-category-responsespan-updatecategoryresponse><span id=update-category-response></span> UpdateCategoryResponse</h3>
-<p><strong>Properties</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Go type</th>
-<th style=text-align:center>Required</th>
-<th>Default</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>category</td>
-<td><a href=#category>Category</a></td>
-<td><code>Category</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
 <tr>
 <td>statusCode</td>
 <td>int64 (formatted integer)</td>
 <td><code>int64</code></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>RFC http status code, ie. 204, etc - https:go.dev/src/net/http/status.go</td>
 <td></td>
 </tr>
 <tr>
@@ -2005,86 +1718,7 @@
 <td><code>string</code></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id=span-idupdate-product-requestspan-updateproductrequest><span id=update-product-request></span> UpdateProductRequest</h3>
-<p><strong>Properties</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Go type</th>
-<th style=text-align:center>Required</th>
-<th>Default</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>path:omitempty</td>
-<td>int64 (formatted integer)</td>
-<td><code>int64</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>product:omitempty</td>
-<td><a href=#product>Product</a></td>
-<td><code>Product</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id=span-idupdate-product-responsespan-updateproductresponse><span id=update-product-response></span> UpdateProductResponse</h3>
-<p><strong>Properties</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Go type</th>
-<th style=text-align:center>Required</th>
-<th>Default</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>product:omitempty</td>
-<td><a href=#product>Product</a></td>
-<td><code>Product</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>statusCode:omitempty</td>
-<td>int64 (formatted integer)</td>
-<td><code>int64</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>statusMessage:omitempty</td>
-<td>string</td>
-<td><code>string</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
+<td>status message</td>
 <td></td>
 </tr>
 </tbody>
@@ -2196,7 +1830,7 @@ Sorry to hear that. Please <a href=https://github.com/k8scommerce/k8scommerce/is
 <script>const yesButton=document.querySelector('.feedback--answer-yes'),noButton=document.querySelector('.feedback--answer-no'),yesResponse=document.querySelector('.feedback--response-yes'),noResponse=document.querySelector('.feedback--response-no'),disableButtons=()=>{yesButton.disabled=!0,noButton.disabled=!0},sendFeedback=b=>{if(typeof ga!='function')return;const a={command:'send',hitType:'event',category:'Helpful',action:'click',label:window.location.pathname,value:b};ga(a.command,a.hitType,a.category,a.action,a.label,a.value)};yesButton.addEventListener('click',()=>{yesResponse.classList.add('feedback--response__visible'),disableButtons(),sendFeedback(1)}),noButton.addEventListener('click',()=>{noResponse.classList.add('feedback--response__visible'),disableButtons(),sendFeedback(0)})</script>
 <br>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified January 16, 2022: <a href=https://github.com/k8scommerce/k8scommerce/commit/290d2f09bdc86ce4f4c7a7bc194d8cbeb91200bb>working on auto-generated docs (290d2f0)</a>
+Last modified January 17, 2022: <a href=https://github.com/k8scommerce/k8scommerce/commit/dd84509a46135dadfdc99b10845c7485a0d0ab3a>updating docs (dd84509)</a>
 </div>
 </div>
 </main>

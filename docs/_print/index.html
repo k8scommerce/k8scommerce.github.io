@@ -360,7 +360,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 </div>
 <div class=td-content>
 <h1 id=pg-1e8e3162c260ce9d59b9b6b28f91c2d4>6.1.1.1 - Cart</h1>
-<div class=lead>Client Gateway API</div>
+<div class=lead>Content negotiation</div>
 <h2 id=cart-endpoints>Cart Endpoints</h2>
 <h3 id=admin>admin</h3>
 <table>
@@ -1023,6 +1023,50 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td style=text-align:center>✓</td>
 <td></td>
 <td>an item&rsquo;s variant sku number</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=span-idjwt-tokenspan-jwttoken><span id=jwt-token></span> JwtToken</h3>
+<p><strong>Properties</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Go type</th>
+<th style=text-align:center>Required</th>
+<th>Default</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>access_expire</td>
+<td>int64 (formatted integer)</td>
+<td><code>int64</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>access_token</td>
+<td>string</td>
+<td><code>string</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>refresh_after</td>
+<td>int64 (formatted integer)</td>
+<td><code>int64</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td></td>
 <td></td>
 </tr>
 </tbody>
@@ -1223,7 +1267,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 </div>
 <div class=td-content style=page-break-before:always>
 <h1 id=pg-f12eaf54cf163b8a3d53a599b70c9ea7>6.1.1.2 - Catalog</h1>
-<div class=lead>Catalog API Endpoints</div>
+<div class=lead>Content negotiation</div>
 <h2 id=catalog-endpoints>Catalog Endpoints</h2>
 <h3 id=admin>admin</h3>
 <table>
@@ -1240,92 +1284,93 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td>POST</td>
 <td>/v1/category</td>
 <td><a href=#create-category>create category</a></td>
-<td></td>
+<td>Create Category</td>
 </tr>
 <tr>
 <td>POST</td>
 <td>/v1/product</td>
 <td><a href=#create-product>create product</a></td>
-<td></td>
+<td>Create Product</td>
 </tr>
 <tr>
 <td>DELETE</td>
 <td>/v1/category/{id}</td>
 <td><a href=#delete-category>delete category</a></td>
-<td></td>
+<td>Delete Category</td>
 </tr>
 <tr>
 <td>DELETE</td>
 <td>/v1/product/{id}</td>
 <td><a href=#delete-product>delete product</a></td>
-<td></td>
+<td>Delete Product</td>
 </tr>
 <tr>
 <td>GET</td>
 <td>/v1/categories</td>
 <td><a href=#get-all-categories>get all categories</a></td>
-<td></td>
+<td>Get All Categories</td>
 </tr>
 <tr>
 <td>GET</td>
 <td>/v1/products/{currentPage}/{pageSize}</td>
 <td><a href=#get-all-products>get all products</a></td>
-<td></td>
+<td>Get All Products</td>
 </tr>
 <tr>
 <td>GET</td>
 <td>/v1/category/{id}</td>
 <td><a href=#get-category-by-id>get category by Id</a></td>
-<td></td>
+<td>Get Category By Id</td>
 </tr>
 <tr>
 <td>GET</td>
 <td>/v1/category/slug/{slug}</td>
 <td><a href=#get-category-by-slug>get category by slug</a></td>
-<td></td>
+<td>Get Category By Slug</td>
 </tr>
 <tr>
 <td>GET</td>
 <td>/v1/product/{id}</td>
 <td><a href=#get-product-by-id>get product by Id</a></td>
-<td></td>
+<td>Get Product By Id</td>
 </tr>
 <tr>
 <td>GET</td>
 <td>/v1/product/sku/{sku}</td>
 <td><a href=#get-product-by-sku>get product by sku</a></td>
-<td></td>
+<td>Get Product By Sku</td>
 </tr>
 <tr>
 <td>GET</td>
 <td>/v1/product/slug/{slug}</td>
 <td><a href=#get-product-by-slug>get product by slug</a></td>
-<td></td>
+<td>Get Product By Slug</td>
 </tr>
 <tr>
 <td>GET</td>
-<td>/v1/products/category/{categoryId}/{currentPage}/{pageSize}</td>
+<td>/v1/products/{categoryId}/{currentPage}/{pageSize}</td>
 <td><a href=#get-products-by-category-id>get products by category Id</a></td>
-<td></td>
+<td>Get Products By Category Id</td>
 </tr>
 <tr>
 <td>PUT</td>
 <td>/v1/category/{id}</td>
 <td><a href=#update-category>update category</a></td>
-<td></td>
+<td>Update Category</td>
 </tr>
 <tr>
 <td>PUT</td>
 <td>/v1/product/{id}</td>
 <td><a href=#update-product>update product</a></td>
-<td></td>
+<td>Update Product</td>
 </tr>
 </tbody>
 </table>
 <h2 id=paths>Paths</h2>
-<h3 id=span-idcreate-categoryspan-create-category-createcategory><span id=create-category></span> create category (<em>createCategory</em>)</h3>
+<h3 id=span-idcreate-categoryspan-create-category-createcategory><span id=create-category></span> Create Category (<em>createCategory</em>)</h3>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>POST /v1/category
-</code></pre></div><h4 id=parameters>Parameters</h4>
+</code></pre></div><p>creates a category</p>
+<h4 id=parameters>Parameters</h4>
 <table>
 <thead>
 <tr>
@@ -1378,9 +1423,10 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <p>Status: OK</p>
 <h6 id=span-idcreate-category-200-schemaspan-schema><span id=create-category-200-schema></span> Schema</h6>
 <p><a href=#create-category-response>CreateCategoryResponse</a></p>
-<h3 id=span-idcreate-productspan-create-product-createproduct><span id=create-product></span> create product (<em>createProduct</em>)</h3>
+<h3 id=span-idcreate-productspan-create-product-createproduct><span id=create-product></span> Create Product (<em>createProduct</em>)</h3>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>POST /v1/product
-</code></pre></div><h4 id=parameters-1>Parameters</h4>
+</code></pre></div><p>creates a product</p>
+<h4 id=parameters-1>Parameters</h4>
 <table>
 <thead>
 <tr>
@@ -1433,9 +1479,10 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <p>Status: OK</p>
 <h6 id=span-idcreate-product-200-schemaspan-schema><span id=create-product-200-schema></span> Schema</h6>
 <p><a href=#create-product-response>CreateProductResponse</a></p>
-<h3 id=span-iddelete-categoryspan-delete-category-deletecategory><span id=delete-category></span> delete category (<em>deleteCategory</em>)</h3>
+<h3 id=span-iddelete-categoryspan-delete-category-deletecategory><span id=delete-category></span> Delete Category (<em>deleteCategory</em>)</h3>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>DELETE /v1/category/{id}
-</code></pre></div><h4 id=parameters-2>Parameters</h4>
+</code></pre></div><p>deletes a category</p>
+<h4 id=parameters-2>Parameters</h4>
 <table>
 <thead>
 <tr>
@@ -1458,7 +1505,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>category id</td>
 </tr>
 <tr>
 <td>body</td>
@@ -1498,9 +1545,10 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <p>Status: OK</p>
 <h6 id=span-iddelete-category-200-schemaspan-schema><span id=delete-category-200-schema></span> Schema</h6>
 <p><a href=#delete-category-response>DeleteCategoryResponse</a></p>
-<h3 id=span-iddelete-productspan-delete-product-deleteproduct><span id=delete-product></span> delete product (<em>deleteProduct</em>)</h3>
+<h3 id=span-iddelete-productspan-delete-product-deleteproduct><span id=delete-product></span> Delete Product (<em>deleteProduct</em>)</h3>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>DELETE /v1/product/{id}
-</code></pre></div><h4 id=parameters-3>Parameters</h4>
+</code></pre></div><p>delete a product</p>
+<h4 id=parameters-3>Parameters</h4>
 <table>
 <thead>
 <tr>
@@ -1523,7 +1571,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>product id</td>
 </tr>
 <tr>
 <td>body</td>
@@ -1563,9 +1611,10 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <p>Status: OK</p>
 <h6 id=span-iddelete-product-200-schemaspan-schema><span id=delete-product-200-schema></span> Schema</h6>
 <p><a href=#delete-product-response>DeleteProductResponse</a></p>
-<h3 id=span-idget-all-categoriesspan-get-all-categories-getallcategories><span id=get-all-categories></span> get all categories (<em>getAllCategories</em>)</h3>
+<h3 id=span-idget-all-categoriesspan-get-all-categories-getallcategories><span id=get-all-categories></span> Get All Categories (<em>getAllCategories</em>)</h3>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>GET /v1/categories
-</code></pre></div><h4 id=all-responses-4>All responses</h4>
+</code></pre></div><p>returns all categories belonging to a store</p>
+<h4 id=all-responses-4>All responses</h4>
 <table>
 <thead>
 <tr>
@@ -1591,9 +1640,10 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <p>Status: OK</p>
 <h6 id=span-idget-all-categories-200-schemaspan-schema><span id=get-all-categories-200-schema></span> Schema</h6>
 <p><a href=#get-all-categories-response>GetAllCategoriesResponse</a></p>
-<h3 id=span-idget-all-productsspan-get-all-products-getallproducts><span id=get-all-products></span> get all products (<em>getAllProducts</em>)</h3>
+<h3 id=span-idget-all-productsspan-get-all-products-getallproducts><span id=get-all-products></span> Get All Products (<em>getAllProducts</em>)</h3>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>GET /v1/products/{currentPage}/{pageSize}
-</code></pre></div><h4 id=parameters-4>Parameters</h4>
+</code></pre></div><p>returns all products belonging to a store</p>
+<h4 id=parameters-4>Parameters</h4>
 <table>
 <thead>
 <tr>
@@ -1616,7 +1666,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>current page number</td>
 </tr>
 <tr>
 <td>pageSize</td>
@@ -1626,7 +1676,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>number of records per page</td>
 </tr>
 <tr>
 <td>sortOn</td>
@@ -1666,9 +1716,10 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <p>Status: OK</p>
 <h6 id=span-idget-all-products-200-schemaspan-schema><span id=get-all-products-200-schema></span> Schema</h6>
 <p><a href=#get-all-products-response>GetAllProductsResponse</a></p>
-<h3 id=span-idget-category-by-idspan-get-category-by-id-getcategorybyid><span id=get-category-by-id></span> get category by Id (<em>getCategoryById</em>)</h3>
+<h3 id=span-idget-category-by-idspan-get-category-by-id-getcategorybyid><span id=get-category-by-id></span> Get Category By Id (<em>getCategoryById</em>)</h3>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>GET /v1/category/{id}
-</code></pre></div><h4 id=parameters-5>Parameters</h4>
+</code></pre></div><p>returns all categories by id belonging to a store</p>
+<h4 id=parameters-5>Parameters</h4>
 <table>
 <thead>
 <tr>
@@ -1691,7 +1742,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>category id</td>
 </tr>
 <tr>
 <td>id</td>
@@ -1731,9 +1782,10 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <p>Status: OK</p>
 <h6 id=span-idget-category-by-id-200-schemaspan-schema><span id=get-category-by-id-200-schema></span> Schema</h6>
 <p><a href=#get-category-by-id-response>GetCategoryByIDResponse</a></p>
-<h3 id=span-idget-category-by-slugspan-get-category-by-slug-getcategorybyslug><span id=get-category-by-slug></span> get category by slug (<em>getCategoryBySlug</em>)</h3>
+<h3 id=span-idget-category-by-slugspan-get-category-by-slug-getcategorybyslug><span id=get-category-by-slug></span> Get Category By Slug (<em>getCategoryBySlug</em>)</h3>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>GET /v1/category/slug/{slug}
-</code></pre></div><h4 id=parameters-6>Parameters</h4>
+</code></pre></div><p>returns all categories by slug belonging to a store</p>
+<h4 id=parameters-6>Parameters</h4>
 <table>
 <thead>
 <tr>
@@ -1756,17 +1808,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
-</tr>
-<tr>
-<td>slug</td>
-<td><code>query</code></td>
-<td>string</td>
-<td><code>string</code></td>
-<td></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
+<td>category slug</td>
 </tr>
 </tbody>
 </table>
@@ -1796,9 +1838,10 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <p>Status: OK</p>
 <h6 id=span-idget-category-by-slug-200-schemaspan-schema><span id=get-category-by-slug-200-schema></span> Schema</h6>
 <p><a href=#get-category-by-slug-response>GetCategoryBySlugResponse</a></p>
-<h3 id=span-idget-product-by-idspan-get-product-by-id-getproductbyid><span id=get-product-by-id></span> get product by Id (<em>getProductById</em>)</h3>
+<h3 id=span-idget-product-by-idspan-get-product-by-id-getproductbyid><span id=get-product-by-id></span> Get Product By Id (<em>getProductById</em>)</h3>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>GET /v1/product/{id}
-</code></pre></div><h4 id=parameters-7>Parameters</h4>
+</code></pre></div><p>returns matching product by id</p>
+<h4 id=parameters-7>Parameters</h4>
 <table>
 <thead>
 <tr>
@@ -1821,7 +1864,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>product id</td>
 </tr>
 </tbody>
 </table>
@@ -1850,10 +1893,11 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <h5 id=span-idget-product-by-id-200span-200---a-successful-response><span id=get-product-by-id-200></span> 200 - A successful response.</h5>
 <p>Status: OK</p>
 <h6 id=span-idget-product-by-id-200-schemaspan-schema><span id=get-product-by-id-200-schema></span> Schema</h6>
-<p><a href=#product>Product</a></p>
-<h3 id=span-idget-product-by-skuspan-get-product-by-sku-getproductbysku><span id=get-product-by-sku></span> get product by sku (<em>getProductBySku</em>)</h3>
+<p><a href=#get-product-response>GetProductResponse</a></p>
+<h3 id=span-idget-product-by-skuspan-get-product-by-sku-getproductbysku><span id=get-product-by-sku></span> Get Product By Sku (<em>getProductBySku</em>)</h3>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>GET /v1/product/sku/{sku}
-</code></pre></div><h4 id=parameters-8>Parameters</h4>
+</code></pre></div><p>returns all products by sku belonging to a store</p>
+<h4 id=parameters-8>Parameters</h4>
 <table>
 <thead>
 <tr>
@@ -1876,7 +1920,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>product sku</td>
 </tr>
 </tbody>
 </table>
@@ -1905,10 +1949,11 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <h5 id=span-idget-product-by-sku-200span-200---a-successful-response><span id=get-product-by-sku-200></span> 200 - A successful response.</h5>
 <p>Status: OK</p>
 <h6 id=span-idget-product-by-sku-200-schemaspan-schema><span id=get-product-by-sku-200-schema></span> Schema</h6>
-<p><a href=#product>Product</a></p>
-<h3 id=span-idget-product-by-slugspan-get-product-by-slug-getproductbyslug><span id=get-product-by-slug></span> get product by slug (<em>getProductBySlug</em>)</h3>
+<p><a href=#get-product-response>GetProductResponse</a></p>
+<h3 id=span-idget-product-by-slugspan-get-product-by-slug-getproductbyslug><span id=get-product-by-slug></span> Get Product By Slug (<em>getProductBySlug</em>)</h3>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>GET /v1/product/slug/{slug}
-</code></pre></div><h4 id=parameters-9>Parameters</h4>
+</code></pre></div><p>returns matching product by slug</p>
+<h4 id=parameters-9>Parameters</h4>
 <table>
 <thead>
 <tr>
@@ -1931,7 +1976,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>product slug</td>
 </tr>
 </tbody>
 </table>
@@ -1960,10 +2005,11 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <h5 id=span-idget-product-by-slug-200span-200---a-successful-response><span id=get-product-by-slug-200></span> 200 - A successful response.</h5>
 <p>Status: OK</p>
 <h6 id=span-idget-product-by-slug-200-schemaspan-schema><span id=get-product-by-slug-200-schema></span> Schema</h6>
-<p><a href=#product>Product</a></p>
-<h3 id=span-idget-products-by-category-idspan-get-products-by-category-id-getproductsbycategoryid><span id=get-products-by-category-id></span> get products by category Id (<em>getProductsByCategoryId</em>)</h3>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>GET /v1/products/category/{categoryId}/{currentPage}/{pageSize}
-</code></pre></div><h4 id=parameters-10>Parameters</h4>
+<p><a href=#get-product-response>GetProductResponse</a></p>
+<h3 id=span-idget-products-by-category-idspan-get-products-by-category-id-getproductsbycategoryid><span id=get-products-by-category-id></span> Get Products By Category Id (<em>getProductsByCategoryId</em>)</h3>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>GET /v1/products/{categoryId}/{currentPage}/{pageSize}
+</code></pre></div><p>returns all products by category id belonging to a store</p>
+<h4 id=parameters-10>Parameters</h4>
 <table>
 <thead>
 <tr>
@@ -1986,7 +2032,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>category id</td>
 </tr>
 <tr>
 <td>currentPage</td>
@@ -1996,7 +2042,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>current page number</td>
 </tr>
 <tr>
 <td>pageSize</td>
@@ -2006,7 +2052,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>number of records per page</td>
 </tr>
 <tr>
 <td>sortOn</td>
@@ -2046,9 +2092,10 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <p>Status: OK</p>
 <h6 id=span-idget-products-by-category-id-200-schemaspan-schema><span id=get-products-by-category-id-200-schema></span> Schema</h6>
 <p><a href=#get-products-by-category-id-response>GetProductsByCategoryIDResponse</a></p>
-<h3 id=span-idupdate-categoryspan-update-category-updatecategory><span id=update-category></span> update category (<em>updateCategory</em>)</h3>
+<h3 id=span-idupdate-categoryspan-update-category-updatecategory><span id=update-category></span> Update Category (<em>updateCategory</em>)</h3>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>PUT /v1/category/{id}
-</code></pre></div><h4 id=parameters-11>Parameters</h4>
+</code></pre></div><p>updates a category</p>
+<h4 id=parameters-11>Parameters</h4>
 <table>
 <thead>
 <tr>
@@ -2071,7 +2118,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>category id</td>
 </tr>
 <tr>
 <td>body</td>
@@ -2111,9 +2158,10 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <p>Status: OK</p>
 <h6 id=span-idupdate-category-200-schemaspan-schema><span id=update-category-200-schema></span> Schema</h6>
 <p><a href=#update-category-response>UpdateCategoryResponse</a></p>
-<h3 id=span-idupdate-productspan-update-product-updateproduct><span id=update-product></span> update product (<em>updateProduct</em>)</h3>
+<h3 id=span-idupdate-productspan-update-product-updateproduct><span id=update-product></span> Update Product (<em>updateProduct</em>)</h3>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>PUT /v1/product/{id}
-</code></pre></div><h4 id=parameters-12>Parameters</h4>
+</code></pre></div><p>updates a product</p>
+<h4 id=parameters-12>Parameters</h4>
 <table>
 <thead>
 <tr>
@@ -2136,7 +2184,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>product id</td>
 </tr>
 <tr>
 <td>body</td>
@@ -2326,21 +2374,12 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td></td>
 </tr>
 <tr>
-<td>statusCode</td>
-<td>int64 (formatted integer)</td>
-<td><code>int64</code></td>
+<td>status</td>
+<td><a href=#response-status>ResponseStatus</a></td>
+<td><code>ResponseStatus</code></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>statusMessage</td>
-<td>string</td>
-<td><code>string</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
+<td>a ResponseStatus object</td>
 <td></td>
 </tr>
 </tbody>
@@ -2396,21 +2435,12 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td></td>
 </tr>
 <tr>
-<td>statusCode:omitempty</td>
-<td>int64 (formatted integer)</td>
-<td><code>int64</code></td>
+<td>status</td>
+<td><a href=#response-status>ResponseStatus</a></td>
+<td><code>ResponseStatus</code></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>statusMessage:omitempty</td>
-<td>string</td>
-<td><code>string</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
+<td>a ResponseStatus object</td>
 <td></td>
 </tr>
 </tbody>
@@ -2457,21 +2487,12 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 </thead>
 <tbody>
 <tr>
-<td>statusCode</td>
-<td>int64 (formatted integer)</td>
-<td><code>int64</code></td>
+<td>status</td>
+<td><a href=#response-status>ResponseStatus</a></td>
+<td><code>ResponseStatus</code></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>statusMessage</td>
-<td>string</td>
-<td><code>string</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
+<td>a ResponseStatus object</td>
 <td></td>
 </tr>
 </tbody>
@@ -2518,21 +2539,12 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 </thead>
 <tbody>
 <tr>
-<td>statusCode:omitempty</td>
-<td>int64 (formatted integer)</td>
-<td><code>int64</code></td>
+<td>status</td>
+<td><a href=#response-status>ResponseStatus</a></td>
+<td><code>ResponseStatus</code></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>statusMessage:omitempty</td>
-<td>string</td>
-<td><code>string</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
+<td>a ResponseStatus object</td>
 <td></td>
 </tr>
 </tbody>
@@ -2558,25 +2570,16 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td><code>[]*Category</code></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>statusCode</td>
-<td>int64 (formatted integer)</td>
-<td><code>int64</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
+<td>a collection of Category</td>
 <td></td>
 </tr>
 <tr>
-<td>statusMessage</td>
-<td>string</td>
-<td><code>string</code></td>
+<td>status</td>
+<td><a href=#response-status>ResponseStatus</a></td>
+<td><code>ResponseStatus</code></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>a ResponseStatus object</td>
 <td></td>
 </tr>
 </tbody>
@@ -2650,6 +2653,15 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td></td>
 </tr>
 <tr>
+<td>status</td>
+<td><a href=#response-status>ResponseStatus</a></td>
+<td><code>ResponseStatus</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>a ResponseStatus object</td>
+<td></td>
+</tr>
+<tr>
 <td>totalPages</td>
 <td>int64 (formatted integer)</td>
 <td><code>int64</code></td>
@@ -2720,21 +2732,12 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td></td>
 </tr>
 <tr>
-<td>statusCode</td>
-<td>int64 (formatted integer)</td>
-<td><code>int64</code></td>
+<td>status</td>
+<td><a href=#response-status>ResponseStatus</a></td>
+<td><code>ResponseStatus</code></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>statusMessage</td>
-<td>string</td>
-<td><code>string</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
+<td>a ResponseStatus object</td>
 <td></td>
 </tr>
 </tbody>
@@ -2760,7 +2763,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td><code>string</code></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>slug name of the category</td>
 <td></td>
 </tr>
 </tbody>
@@ -2790,21 +2793,12 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td></td>
 </tr>
 <tr>
-<td>statusCode</td>
-<td>int64 (formatted integer)</td>
-<td><code>int64</code></td>
+<td>status</td>
+<td><a href=#response-status>ResponseStatus</a></td>
+<td><code>ResponseStatus</code></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>statusMessage</td>
-<td>string</td>
-<td><code>string</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
+<td>a ResponseStatus object</td>
 <td></td>
 </tr>
 </tbody>
@@ -2882,7 +2876,42 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td><code>string</code></td>
 <td style=text-align:center>✓</td>
 <td></td>
+<td>slug name of the category</td>
 <td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=span-idget-product-responsespan-getproductresponse><span id=get-product-response></span> GetProductResponse</h3>
+<p><strong>Properties</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Go type</th>
+<th style=text-align:center>Required</th>
+<th>Default</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>product</td>
+<td><a href=#product>Product</a></td>
+<td><code>Product</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>slug name of the category</td>
+<td></td>
+</tr>
+<tr>
+<td>status</td>
+<td><a href=#response-status>ResponseStatus</a></td>
+<td><code>ResponseStatus</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>a ResponseStatus object</td>
 <td></td>
 </tr>
 </tbody>
@@ -2965,6 +2994,15 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td></td>
 </tr>
 <tr>
+<td>status</td>
+<td><a href=#response-status>ResponseStatus</a></td>
+<td><code>ResponseStatus</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>a ResponseStatus object</td>
+<td></td>
+</tr>
+<tr>
 <td>totalPages</td>
 <td>int64 (formatted integer)</td>
 <td><code>int64</code></td>
@@ -2975,6 +3013,50 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 </tr>
 <tr>
 <td>totalRecords</td>
+<td>int64 (formatted integer)</td>
+<td><code>int64</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=span-idjwt-tokenspan-jwttoken><span id=jwt-token></span> JwtToken</h3>
+<p><strong>Properties</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Go type</th>
+<th style=text-align:center>Required</th>
+<th>Default</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>access_expire</td>
+<td>int64 (formatted integer)</td>
+<td><code>int64</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>access_token</td>
+<td>string</td>
+<td><code>string</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>refresh_after</td>
 <td>int64 (formatted integer)</td>
 <td><code>int64</code></td>
 <td style=text-align:center>✓</td>
@@ -3153,6 +3235,41 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 </tr>
 </tbody>
 </table>
+<h3 id=span-idresponse-statusspan-responsestatus><span id=response-status></span> ResponseStatus</h3>
+<p><strong>Properties</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Go type</th>
+<th style=text-align:center>Required</th>
+<th>Default</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>statusCode</td>
+<td>int64 (formatted integer)</td>
+<td><code>int64</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>RFC http status code, ie. 204, etc - https:go.dev/src/net/http/status.go</td>
+<td></td>
+</tr>
+<tr>
+<td>statusMessage</td>
+<td>string</td>
+<td><code>string</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>status message</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h3 id=span-idupdate-category-requestspan-updatecategoryrequest><span id=update-category-request></span> UpdateCategoryRequest</h3>
 <p><strong>Properties</strong></p>
 <table>
@@ -3213,21 +3330,12 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td></td>
 </tr>
 <tr>
-<td>statusCode</td>
-<td>int64 (formatted integer)</td>
-<td><code>int64</code></td>
+<td>status</td>
+<td><a href=#response-status>ResponseStatus</a></td>
+<td><code>ResponseStatus</code></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>statusMessage</td>
-<td>string</td>
-<td><code>string</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
+<td>a ResponseStatus object</td>
 <td></td>
 </tr>
 </tbody>
@@ -3292,21 +3400,12 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td></td>
 </tr>
 <tr>
-<td>statusCode:omitempty</td>
-<td>int64 (formatted integer)</td>
-<td><code>int64</code></td>
+<td>status</td>
+<td><a href=#response-status>ResponseStatus</a></td>
+<td><code>ResponseStatus</code></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>statusMessage:omitempty</td>
-<td>string</td>
-<td><code>string</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
+<td>a ResponseStatus object</td>
 <td></td>
 </tr>
 </tbody>
@@ -3403,75 +3502,611 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 </div>
 <div class=td-content style=page-break-before:always>
 <h1 id=pg-bda9a19cbeeb73aa7d6b969a859a8bf5>6.1.1.3 - Customer</h1>
-<div class=lead>Customer API Endpoints</div>
-<h2 id=customer-endpoints-customer-api-endpoints>Customer Endpoints# Customer API Endpoints</h2>
-<p>admin gateway customer api endpoints</p>
-<h2 id=version-1>Version: 1</h2>
-<h3 id=security>Security</h3>
-<p><strong>apiKey</strong></p>
+<div class=lead>Content negotiation</div>
+<h2 id=customer-endpoints>Customer Endpoints</h2>
+<h3 id=admin>admin</h3>
 <table>
 <thead>
 <tr>
-<th>apiKey</th>
-<th><em>API Key</em></th>
+<th>Method</th>
+<th>URI</th>
+<th>Name</th>
+<th>Summary</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Description</td>
-<td>Enter JWT Bearer token <strong><em>only</em></strong></td>
+<td>POST</td>
+<td>/v1/customer</td>
+<td><a href=#create-customer>create customer</a></td>
+<td>Create Customer</td>
 </tr>
 <tr>
-<td>Name</td>
-<td>Authorization</td>
-</tr>
-<tr>
-<td>In</td>
-<td>header</td>
+<td>POST</td>
+<td>/v1/customer/login</td>
+<td><a href=#customer-login>customer login</a></td>
+<td>Login</td>
 </tr>
 </tbody>
 </table>
-<h3 id=models>Models</h3>
-<h4 id=customer>Customer</h4>
+<h2 id=paths>Paths</h2>
+<h3 id=span-idcreate-customerspan-create-customer-createcustomer><span id=create-customer></span> Create Customer (<em>createCustomer</em>)</h3>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>POST /v1/customer
+</code></pre></div><p>creates a new customer</p>
+<h4 id=parameters>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Source</th>
+<th>Type</th>
+<th>Go type</th>
+<th>Separator</th>
+<th style=text-align:center>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>body</td>
+<td><code>body</code></td>
+<td><a href=#create-customer-request>CreateCustomerRequest</a></td>
+<td><code>models.CreateCustomerRequest</code></td>
+<td></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id=all-responses>All responses</h4>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Status</th>
+<th>Description</th>
+<th style=text-align:center>Has headers</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href=#create-customer-200>200</a></td>
+<td>OK</td>
+<td>A successful response.</td>
+<td style=text-align:center></td>
+<td><a href=#create-customer-200-schema>schema</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id=responses>Responses</h4>
+<h5 id=span-idcreate-customer-200span-200---a-successful-response><span id=create-customer-200></span> 200 - A successful response.</h5>
+<p>Status: OK</p>
+<h6 id=span-idcreate-customer-200-schemaspan-schema><span id=create-customer-200-schema></span> Schema</h6>
+<p><a href=#create-customer-response>CreateCustomerResponse</a></p>
+<h3 id=span-idcustomer-loginspan-login-customerlogin><span id=customer-login></span> Login (<em>customerLogin</em>)</h3>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>POST /v1/customer/login
+</code></pre></div><p>login for customers</p>
+<h4 id=parameters-1>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Source</th>
+<th>Type</th>
+<th>Go type</th>
+<th>Separator</th>
+<th style=text-align:center>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>body</td>
+<td><code>body</code></td>
+<td><a href=#customer-login-request>CustomerLoginRequest</a></td>
+<td><code>models.CustomerLoginRequest</code></td>
+<td></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id=all-responses-1>All responses</h4>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Status</th>
+<th>Description</th>
+<th style=text-align:center>Has headers</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href=#customer-login-200>200</a></td>
+<td>OK</td>
+<td>A successful response.</td>
+<td style=text-align:center></td>
+<td><a href=#customer-login-200-schema>schema</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id=responses-1>Responses</h4>
+<h5 id=span-idcustomer-login-200span-200---a-successful-response><span id=customer-login-200></span> 200 - A successful response.</h5>
+<p>Status: OK</p>
+<h6 id=span-idcustomer-login-200-schemaspan-schema><span id=customer-login-200-schema></span> Schema</h6>
+<p><a href=#customer-login-response>CustomerLoginResponse</a></p>
+<h2 id=models>Models</h2>
+<h3 id=span-idaddressspan-address><span id=address></span> Address</h3>
+<p><strong>Properties</strong></p>
 <table>
 <thead>
 <tr>
 <th>Name</th>
 <th>Type</th>
+<th>Go type</th>
+<th style=text-align:center>Required</th>
+<th>Default</th>
 <th>Description</th>
-<th>Required</th>
+<th>Example</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>id</td>
-<td>long</td>
+<td>city</td>
+<td>string</td>
+<td><code>string</code></td>
+<td style=text-align:center>✓</td>
 <td></td>
-<td>Yes</td>
+<td>city name</td>
+<td></td>
+</tr>
+<tr>
+<td>country</td>
+<td>string</td>
+<td><code>string</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>IISO 3166-1 alpha-2 country code. https:en.wikipedia.org/wiki/List_of_ISO_3166_country_codes</td>
+<td></td>
+</tr>
+<tr>
+<td>isDefault</td>
+<td>boolean (formatted boolean)</td>
+<td><code>bool</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>indicates if this is a default address</td>
+<td></td>
+</tr>
+<tr>
+<td>postalCode</td>
+<td>string</td>
+<td><code>string</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>postal or zip code</td>
+<td></td>
+</tr>
+<tr>
+<td>stateProvince</td>
+<td>string</td>
+<td><code>string</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>state or province name</td>
+<td></td>
+</tr>
+<tr>
+<td>street</td>
+<td>string</td>
+<td><code>string</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>street name, ie: 1723 NW 23rd Ave.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=span-idcreate-customer-requestspan-createcustomerrequest><span id=create-customer-request></span> CreateCustomerRequest</h3>
+<p><strong>Properties</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Go type</th>
+<th style=text-align:center>Required</th>
+<th>Default</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>customer</td>
+<td><a href=#new-customer>NewCustomer</a></td>
+<td><code>NewCustomer</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>NewCustomer object</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=span-idcreate-customer-responsespan-createcustomerresponse><span id=create-customer-response></span> CreateCustomerResponse</h3>
+<p><strong>Properties</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Go type</th>
+<th style=text-align:center>Required</th>
+<th>Default</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>customer</td>
+<td><a href=#customer>Customer</a></td>
+<td><code>Customer</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>Customer object</td>
+<td></td>
+</tr>
+<tr>
+<td>status</td>
+<td><a href=#response-status>ResponseStatus</a></td>
+<td><code>ResponseStatus</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>a ResponseStatus object</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=span-idcustomerspan-customer><span id=customer></span> Customer</h3>
+<p><strong>Properties</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Go type</th>
+<th style=text-align:center>Required</th>
+<th>Default</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>email</td>
+<td>string</td>
+<td><code>string</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>email address</td>
+<td></td>
 </tr>
 <tr>
 <td>firstName</td>
 <td>string</td>
+<td><code>string</code></td>
+<td style=text-align:center>✓</td>
 <td></td>
-<td>Yes</td>
+<td>first name</td>
+<td></td>
+</tr>
+<tr>
+<td>id</td>
+<td>int64 (formatted integer)</td>
+<td><code>int64</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>customer id</td>
+<td></td>
 </tr>
 <tr>
 <td>lastName</td>
 <td>string</td>
+<td><code>string</code></td>
+<td style=text-align:center>✓</td>
 <td></td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>email</td>
-<td>string</td>
+<td>last or given name</td>
 <td></td>
-<td>Yes</td>
 </tr>
 <tr>
 <td>password</td>
 <td>string</td>
+<td><code>string</code></td>
+<td style=text-align:center>✓</td>
 <td></td>
-<td>Yes</td>
+<td>password</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=span-idcustomer-accountspan-customeraccount><span id=customer-account></span> CustomerAccount</h3>
+<p><strong>Properties</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Go type</th>
+<th style=text-align:center>Required</th>
+<th>Default</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>billingAddress</td>
+<td><a href=#address>Address</a></td>
+<td><code>Address</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>Address object</td>
+<td></td>
+</tr>
+<tr>
+<td>id</td>
+<td>int64 (formatted integer)</td>
+<td><code>int64</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>customer id</td>
+<td></td>
+</tr>
+<tr>
+<td>shippingAddresses</td>
+<td>[]<a href=#address>Address</a></td>
+<td><code>[]*Address</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>collection of Address objects</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=span-idcustomer-login-requestspan-customerloginrequest><span id=customer-login-request></span> CustomerLoginRequest</h3>
+<p><strong>Properties</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Go type</th>
+<th style=text-align:center>Required</th>
+<th>Default</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>email</td>
+<td>string</td>
+<td><code>string</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>email address, unique to each store id</td>
+<td></td>
+</tr>
+<tr>
+<td>password</td>
+<td>string</td>
+<td><code>string</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>password</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=span-idcustomer-login-responsespan-customerloginresponse><span id=customer-login-response></span> CustomerLoginResponse</h3>
+<p><strong>Properties</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Go type</th>
+<th style=text-align:center>Required</th>
+<th>Default</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>customer</td>
+<td><a href=#customer>Customer</a></td>
+<td><code>Customer</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>Customer object</td>
+<td></td>
+</tr>
+<tr>
+<td>jwt</td>
+<td><a href=#jwt-token>JwtToken</a></td>
+<td><code>JwtToken</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>jwt token</td>
+<td></td>
+</tr>
+<tr>
+<td>status</td>
+<td><a href=#response-status>ResponseStatus</a></td>
+<td><code>ResponseStatus</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>a ResponseStatus object</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=span-idjwt-tokenspan-jwttoken><span id=jwt-token></span> JwtToken</h3>
+<p><strong>Properties</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Go type</th>
+<th style=text-align:center>Required</th>
+<th>Default</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>access_expire</td>
+<td>int64 (formatted integer)</td>
+<td><code>int64</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>access_token</td>
+<td>string</td>
+<td><code>string</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>refresh_after</td>
+<td>int64 (formatted integer)</td>
+<td><code>int64</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=span-idnew-customerspan-newcustomer><span id=new-customer></span> NewCustomer</h3>
+<p><strong>Properties</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Go type</th>
+<th style=text-align:center>Required</th>
+<th>Default</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>billingAddress</td>
+<td><a href=#address>Address</a></td>
+<td><code>Address</code></td>
+<td style=text-align:center></td>
+<td></td>
+<td>Address object</td>
+<td></td>
+</tr>
+<tr>
+<td>email</td>
+<td>string</td>
+<td><code>string</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>email address, unique per store id</td>
+<td></td>
+</tr>
+<tr>
+<td>firstName</td>
+<td>string</td>
+<td><code>string</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>first name</td>
+<td></td>
+</tr>
+<tr>
+<td>lastName</td>
+<td>string</td>
+<td><code>string</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>last or given name</td>
+<td></td>
+</tr>
+<tr>
+<td>password</td>
+<td>string</td>
+<td><code>string</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>password</td>
+<td></td>
+</tr>
+<tr>
+<td>shippingAddresses</td>
+<td><a href=#address>Address</a></td>
+<td><code>Address</code></td>
+<td style=text-align:center></td>
+<td></td>
+<td>Address object</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=span-idresponse-statusspan-responsestatus><span id=response-status></span> ResponseStatus</h3>
+<p><strong>Properties</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Go type</th>
+<th style=text-align:center>Required</th>
+<th>Default</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>statusCode</td>
+<td>int64 (formatted integer)</td>
+<td><code>int64</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>RFC http status code, ie. 204, etc - https:go.dev/src/net/http/status.go</td>
+<td></td>
+</tr>
+<tr>
+<td>statusMessage</td>
+<td>string</td>
+<td><code>string</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>status message</td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -3506,7 +4141,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 </div>
 <div class=td-content style=page-break-before:always>
 <h1 id=pg-94556364a244f2612d2b7a60a1d25e82>6.1.1.11 - User</h1>
-<div class=lead>User API Endpoints</div>
+<div class=lead>Content negotiation</div>
 <h2 id=user-endpoints>User Endpoints</h2>
 <h3 id=admin>admin</h3>
 <table>
@@ -3625,6 +4260,41 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td style=text-align:center>✓</td>
 <td></td>
 <td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=span-idresponse-statusspan-responsestatus><span id=response-status></span> ResponseStatus</h3>
+<p><strong>Properties</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Go type</th>
+<th style=text-align:center>Required</th>
+<th>Default</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>statusCode</td>
+<td>int64 (formatted integer)</td>
+<td><code>int64</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>RFC http status code, ie. 204, etc - https:go.dev/src/net/http/status.go</td>
+<td></td>
+</tr>
+<tr>
+<td>statusMessage</td>
+<td>string</td>
+<td><code>string</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>status message</td>
 <td></td>
 </tr>
 </tbody>
@@ -3790,7 +4460,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 </div>
 <div class=td-content>
 <h1 id=pg-8924ac62bd45f9d4232816c177eaf68e>6.1.2.1 - Cart</h1>
-<div class=lead>Client Gateway API</div>
+<div class=lead>Content negotiation</div>
 <h2 id=cart-endpoints>Cart Endpoints</h2>
 <h3 id=client>client</h3>
 <table>
@@ -4457,6 +5127,50 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 </tr>
 </tbody>
 </table>
+<h3 id=span-idjwt-tokenspan-jwttoken><span id=jwt-token></span> JwtToken</h3>
+<p><strong>Properties</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Go type</th>
+<th style=text-align:center>Required</th>
+<th>Default</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>access_expire</td>
+<td>int64 (formatted integer)</td>
+<td><code>int64</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>access_token</td>
+<td>string</td>
+<td><code>string</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>refresh_after</td>
+<td>int64 (formatted integer)</td>
+<td><code>int64</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h3 id=span-idremove-cart-item-requestspan-removecartitemrequest><span id=remove-cart-item-request></span> RemoveCartItemRequest</h3>
 <p><strong>Properties</strong></p>
 <table>
@@ -4653,7 +5367,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 </div>
 <div class=td-content style=page-break-before:always>
 <h1 id=pg-4dcc8d9f8478fe98888c0c859ab6dccc>6.1.2.2 - Catalog</h1>
-<div class=lead>Catalog API Endpoints</div>
+<div class=lead>Content negotiation</div>
 <h2 id=catalog-endpoints>Catalog Endpoints</h2>
 <h3 id=client>client</h3>
 <table>
@@ -4676,92 +5390,50 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td>GET</td>
 <td>/v1/products/{currentPage}/{pageSize}</td>
 <td><a href=#get-all-products>get all products</a></td>
-<td>getAllProducts</td>
-</tr>
-<tr>
-<td>returns all products</td>
-<td></td>
-<td></td>
-<td></td>
+<td>Get All Products</td>
 </tr>
 <tr>
 <td>GET</td>
 <td>/v1/category/{id}</td>
 <td><a href=#get-category-by-id>get category by Id</a></td>
-<td>getCategoryById</td>
-</tr>
-<tr>
-<td>returns a category by id</td>
-<td></td>
-<td></td>
-<td></td>
+<td>Get Category By Id</td>
 </tr>
 <tr>
 <td>GET</td>
 <td>/v1/category/slug/{slug}</td>
 <td><a href=#get-category-by-slug>get category by slug</a></td>
-<td>getCategoryBySlug</td>
-</tr>
-<tr>
-<td>returns a category by url slug and storeId</td>
-<td></td>
-<td></td>
-<td></td>
+<td>Get Category By Slug</td>
 </tr>
 <tr>
 <td>GET</td>
 <td>/v1/product/{id}</td>
 <td><a href=#get-product-by-id>get product by Id</a></td>
-<td>getProductById</td>
-</tr>
-<tr>
-<td>returns a product by id</td>
-<td></td>
-<td></td>
-<td></td>
+<td>Get Product By Id</td>
 </tr>
 <tr>
 <td>GET</td>
 <td>/v1/product/sku/{sku}</td>
 <td><a href=#get-product-by-sku>get product by sku</a></td>
-<td>getProductBySku</td>
-</tr>
-<tr>
-<td>returns a product by sku</td>
-<td></td>
-<td></td>
-<td></td>
+<td>Get Product By Sku</td>
 </tr>
 <tr>
 <td>GET</td>
 <td>/v1/product/slug/{slug}</td>
 <td><a href=#get-product-by-slug>get product by slug</a></td>
-<td>getProductBySlug</td>
-</tr>
-<tr>
-<td>returns a product by url slug</td>
-<td></td>
-<td></td>
-<td></td>
+<td>Get Product By Slug</td>
 </tr>
 <tr>
 <td>GET</td>
-<td>/v1/products/category/{categoryId}/{currentPage}/{pageSize}</td>
+<td>/v1/products/{categoryId}/{currentPage}/{pageSize}</td>
 <td><a href=#get-products-by-category-id>get products by category Id</a></td>
-<td>getProductsByCategoryId</td>
-</tr>
-<tr>
-<td>returns all products belonging to a category id</td>
-<td></td>
-<td></td>
-<td></td>
+<td>Get Products By Category Id</td>
 </tr>
 </tbody>
 </table>
 <h2 id=paths>Paths</h2>
 <h3 id=span-idget-all-categoriesspan-get-all-categories-getallcategories><span id=get-all-categories></span> Get All Categories (<em>getAllCategories</em>)</h3>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>GET /v1/categories
-</code></pre></div><p>returns all categories by belonging to a store</p>
+</code></pre></div><p>returns all categories belonging to a store</p>
 <h4 id=all-responses>All responses</h4>
 <table>
 <thead>
@@ -4788,11 +5460,10 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <p>Status: OK</p>
 <h6 id=span-idget-all-categories-200-schemaspan-schema><span id=get-all-categories-200-schema></span> Schema</h6>
 <p><a href=#get-all-categories-response>GetAllCategoriesResponse</a></p>
-<h3 id=span-idget-all-productsspan-getallproducts><span id=get-all-products></span> getAllProducts</h3>
-<pre><code>returns all products (*getAllProducts*)
-</code></pre>
+<h3 id=span-idget-all-productsspan-get-all-products-getallproducts><span id=get-all-products></span> Get All Products (<em>getAllProducts</em>)</h3>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>GET /v1/products/{currentPage}/{pageSize}
-</code></pre></div><h4 id=parameters>Parameters</h4>
+</code></pre></div><p>returns all products belonging to a store</p>
+<h4 id=parameters>Parameters</h4>
 <table>
 <thead>
 <tr>
@@ -4815,7 +5486,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>current page number</td>
 </tr>
 <tr>
 <td>pageSize</td>
@@ -4825,7 +5496,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>number of records per page</td>
 </tr>
 <tr>
 <td>sortOn</td>
@@ -4833,7 +5504,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td>string</td>
 <td><code>string</code></td>
 <td></td>
-<td style=text-align:center></td>
+<td style=text-align:center>✓</td>
 <td></td>
 <td></td>
 </tr>
@@ -4865,11 +5536,10 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <p>Status: OK</p>
 <h6 id=span-idget-all-products-200-schemaspan-schema><span id=get-all-products-200-schema></span> Schema</h6>
 <p><a href=#get-all-products-response>GetAllProductsResponse</a></p>
-<h3 id=span-idget-category-by-idspan-getcategorybyid><span id=get-category-by-id></span> getCategoryById</h3>
-<pre><code>returns a category by id (*getCategoryById*)
-</code></pre>
+<h3 id=span-idget-category-by-idspan-get-category-by-id-getcategorybyid><span id=get-category-by-id></span> Get Category By Id (<em>getCategoryById</em>)</h3>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>GET /v1/category/{id}
-</code></pre></div><h4 id=parameters-1>Parameters</h4>
+</code></pre></div><p>returns all categories by id belonging to a store</p>
+<h4 id=parameters-1>Parameters</h4>
 <table>
 <thead>
 <tr>
@@ -4889,6 +5559,16 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td><code>path</code></td>
 <td>string</td>
 <td><code>string</code></td>
+<td></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>category id</td>
+</tr>
+<tr>
+<td>id</td>
+<td><code>query</code></td>
+<td>int64 (formatted integer)</td>
+<td><code>int64</code></td>
 <td></td>
 <td style=text-align:center>✓</td>
 <td></td>
@@ -4922,11 +5602,10 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <p>Status: OK</p>
 <h6 id=span-idget-category-by-id-200-schemaspan-schema><span id=get-category-by-id-200-schema></span> Schema</h6>
 <p><a href=#get-category-by-id-response>GetCategoryByIDResponse</a></p>
-<h3 id=span-idget-category-by-slugspan-getcategorybyslug><span id=get-category-by-slug></span> getCategoryBySlug</h3>
-<pre><code>returns a category by url slug and storeId (*getCategoryBySlug*)
-</code></pre>
+<h3 id=span-idget-category-by-slugspan-get-category-by-slug-getcategorybyslug><span id=get-category-by-slug></span> Get Category By Slug (<em>getCategoryBySlug</em>)</h3>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>GET /v1/category/slug/{slug}
-</code></pre></div><h4 id=parameters-2>Parameters</h4>
+</code></pre></div><p>returns all categories by slug belonging to a store</p>
+<h4 id=parameters-2>Parameters</h4>
 <table>
 <thead>
 <tr>
@@ -4949,7 +5628,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>category slug</td>
 </tr>
 </tbody>
 </table>
@@ -4979,11 +5658,10 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <p>Status: OK</p>
 <h6 id=span-idget-category-by-slug-200-schemaspan-schema><span id=get-category-by-slug-200-schema></span> Schema</h6>
 <p><a href=#get-category-by-slug-response>GetCategoryBySlugResponse</a></p>
-<h3 id=span-idget-product-by-idspan-getproductbyid><span id=get-product-by-id></span> getProductById</h3>
-<pre><code>returns a product by id (*getProductById*)
-</code></pre>
+<h3 id=span-idget-product-by-idspan-get-product-by-id-getproductbyid><span id=get-product-by-id></span> Get Product By Id (<em>getProductById</em>)</h3>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>GET /v1/product/{id}
-</code></pre></div><h4 id=parameters-3>Parameters</h4>
+</code></pre></div><p>returns matching product by id</p>
+<h4 id=parameters-3>Parameters</h4>
 <table>
 <thead>
 <tr>
@@ -5006,7 +5684,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>product id</td>
 </tr>
 </tbody>
 </table>
@@ -5035,12 +5713,11 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <h5 id=span-idget-product-by-id-200span-200---a-successful-response><span id=get-product-by-id-200></span> 200 - A successful response.</h5>
 <p>Status: OK</p>
 <h6 id=span-idget-product-by-id-200-schemaspan-schema><span id=get-product-by-id-200-schema></span> Schema</h6>
-<p><a href=#product>Product</a></p>
-<h3 id=span-idget-product-by-skuspan-getproductbysku><span id=get-product-by-sku></span> getProductBySku</h3>
-<pre><code>returns a product by sku (*getProductBySku*)
-</code></pre>
+<p><a href=#get-product-response>GetProductResponse</a></p>
+<h3 id=span-idget-product-by-skuspan-get-product-by-sku-getproductbysku><span id=get-product-by-sku></span> Get Product By Sku (<em>getProductBySku</em>)</h3>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>GET /v1/product/sku/{sku}
-</code></pre></div><h4 id=parameters-4>Parameters</h4>
+</code></pre></div><p>returns all products by sku belonging to a store</p>
+<h4 id=parameters-4>Parameters</h4>
 <table>
 <thead>
 <tr>
@@ -5063,7 +5740,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>product sku</td>
 </tr>
 </tbody>
 </table>
@@ -5092,12 +5769,11 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <h5 id=span-idget-product-by-sku-200span-200---a-successful-response><span id=get-product-by-sku-200></span> 200 - A successful response.</h5>
 <p>Status: OK</p>
 <h6 id=span-idget-product-by-sku-200-schemaspan-schema><span id=get-product-by-sku-200-schema></span> Schema</h6>
-<p><a href=#product>Product</a></p>
-<h3 id=span-idget-product-by-slugspan-getproductbyslug><span id=get-product-by-slug></span> getProductBySlug</h3>
-<pre><code>returns a product by url slug (*getProductBySlug*)
-</code></pre>
+<p><a href=#get-product-response>GetProductResponse</a></p>
+<h3 id=span-idget-product-by-slugspan-get-product-by-slug-getproductbyslug><span id=get-product-by-slug></span> Get Product By Slug (<em>getProductBySlug</em>)</h3>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>GET /v1/product/slug/{slug}
-</code></pre></div><h4 id=parameters-5>Parameters</h4>
+</code></pre></div><p>returns matching product by slug</p>
+<h4 id=parameters-5>Parameters</h4>
 <table>
 <thead>
 <tr>
@@ -5120,7 +5796,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>product slug</td>
 </tr>
 </tbody>
 </table>
@@ -5149,12 +5825,11 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <h5 id=span-idget-product-by-slug-200span-200---a-successful-response><span id=get-product-by-slug-200></span> 200 - A successful response.</h5>
 <p>Status: OK</p>
 <h6 id=span-idget-product-by-slug-200-schemaspan-schema><span id=get-product-by-slug-200-schema></span> Schema</h6>
-<p><a href=#product>Product</a></p>
-<h3 id=span-idget-products-by-category-idspan-getproductsbycategoryid><span id=get-products-by-category-id></span> getProductsByCategoryId</h3>
-<pre><code>returns all products belonging to a category id (*getProductsByCategoryId*)
-</code></pre>
-<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>GET /v1/products/category/{categoryId}/{currentPage}/{pageSize}
-</code></pre></div><h4 id=parameters-6>Parameters</h4>
+<p><a href=#get-product-response>GetProductResponse</a></p>
+<h3 id=span-idget-products-by-category-idspan-get-products-by-category-id-getproductsbycategoryid><span id=get-products-by-category-id></span> Get Products By Category Id (<em>getProductsByCategoryId</em>)</h3>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>GET /v1/products/{categoryId}/{currentPage}/{pageSize}
+</code></pre></div><p>returns all products by category id belonging to a store</p>
+<h4 id=parameters-6>Parameters</h4>
 <table>
 <thead>
 <tr>
@@ -5177,7 +5852,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>category id</td>
 </tr>
 <tr>
 <td>currentPage</td>
@@ -5187,7 +5862,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>current page number</td>
 </tr>
 <tr>
 <td>pageSize</td>
@@ -5197,7 +5872,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>number of records per page</td>
 </tr>
 <tr>
 <td>sortOn</td>
@@ -5336,270 +6011,6 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 </tr>
 </tbody>
 </table>
-<h3 id=span-idcreate-category-requestspan-createcategoryrequest><span id=create-category-request></span> CreateCategoryRequest</h3>
-<p><strong>Properties</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Go type</th>
-<th style=text-align:center>Required</th>
-<th>Default</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>category</td>
-<td><a href=#category>Category</a></td>
-<td><code>Category</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id=span-idcreate-category-responsespan-createcategoryresponse><span id=create-category-response></span> CreateCategoryResponse</h3>
-<p><strong>Properties</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Go type</th>
-<th style=text-align:center>Required</th>
-<th>Default</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>category</td>
-<td><a href=#category>Category</a></td>
-<td><code>Category</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>statusCode</td>
-<td>int64 (formatted integer)</td>
-<td><code>int64</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>statusMessage</td>
-<td>string</td>
-<td><code>string</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id=span-idcreate-product-requestspan-createproductrequest><span id=create-product-request></span> CreateProductRequest</h3>
-<p><strong>Properties</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Go type</th>
-<th style=text-align:center>Required</th>
-<th>Default</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>product:omitempty</td>
-<td><a href=#product>Product</a></td>
-<td><code>Product</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id=span-idcreate-product-responsespan-createproductresponse><span id=create-product-response></span> CreateProductResponse</h3>
-<p><strong>Properties</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Go type</th>
-<th style=text-align:center>Required</th>
-<th>Default</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>product:omitempty</td>
-<td><a href=#product>Product</a></td>
-<td><code>Product</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>statusCode:omitempty</td>
-<td>int64 (formatted integer)</td>
-<td><code>int64</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>statusMessage:omitempty</td>
-<td>string</td>
-<td><code>string</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id=span-iddelete-category-requestspan-deletecategoryrequest><span id=delete-category-request></span> DeleteCategoryRequest</h3>
-<p><strong>Properties</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Go type</th>
-<th style=text-align:center>Required</th>
-<th>Default</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>id</td>
-<td>int64 (formatted integer)</td>
-<td><code>int64</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id=span-iddelete-category-responsespan-deletecategoryresponse><span id=delete-category-response></span> DeleteCategoryResponse</h3>
-<p><strong>Properties</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Go type</th>
-<th style=text-align:center>Required</th>
-<th>Default</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>statusCode</td>
-<td>int64 (formatted integer)</td>
-<td><code>int64</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>statusMessage</td>
-<td>string</td>
-<td><code>string</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id=span-iddelete-product-requestspan-deleteproductrequest><span id=delete-product-request></span> DeleteProductRequest</h3>
-<p><strong>Properties</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Go type</th>
-<th style=text-align:center>Required</th>
-<th>Default</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>path:omitempty</td>
-<td>int64 (formatted integer)</td>
-<td><code>int64</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id=span-iddelete-product-responsespan-deleteproductresponse><span id=delete-product-response></span> DeleteProductResponse</h3>
-<p><strong>Properties</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Go type</th>
-<th style=text-align:center>Required</th>
-<th>Default</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>statusCode:omitempty</td>
-<td>int64 (formatted integer)</td>
-<td><code>int64</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>statusMessage:omitempty</td>
-<td>string</td>
-<td><code>string</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id=span-idget-all-categories-requestspan-getallcategoriesrequest><span id=get-all-categories-request></span> GetAllCategoriesRequest</h3>
-<p><a href=#interface>interface{}</a></p>
 <h3 id=span-idget-all-categories-responsespan-getallcategoriesresponse><span id=get-all-categories-response></span> GetAllCategoriesResponse</h3>
 <p><strong>Properties</strong></p>
 <table>
@@ -5621,25 +6032,16 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td><code>[]*Category</code></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>statusCode</td>
-<td>int64 (formatted integer)</td>
-<td><code>int64</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
+<td>a collection of Category</td>
 <td></td>
 </tr>
 <tr>
-<td>statusMessage</td>
-<td>string</td>
-<td><code>string</code></td>
+<td>status</td>
+<td><a href=#response-status>ResponseStatus</a></td>
+<td><code>ResponseStatus</code></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>a ResponseStatus object</td>
 <td></td>
 </tr>
 </tbody>
@@ -5681,7 +6083,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td>sortOn</td>
 <td>string</td>
 <td><code>string</code></td>
-<td style=text-align:center></td>
+<td style=text-align:center>✓</td>
 <td></td>
 <td></td>
 <td></td>
@@ -5710,6 +6112,15 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td style=text-align:center>✓</td>
 <td></td>
 <td></td>
+<td></td>
+</tr>
+<tr>
+<td>status</td>
+<td><a href=#response-status>ResponseStatus</a></td>
+<td><code>ResponseStatus</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>a ResponseStatus object</td>
 <td></td>
 </tr>
 <tr>
@@ -5783,21 +6194,12 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td></td>
 </tr>
 <tr>
-<td>statusCode</td>
-<td>int64 (formatted integer)</td>
-<td><code>int64</code></td>
+<td>status</td>
+<td><a href=#response-status>ResponseStatus</a></td>
+<td><code>ResponseStatus</code></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>statusMessage</td>
-<td>string</td>
-<td><code>string</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
+<td>a ResponseStatus object</td>
 <td></td>
 </tr>
 </tbody>
@@ -5823,7 +6225,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td><code>string</code></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>slug name of the category</td>
 <td></td>
 </tr>
 </tbody>
@@ -5853,21 +6255,12 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td></td>
 </tr>
 <tr>
-<td>statusCode</td>
-<td>int64 (formatted integer)</td>
-<td><code>int64</code></td>
+<td>status</td>
+<td><a href=#response-status>ResponseStatus</a></td>
+<td><code>ResponseStatus</code></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>statusMessage</td>
-<td>string</td>
-<td><code>string</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
+<td>a ResponseStatus object</td>
 <td></td>
 </tr>
 </tbody>
@@ -5945,7 +6338,42 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td><code>string</code></td>
 <td style=text-align:center>✓</td>
 <td></td>
+<td>slug name of the category</td>
 <td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=span-idget-product-responsespan-getproductresponse><span id=get-product-response></span> GetProductResponse</h3>
+<p><strong>Properties</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Go type</th>
+<th style=text-align:center>Required</th>
+<th>Default</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>product</td>
+<td><a href=#product>Product</a></td>
+<td><code>Product</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>slug name of the category</td>
+<td></td>
+</tr>
+<tr>
+<td>status</td>
+<td><a href=#response-status>ResponseStatus</a></td>
+<td><code>ResponseStatus</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>a ResponseStatus object</td>
 <td></td>
 </tr>
 </tbody>
@@ -6028,6 +6456,15 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td></td>
 </tr>
 <tr>
+<td>status</td>
+<td><a href=#response-status>ResponseStatus</a></td>
+<td><code>ResponseStatus</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>a ResponseStatus object</td>
+<td></td>
+</tr>
+<tr>
 <td>totalPages</td>
 <td>int64 (formatted integer)</td>
 <td><code>int64</code></td>
@@ -6038,6 +6475,50 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 </tr>
 <tr>
 <td>totalRecords</td>
+<td>int64 (formatted integer)</td>
+<td><code>int64</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=span-idjwt-tokenspan-jwttoken><span id=jwt-token></span> JwtToken</h3>
+<p><strong>Properties</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Go type</th>
+<th style=text-align:center>Required</th>
+<th>Default</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>access_expire</td>
+<td>int64 (formatted integer)</td>
+<td><code>int64</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>access_token</td>
+<td>string</td>
+<td><code>string</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>refresh_after</td>
 <td>int64 (formatted integer)</td>
 <td><code>int64</code></td>
 <td style=text-align:center>✓</td>
@@ -6216,7 +6697,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 </tr>
 </tbody>
 </table>
-<h3 id=span-idupdate-category-requestspan-updatecategoryrequest><span id=update-category-request></span> UpdateCategoryRequest</h3>
+<h3 id=span-idresponse-statusspan-responsestatus><span id=response-status></span> ResponseStatus</h3>
 <p><strong>Properties</strong></p>
 <table>
 <thead>
@@ -6231,57 +6712,13 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>category</td>
-<td><a href=#category>Category</a></td>
-<td><code>Category</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>id</td>
-<td>int64 (formatted integer)</td>
-<td><code>int64</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id=span-idupdate-category-responsespan-updatecategoryresponse><span id=update-category-response></span> UpdateCategoryResponse</h3>
-<p><strong>Properties</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Go type</th>
-<th style=text-align:center>Required</th>
-<th>Default</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>category</td>
-<td><a href=#category>Category</a></td>
-<td><code>Category</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
 <tr>
 <td>statusCode</td>
 <td>int64 (formatted integer)</td>
 <td><code>int64</code></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>RFC http status code, ie. 204, etc - https:go.dev/src/net/http/status.go</td>
 <td></td>
 </tr>
 <tr>
@@ -6290,86 +6727,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td><code>string</code></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id=span-idupdate-product-requestspan-updateproductrequest><span id=update-product-request></span> UpdateProductRequest</h3>
-<p><strong>Properties</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Go type</th>
-<th style=text-align:center>Required</th>
-<th>Default</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>path:omitempty</td>
-<td>int64 (formatted integer)</td>
-<td><code>int64</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>product:omitempty</td>
-<td><a href=#product>Product</a></td>
-<td><code>Product</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h3 id=span-idupdate-product-responsespan-updateproductresponse><span id=update-product-response></span> UpdateProductResponse</h3>
-<p><strong>Properties</strong></p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Go type</th>
-<th style=text-align:center>Required</th>
-<th>Default</th>
-<th>Description</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>product:omitempty</td>
-<td><a href=#product>Product</a></td>
-<td><code>Product</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>statusCode:omitempty</td>
-<td>int64 (formatted integer)</td>
-<td><code>int64</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>statusMessage:omitempty</td>
-<td>string</td>
-<td><code>string</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
+<td>status message</td>
 <td></td>
 </tr>
 </tbody>
@@ -6466,7 +6824,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 </div>
 <div class=td-content style=page-break-before:always>
 <h1 id=pg-9dff332a70908004456ced7bcfa75841>6.1.2.3 - Customer</h1>
-<div class=lead>Client Gateway API</div>
+<div class=lead>Content negotiation</div>
 <h2 id=customer-endpoints>Customer Endpoints</h2>
 <h3 id=client>client</h3>
 <table>
@@ -6481,17 +6839,79 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <tbody>
 <tr>
 <td>POST</td>
+<td>/v1/customer</td>
+<td><a href=#create-customer>create customer</a></td>
+<td>Create Customer</td>
+</tr>
+<tr>
+<td>POST</td>
 <td>/v1/customer/login</td>
-<td><a href=#login>login</a></td>
+<td><a href=#customer-login>customer login</a></td>
 <td>Login</td>
 </tr>
 </tbody>
 </table>
 <h2 id=paths>Paths</h2>
-<h3 id=span-idloginspan-login-login><span id=login></span> Login (<em>login</em>)</h3>
+<h3 id=span-idcreate-customerspan-create-customer-createcustomer><span id=create-customer></span> Create Customer (<em>createCustomer</em>)</h3>
+<div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>POST /v1/customer
+</code></pre></div><p>creates a new customer</p>
+<h4 id=parameters>Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Source</th>
+<th>Type</th>
+<th>Go type</th>
+<th>Separator</th>
+<th style=text-align:center>Required</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>body</td>
+<td><code>body</code></td>
+<td><a href=#create-customer-request>CreateCustomerRequest</a></td>
+<td><code>models.CreateCustomerRequest</code></td>
+<td></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id=all-responses>All responses</h4>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Status</th>
+<th>Description</th>
+<th style=text-align:center>Has headers</th>
+<th>Schema</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href=#create-customer-200>200</a></td>
+<td>OK</td>
+<td>A successful response.</td>
+<td style=text-align:center></td>
+<td><a href=#create-customer-200-schema>schema</a></td>
+</tr>
+</tbody>
+</table>
+<h4 id=responses>Responses</h4>
+<h5 id=span-idcreate-customer-200span-200---a-successful-response><span id=create-customer-200></span> 200 - A successful response.</h5>
+<p>Status: OK</p>
+<h6 id=span-idcreate-customer-200-schemaspan-schema><span id=create-customer-200-schema></span> Schema</h6>
+<p><a href=#create-customer-response>CreateCustomerResponse</a></p>
+<h3 id=span-idcustomer-loginspan-login-customerlogin><span id=customer-login></span> Login (<em>customerLogin</em>)</h3>
 <div class=highlight><pre tabindex=0 style=background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>POST /v1/customer/login
 </code></pre></div><p>login for customers</p>
-<h4 id=parameters>Parameters</h4>
+<h4 id=parameters-1>Parameters</h4>
 <table>
 <thead>
 <tr>
@@ -6518,7 +6938,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 </tr>
 </tbody>
 </table>
-<h4 id=all-responses>All responses</h4>
+<h4 id=all-responses-1>All responses</h4>
 <table>
 <thead>
 <tr>
@@ -6531,20 +6951,152 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 </thead>
 <tbody>
 <tr>
-<td><a href=#login-200>200</a></td>
+<td><a href=#customer-login-200>200</a></td>
 <td>OK</td>
 <td>A successful response.</td>
 <td style=text-align:center></td>
-<td><a href=#login-200-schema>schema</a></td>
+<td><a href=#customer-login-200-schema>schema</a></td>
 </tr>
 </tbody>
 </table>
-<h4 id=responses>Responses</h4>
-<h5 id=span-idlogin-200span-200---a-successful-response><span id=login-200></span> 200 - A successful response.</h5>
+<h4 id=responses-1>Responses</h4>
+<h5 id=span-idcustomer-login-200span-200---a-successful-response><span id=customer-login-200></span> 200 - A successful response.</h5>
 <p>Status: OK</p>
-<h6 id=span-idlogin-200-schemaspan-schema><span id=login-200-schema></span> Schema</h6>
+<h6 id=span-idcustomer-login-200-schemaspan-schema><span id=customer-login-200-schema></span> Schema</h6>
 <p><a href=#customer-login-response>CustomerLoginResponse</a></p>
 <h2 id=models>Models</h2>
+<h3 id=span-idaddressspan-address><span id=address></span> Address</h3>
+<p><strong>Properties</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Go type</th>
+<th style=text-align:center>Required</th>
+<th>Default</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>city</td>
+<td>string</td>
+<td><code>string</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>city name</td>
+<td></td>
+</tr>
+<tr>
+<td>country</td>
+<td>string</td>
+<td><code>string</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>IISO 3166-1 alpha-2 country code. https:en.wikipedia.org/wiki/List_of_ISO_3166_country_codes</td>
+<td></td>
+</tr>
+<tr>
+<td>isDefault</td>
+<td>boolean (formatted boolean)</td>
+<td><code>bool</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>indicates if this is a default address</td>
+<td></td>
+</tr>
+<tr>
+<td>postalCode</td>
+<td>string</td>
+<td><code>string</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>postal or zip code</td>
+<td></td>
+</tr>
+<tr>
+<td>stateProvince</td>
+<td>string</td>
+<td><code>string</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>state or province name</td>
+<td></td>
+</tr>
+<tr>
+<td>street</td>
+<td>string</td>
+<td><code>string</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>street name, ie: 1723 NW 23rd Ave.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=span-idcreate-customer-requestspan-createcustomerrequest><span id=create-customer-request></span> CreateCustomerRequest</h3>
+<p><strong>Properties</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Go type</th>
+<th style=text-align:center>Required</th>
+<th>Default</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>customer</td>
+<td><a href=#new-customer>NewCustomer</a></td>
+<td><code>NewCustomer</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>NewCustomer object</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=span-idcreate-customer-responsespan-createcustomerresponse><span id=create-customer-response></span> CreateCustomerResponse</h3>
+<p><strong>Properties</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Go type</th>
+<th style=text-align:center>Required</th>
+<th>Default</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>customer</td>
+<td><a href=#customer>Customer</a></td>
+<td><code>Customer</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>Customer object</td>
+<td></td>
+</tr>
+<tr>
+<td>status</td>
+<td><a href=#response-status>ResponseStatus</a></td>
+<td><code>ResponseStatus</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>a ResponseStatus object</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h3 id=span-idcustomerspan-customer><span id=customer></span> Customer</h3>
 <p><strong>Properties</strong></p>
 <table>
@@ -6566,7 +7118,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td><code>string</code></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>email address</td>
 <td></td>
 </tr>
 <tr>
@@ -6575,7 +7127,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td><code>string</code></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>first name</td>
 <td></td>
 </tr>
 <tr>
@@ -6584,7 +7136,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td><code>int64</code></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>customer id</td>
 <td></td>
 </tr>
 <tr>
@@ -6593,7 +7145,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td><code>string</code></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>last or given name</td>
 <td></td>
 </tr>
 <tr>
@@ -6602,7 +7154,51 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td><code>string</code></td>
 <td style=text-align:center>✓</td>
 <td></td>
+<td>password</td>
 <td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=span-idcustomer-accountspan-customeraccount><span id=customer-account></span> CustomerAccount</h3>
+<p><strong>Properties</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Go type</th>
+<th style=text-align:center>Required</th>
+<th>Default</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>billingAddress</td>
+<td><a href=#address>Address</a></td>
+<td><code>Address</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>Address object</td>
+<td></td>
+</tr>
+<tr>
+<td>id</td>
+<td>int64 (formatted integer)</td>
+<td><code>int64</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>customer id</td>
+<td></td>
+</tr>
+<tr>
+<td>shippingAddresses</td>
+<td>[]<a href=#address>Address</a></td>
+<td><code>[]*Address</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>collection of Address objects</td>
 <td></td>
 </tr>
 </tbody>
@@ -6628,7 +7224,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td><code>string</code></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>email address, unique to each store id</td>
 <td></td>
 </tr>
 <tr>
@@ -6637,7 +7233,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td><code>string</code></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>password</td>
 <td></td>
 </tr>
 </tbody>
@@ -6663,7 +7259,7 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td><code>Customer</code></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>Customer object</td>
 <td></td>
 </tr>
 <tr>
@@ -6672,25 +7268,16 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td><code>JwtToken</code></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>statusCode</td>
-<td>int64 (formatted integer)</td>
-<td><code>int64</code></td>
-<td style=text-align:center>✓</td>
-<td></td>
-<td></td>
+<td>jwt token</td>
 <td></td>
 </tr>
 <tr>
-<td>statusMessage</td>
-<td>string</td>
-<td><code>string</code></td>
+<td>status</td>
+<td><a href=#response-status>ResponseStatus</a></td>
+<td><code>ResponseStatus</code></td>
 <td style=text-align:center>✓</td>
 <td></td>
-<td></td>
+<td>a ResponseStatus object</td>
 <td></td>
 </tr>
 </tbody>
@@ -6735,6 +7322,112 @@ via <code>JSON</code> over common protocols such as <code>http</code> and <code>
 <td style=text-align:center>✓</td>
 <td></td>
 <td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=span-idnew-customerspan-newcustomer><span id=new-customer></span> NewCustomer</h3>
+<p><strong>Properties</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Go type</th>
+<th style=text-align:center>Required</th>
+<th>Default</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>billingAddress</td>
+<td><a href=#address>Address</a></td>
+<td><code>Address</code></td>
+<td style=text-align:center></td>
+<td></td>
+<td>Address object</td>
+<td></td>
+</tr>
+<tr>
+<td>email</td>
+<td>string</td>
+<td><code>string</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>email address, unique per store id</td>
+<td></td>
+</tr>
+<tr>
+<td>firstName</td>
+<td>string</td>
+<td><code>string</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>first name</td>
+<td></td>
+</tr>
+<tr>
+<td>lastName</td>
+<td>string</td>
+<td><code>string</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>last or given name</td>
+<td></td>
+</tr>
+<tr>
+<td>password</td>
+<td>string</td>
+<td><code>string</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>password</td>
+<td></td>
+</tr>
+<tr>
+<td>shippingAddresses</td>
+<td><a href=#address>Address</a></td>
+<td><code>Address</code></td>
+<td style=text-align:center></td>
+<td></td>
+<td>Address object</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id=span-idresponse-statusspan-responsestatus><span id=response-status></span> ResponseStatus</h3>
+<p><strong>Properties</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Go type</th>
+<th style=text-align:center>Required</th>
+<th>Default</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>statusCode</td>
+<td>int64 (formatted integer)</td>
+<td><code>int64</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>RFC http status code, ie. 204, etc - https:go.dev/src/net/http/status.go</td>
+<td></td>
+</tr>
+<tr>
+<td>statusMessage</td>
+<td>string</td>
+<td><code>string</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td>status message</td>
 <td></td>
 </tr>
 </tbody>

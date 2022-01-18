@@ -4,7 +4,7 @@
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <meta name=generator content="Hugo 0.91.2">
 <meta name=robots content="index, follow">
-<script type=application/ld+json>{"@context":"http://schema.org","@type":"WebSite","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/k8scommerce.github.io"},"articleSection":"docs","name":"Cart","headline":"Cart","description":"Client Gateway API\n","inLanguage":"en-US","author":"","creator":"","publisher":"","accountablePerson":"","copyrightHolder":"","copyrightYear":"2022","datePublished":"2022-01-12 00:00:00 \u002b0000 UTC","dateModified":"2022-01-12 00:00:00 \u002b0000 UTC","url":"https:\/\/k8scommerce.github.io\/docs\/rest-gateway-endpoints\/v1\/admin-gateway\/cart\/","wordCount":"720","keywords":["K8sCommerce"]}</script>
+<script type=application/ld+json>{"@context":"http://schema.org","@type":"WebSite","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/k8scommerce.github.io"},"articleSection":"docs","name":"Cart","headline":"Cart","description":"Content negotiation\n","inLanguage":"en-US","author":"","creator":"","publisher":"","accountablePerson":"","copyrightHolder":"","copyrightYear":"2022","datePublished":"2022-01-12 00:00:00 \u002b0000 UTC","dateModified":"2022-01-12 00:00:00 \u002b0000 UTC","url":"https:\/\/k8scommerce.github.io\/docs\/rest-gateway-endpoints\/v1\/admin-gateway\/cart\/","wordCount":"746","keywords":["K8sCommerce"]}</script>
 <link rel="shortcut icon" href=/favicons/favicon.ico>
 <link rel=apple-touch-icon href=/favicons/apple-touch-icon-180x180.png sizes=180x180>
 <link rel=icon type=image/png href=/favicons/favicon-16x16.png sizes=16x16>
@@ -14,23 +14,23 @@
 <meta name=msapplication-TileColor content="#4279f4">
 <meta name=theme-color content="#4279f4">
 <title>Cart | K8sCommerce</title>
-<meta name=description content="Client Gateway API
+<meta name=description content="Content negotiation
 ">
 <meta property="og:title" content="Cart">
-<meta property="og:description" content="Client Gateway API
+<meta property="og:description" content="Content negotiation
 ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://k8scommerce.github.io/docs/rest-gateway-endpoints/v1/admin-gateway/cart/"><meta property="article:section" content="docs">
 <meta property="article:published_time" content="2022-01-12T00:00:00+00:00">
-<meta property="article:modified_time" content="2022-01-16T16:57:04-07:00"><meta property="og:site_name" content="K8sCommerce">
+<meta property="article:modified_time" content="2022-01-17T20:26:45-07:00"><meta property="og:site_name" content="K8sCommerce">
 <meta itemprop=name content="Cart">
-<meta itemprop=description content="Client Gateway API
+<meta itemprop=description content="Content negotiation
 "><meta itemprop=datePublished content="2022-01-12T00:00:00+00:00">
-<meta itemprop=dateModified content="2022-01-16T16:57:04-07:00">
-<meta itemprop=wordCount content="720">
+<meta itemprop=dateModified content="2022-01-17T20:26:45-07:00">
+<meta itemprop=wordCount content="746">
 <meta itemprop=keywords content><meta name=twitter:card content="summary">
 <meta name=twitter:title content="Cart">
-<meta name=twitter:description content="Client Gateway API
+<meta name=twitter:description content="Content negotiation
 ">
 <link rel=preload href=/scss/main.min.9b02fa86671b61c8dfe2940f9a0a4a2d3e19a9be4667c10266fc96604b2dd385.css as=style>
 <link href=/scss/main.min.9b02fa86671b61c8dfe2940f9a0a4a2d3e19a9be4667c10266fc96604b2dd385.css rel=stylesheet integrity>
@@ -315,6 +315,7 @@
 <li><a href=#span-idget-cart-requestspan-getcartrequest><span id=get-cart-request></span> GetCartRequest</a></li>
 <li><a href=#span-idget-cart-responsespan-getcartresponse><span id=get-cart-response></span> GetCartResponse</a></li>
 <li><a href=#span-iditemspan-item><span id=item></span> Item</a></li>
+<li><a href=#span-idjwt-tokenspan-jwttoken><span id=jwt-token></span> JwtToken</a></li>
 <li><a href=#span-idremove-cart-item-requestspan-removecartitemrequest><span id=remove-cart-item-request></span> RemoveCartItemRequest</a></li>
 <li><a href=#span-idremove-cart-item-responsespan-removecartitemresponse><span id=remove-cart-item-response></span> RemoveCartItemResponse</a></li>
 <li><a href=#span-idresponse-statusspan-responsestatus><span id=response-status></span> ResponseStatus</a></li>
@@ -347,7 +348,7 @@
 </nav>
 <div class=td-content>
 <h1>Cart</h1>
-<div class=lead>Client Gateway API</div>
+<div class=lead>Content negotiation</div>
 <header class=article-meta>
 </header>
 <h2 id=cart-endpoints>Cart Endpoints</h2>
@@ -1016,6 +1017,50 @@
 </tr>
 </tbody>
 </table>
+<h3 id=span-idjwt-tokenspan-jwttoken><span id=jwt-token></span> JwtToken</h3>
+<p><strong>Properties</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Go type</th>
+<th style=text-align:center>Required</th>
+<th>Default</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>access_expire</td>
+<td>int64 (formatted integer)</td>
+<td><code>int64</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>access_token</td>
+<td>string</td>
+<td><code>string</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>refresh_after</td>
+<td>int64 (formatted integer)</td>
+<td><code>int64</code></td>
+<td style=text-align:center>✓</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h3 id=span-idremove-cart-item-requestspan-removecartitemrequest><span id=remove-cart-item-request></span> RemoveCartItemRequest</h3>
 <p><strong>Properties</strong></p>
 <table>
@@ -1227,7 +1272,7 @@ Sorry to hear that. Please <a href=https://github.com/k8scommerce/k8scommerce/is
 <script>const yesButton=document.querySelector('.feedback--answer-yes'),noButton=document.querySelector('.feedback--answer-no'),yesResponse=document.querySelector('.feedback--response-yes'),noResponse=document.querySelector('.feedback--response-no'),disableButtons=()=>{yesButton.disabled=!0,noButton.disabled=!0},sendFeedback=b=>{if(typeof ga!='function')return;const a={command:'send',hitType:'event',category:'Helpful',action:'click',label:window.location.pathname,value:b};ga(a.command,a.hitType,a.category,a.action,a.label,a.value)};yesButton.addEventListener('click',()=>{yesResponse.classList.add('feedback--response__visible'),disableButtons(),sendFeedback(1)}),noButton.addEventListener('click',()=>{noResponse.classList.add('feedback--response__visible'),disableButtons(),sendFeedback(0)})</script>
 <br>
 <div class="text-muted mt-5 pt-3 border-top">
-Last modified January 16, 2022: <a href=https://github.com/k8scommerce/k8scommerce/commit/290d2f09bdc86ce4f4c7a7bc194d8cbeb91200bb>working on auto-generated docs (290d2f0)</a>
+Last modified January 17, 2022: <a href=https://github.com/k8scommerce/k8scommerce/commit/dd84509a46135dadfdc99b10845c7485a0d0ab3a>updating docs (dd84509)</a>
 </div>
 </div>
 </main>

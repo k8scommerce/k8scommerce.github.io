@@ -1,15 +1,58 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>K8sCommerce – Methodology</title><link>https://k8scommerce.github.io/en/docs/microservices/methodology/</link><description>Recent content in Methodology on K8sCommerce</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 12 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://k8scommerce.github.io/en/docs/microservices/methodology/index.xml" rel="self" type="application/rss+xml"/><item><title>En: Go-Zero &amp; goctl</title><link>https://k8scommerce.github.io/en/docs/microservices/methodology/go-zero-and-goctl/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/en/docs/microservices/methodology/go-zero-and-goctl/</guid><description>
-&lt;h2 id="go-zero">Go-Zero&lt;/h2>
-&lt;h2 id="goctl">goctl&lt;/h2></description></item><item><title>En: Development Philosophy</title><link>https://k8scommerce.github.io/en/docs/microservices/methodology/development-philosophy/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/en/docs/microservices/methodology/development-philosophy/</guid><description>
-&lt;p>The K8sCommerce project embraces the development philosophy:&lt;/p>
-&lt;blockquote>
-&lt;p>&lt;em>&amp;ldquo;Prefer tools over conventions.&amp;quot;&lt;/em>&lt;/p>
-&lt;/blockquote>
-&lt;p>Employing code-generation tools as often as possible reduces repetitively writing foundational code such as CRUD operations, gRPC bindings, microservice boilerplate code. etc. This methodology shortens the developer&amp;rsquo;s learning curve while reducing, and oftentimes eliminating, human-introduced bugs.&lt;/p>
-&lt;p>Incorporating the following code-generation tools in our project has helped speed up development, integrations, and logic refinements, creating a desirable, streamlined, high-velocity development approach.&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://developers.google.com/protocol-buffers/">Google&amp;rsquo;s protocol buffers (protoc)&lt;/a>: RPC client/server generation from .proto files with almost every language supported&lt;/li>
-&lt;li>&lt;a href="https://github.com/zeromicro/go-zero">go-zero&amp;rsquo;s goctl&lt;/a>: microservice framework generation from .proto and .api files&lt;/li>
-&lt;li>&lt;a href="https://github.com/xo/xo">xo&amp;rsquo;s xo&lt;/a>: Database CRUD object generation for relational databases, with primary key, foreign key, enum, and advanced composite primary key support.&lt;/li>
-&lt;/ul>
-&lt;p>Preferring tools over conventions, combined with ever-growing documentation, empowers businesses to successfully integrate K8sCommerce&amp;rsquo;s projects into their existing coding ecosystem in condensed timeframes.&lt;/p></description></item></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>K8sCommerce – Methodology</title>
+    <link>https://k8scommerce.github.io/en/docs/microservices/methodology/</link>
+    <description>Recent content in Methodology on K8sCommerce</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 12 Jan 2022 00:00:00 +0000</lastBuildDate>
+    
+	  <atom:link href="https://k8scommerce.github.io/en/docs/microservices/methodology/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>En: Go-Zero &amp; goctl</title>
+      <link>https://k8scommerce.github.io/en/docs/microservices/methodology/go-zero-and-goctl/</link>
+      <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://k8scommerce.github.io/en/docs/microservices/methodology/go-zero-and-goctl/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;go-zero&#34;&gt;Go-Zero&lt;/h2&gt;
+&lt;h2 id=&#34;goctl&#34;&gt;goctl&lt;/h2&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>En: Development Philosophy</title>
+      <link>https://k8scommerce.github.io/en/docs/microservices/methodology/development-philosophy/</link>
+      <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://k8scommerce.github.io/en/docs/microservices/methodology/development-philosophy/</guid>
+      <description>
+        
+        
+        &lt;p&gt;The K8sCommerce project embraces the development philosophy:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&amp;ldquo;Prefer tools over conventions.&amp;quot;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Employing code-generation tools as often as possible reduces repetitively writing foundational code such as CRUD operations, gRPC bindings, microservice boilerplate code. etc. This methodology shortens the developer&amp;rsquo;s learning curve while reducing, and oftentimes eliminating, human-introduced bugs.&lt;/p&gt;
+&lt;p&gt;Incorporating the following code-generation tools in our project has helped speed up development, integrations, and logic refinements, creating a desirable, streamlined, high-velocity development approach.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://developers.google.com/protocol-buffers/&#34;&gt;Google&amp;rsquo;s protocol buffers (protoc)&lt;/a&gt;: RPC client/server generation from .proto files with almost every language supported&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/zeromicro/go-zero&#34;&gt;go-zero&amp;rsquo;s goctl&lt;/a&gt;: microservice framework generation from .proto and .api files&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/xo/xo&#34;&gt;xo&amp;rsquo;s xo&lt;/a&gt;: Database CRUD object generation for relational databases, with primary key, foreign key, enum, and advanced composite primary key support.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Preferring tools over conventions, combined with ever-growing documentation, empowers businesses to successfully integrate K8sCommerce&amp;rsquo;s projects into their existing coding ecosystem in condensed timeframes.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

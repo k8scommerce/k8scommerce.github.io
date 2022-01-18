@@ -228,11 +228,11 @@ desc = "Follow us on Twitter to get the latest news!"
 icon = "fab fa-twitter"
 name = "Twitter"
 url = "https://twitter.com/K8sCommerce"
-[[params.links.user]]
-desc = "Practical questions and curated answers"
-icon = "fab fa-stack-overflow"
-name = "Stack Overflow"
-url = "https://example.org/stack"
+# [[params.links.user]]
+# desc = "Practical questions and curated answers"
+# icon = "fab fa-stack-overflow"
+# name = "Stack Overflow"
+# url = "https://example.org/stack"
 # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
 [[params.links.developer]]
 desc = "Development takes place here!"
@@ -243,7 +243,7 @@ url = "https://github.com/k8scommerce/k8scommerce"
 desc = "Chat with other project developers"
 icon = "fab fa-slack"
 name = "Slack"
-url = "https://example.org/slack"
+url = "https://k8scommerce.slack.com"
 # [[params.links.developer]]
 #   name = "Developer mailing list"
 #   url = "https://example.org/mail"

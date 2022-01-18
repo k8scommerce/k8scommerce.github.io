@@ -1,0 +1,20 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>K8sCommerce – Gateway Services</title><link>https://k8scommerce.github.io/en/docs/microservices/gateway-services/</link><description>Recent content in Gateway Services on K8sCommerce</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Wed, 12 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://k8scommerce.github.io/en/docs/microservices/gateway-services/index.xml" rel="self" type="application/rss+xml"/><item><title>En: Client Gateway</title><link>https://k8scommerce.github.io/en/docs/microservices/gateway-services/client-gateway/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/en/docs/microservices/gateway-services/client-gateway/</guid><description>
+&lt;h2 id="cart">Cart&lt;/h2>
+&lt;h2 id="catalog">Catalog&lt;/h2>
+&lt;h2 id="customer">Customer&lt;/h2>
+&lt;h2 id="others-bought">Others Bought&lt;/h2>
+&lt;h2 id="payment">Payment&lt;/h2>
+&lt;h2 id="shipping">Shipping&lt;/h2>
+&lt;h2 id="similar-products">Similar Products&lt;/h2></description></item><item><title>En: Admin Gateway</title><link>https://k8scommerce.github.io/en/docs/microservices/gateway-services/admin-gateway/</link><pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate><guid>https://k8scommerce.github.io/en/docs/microservices/gateway-services/admin-gateway/</guid><description>
+&lt;h2 id="cart">Cart&lt;/h2>
+&lt;h2 id="catalog">Catalog&lt;/h2>
+&lt;h2 id="customer">Customer&lt;/h2>
+&lt;h2 id="email">Email&lt;/h2>
+&lt;h2 id="inventory">Inventory&lt;/h2>
+&lt;h2 id="others-bought">Others Bought&lt;/h2>
+&lt;h2 id="payment">Payment&lt;/h2>
+&lt;h2 id="shipping">Shipping&lt;/h2>
+&lt;h2 id="similar-products">Similar Products&lt;/h2>
+&lt;h2 id="store">Store&lt;/h2>
+&lt;h2 id="user">User&lt;/h2>
+&lt;h2 id="warehouse">Warehouse&lt;/h2></description></item></channel></rss>

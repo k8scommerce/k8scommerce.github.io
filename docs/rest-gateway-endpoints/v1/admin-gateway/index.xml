@@ -681,7 +681,7 @@
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>access_expire&lt;/td>
+&lt;td>accessExpire&lt;/td>
 &lt;td>int64 (formatted integer)&lt;/td>
 &lt;td>&lt;code>int64&lt;/code>&lt;/td>
 &lt;td style="text-align:center">✓&lt;/td>
@@ -690,7 +690,7 @@
 &lt;td>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>access_token&lt;/td>
+&lt;td>accessToken&lt;/td>
 &lt;td>string&lt;/td>
 &lt;td>&lt;code>string&lt;/code>&lt;/td>
 &lt;td style="text-align:center">✓&lt;/td>
@@ -699,7 +699,7 @@
 &lt;td>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>refresh_after&lt;/td>
+&lt;td>refreshAfter&lt;/td>
 &lt;td>int64 (formatted integer)&lt;/td>
 &lt;td>&lt;code>int64&lt;/code>&lt;/td>
 &lt;td style="text-align:center">✓&lt;/td>
@@ -2672,7 +2672,7 @@
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>access_expire&lt;/td>
+&lt;td>accessExpire&lt;/td>
 &lt;td>int64 (formatted integer)&lt;/td>
 &lt;td>&lt;code>int64&lt;/code>&lt;/td>
 &lt;td style="text-align:center">✓&lt;/td>
@@ -2681,7 +2681,7 @@
 &lt;td>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>access_token&lt;/td>
+&lt;td>accessToken&lt;/td>
 &lt;td>string&lt;/td>
 &lt;td>&lt;code>string&lt;/code>&lt;/td>
 &lt;td style="text-align:center">✓&lt;/td>
@@ -2690,7 +2690,7 @@
 &lt;td>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>refresh_after&lt;/td>
+&lt;td>refreshAfter&lt;/td>
 &lt;td>int64 (formatted integer)&lt;/td>
 &lt;td>&lt;code>int64&lt;/code>&lt;/td>
 &lt;td style="text-align:center">✓&lt;/td>
@@ -3606,7 +3606,7 @@
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>access_expire&lt;/td>
+&lt;td>accessExpire&lt;/td>
 &lt;td>int64 (formatted integer)&lt;/td>
 &lt;td>&lt;code>int64&lt;/code>&lt;/td>
 &lt;td style="text-align:center">✓&lt;/td>
@@ -3615,7 +3615,7 @@
 &lt;td>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>access_token&lt;/td>
+&lt;td>accessToken&lt;/td>
 &lt;td>string&lt;/td>
 &lt;td>&lt;code>string&lt;/code>&lt;/td>
 &lt;td style="text-align:center">✓&lt;/td>
@@ -3624,7 +3624,7 @@
 &lt;td>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>refresh_after&lt;/td>
+&lt;td>refreshAfter&lt;/td>
 &lt;td>int64 (formatted integer)&lt;/td>
 &lt;td>&lt;code>int64&lt;/code>&lt;/td>
 &lt;td style="text-align:center">✓&lt;/td>
@@ -3834,7 +3834,7 @@
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>access_expire&lt;/td>
+&lt;td>accessExpire&lt;/td>
 &lt;td>int64 (formatted integer)&lt;/td>
 &lt;td>&lt;code>int64&lt;/code>&lt;/td>
 &lt;td style="text-align:center">✓&lt;/td>
@@ -3843,7 +3843,7 @@
 &lt;td>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>access_token&lt;/td>
+&lt;td>accessToken&lt;/td>
 &lt;td>string&lt;/td>
 &lt;td>&lt;code>string&lt;/code>&lt;/td>
 &lt;td style="text-align:center">✓&lt;/td>
@@ -3852,7 +3852,7 @@
 &lt;td>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>refresh_after&lt;/td>
+&lt;td>refreshAfter&lt;/td>
 &lt;td>int64 (formatted integer)&lt;/td>
 &lt;td>&lt;code>int64&lt;/code>&lt;/td>
 &lt;td style="text-align:center">✓&lt;/td>
@@ -3918,7 +3918,7 @@
 &lt;td>&lt;code>string&lt;/code>&lt;/td>
 &lt;td style="text-align:center">✓&lt;/td>
 &lt;td>&lt;/td>
-&lt;td>&lt;/td>
+&lt;td>email address&lt;/td>
 &lt;td>&lt;/td>
 &lt;/tr>
 &lt;tr>
@@ -3927,7 +3927,7 @@
 &lt;td>&lt;code>string&lt;/code>&lt;/td>
 &lt;td style="text-align:center">✓&lt;/td>
 &lt;td>&lt;/td>
-&lt;td>&lt;/td>
+&lt;td>first name&lt;/td>
 &lt;td>&lt;/td>
 &lt;/tr>
 &lt;tr>
@@ -3936,7 +3936,7 @@
 &lt;td>&lt;code>int64&lt;/code>&lt;/td>
 &lt;td style="text-align:center">✓&lt;/td>
 &lt;td>&lt;/td>
-&lt;td>&lt;/td>
+&lt;td>user id&lt;/td>
 &lt;td>&lt;/td>
 &lt;/tr>
 &lt;tr>
@@ -3945,7 +3945,7 @@
 &lt;td>&lt;code>string&lt;/code>&lt;/td>
 &lt;td style="text-align:center">✓&lt;/td>
 &lt;td>&lt;/td>
-&lt;td>&lt;/td>
+&lt;td>last name&lt;/td>
 &lt;td>&lt;/td>
 &lt;/tr>
 &lt;tr>
@@ -3954,7 +3954,7 @@
 &lt;td>&lt;code>string&lt;/code>&lt;/td>
 &lt;td style="text-align:center">✓&lt;/td>
 &lt;td>&lt;/td>
-&lt;td>&lt;/td>
+&lt;td>password&lt;/td>
 &lt;td>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
@@ -3980,7 +3980,7 @@
 &lt;td>&lt;code>string&lt;/code>&lt;/td>
 &lt;td style="text-align:center">✓&lt;/td>
 &lt;td>&lt;/td>
-&lt;td>&lt;/td>
+&lt;td>email address&lt;/td>
 &lt;td>&lt;/td>
 &lt;/tr>
 &lt;tr>
@@ -3989,7 +3989,7 @@
 &lt;td>&lt;code>string&lt;/code>&lt;/td>
 &lt;td style="text-align:center">✓&lt;/td>
 &lt;td>&lt;/td>
-&lt;td>&lt;/td>
+&lt;td>password&lt;/td>
 &lt;td>&lt;/td>
 &lt;/tr>
 &lt;/tbody>
@@ -4015,25 +4015,16 @@
 &lt;td>&lt;code>JwtToken&lt;/code>&lt;/td>
 &lt;td style="text-align:center">✓&lt;/td>
 &lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>statusCode&lt;/td>
-&lt;td>int64 (formatted integer)&lt;/td>
-&lt;td>&lt;code>int64&lt;/code>&lt;/td>
-&lt;td style="text-align:center">✓&lt;/td>
-&lt;td>&lt;/td>
-&lt;td>&lt;/td>
+&lt;td>JwtToken object&lt;/td>
 &lt;td>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>statusMessage&lt;/td>
-&lt;td>string&lt;/td>
-&lt;td>&lt;code>string&lt;/code>&lt;/td>
+&lt;td>status&lt;/td>
+&lt;td>&lt;a href="#response-status">ResponseStatus&lt;/a>&lt;/td>
+&lt;td>&lt;code>ResponseStatus&lt;/code>&lt;/td>
 &lt;td style="text-align:center">✓&lt;/td>
 &lt;td>&lt;/td>
-&lt;td>&lt;/td>
+&lt;td>a ResponseStatus object&lt;/td>
 &lt;td>&lt;/td>
 &lt;/tr>
 &lt;tr>
@@ -4042,7 +4033,7 @@
 &lt;td>&lt;code>User&lt;/code>&lt;/td>
 &lt;td style="text-align:center">✓&lt;/td>
 &lt;td>&lt;/td>
-&lt;td>&lt;/td>
+&lt;td>User object&lt;/td>
 &lt;td>&lt;/td>
 &lt;/tr>
 &lt;/tbody>

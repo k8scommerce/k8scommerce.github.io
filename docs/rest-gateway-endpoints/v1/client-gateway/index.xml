@@ -681,7 +681,7 @@
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>access_expire&lt;/td>
+&lt;td>accessExpire&lt;/td>
 &lt;td>int64 (formatted integer)&lt;/td>
 &lt;td>&lt;code>int64&lt;/code>&lt;/td>
 &lt;td style="text-align:center">✓&lt;/td>
@@ -690,7 +690,7 @@
 &lt;td>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>access_token&lt;/td>
+&lt;td>accessToken&lt;/td>
 &lt;td>string&lt;/td>
 &lt;td>&lt;code>string&lt;/code>&lt;/td>
 &lt;td style="text-align:center">✓&lt;/td>
@@ -699,7 +699,7 @@
 &lt;td>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>refresh_after&lt;/td>
+&lt;td>refreshAfter&lt;/td>
 &lt;td>int64 (formatted integer)&lt;/td>
 &lt;td>&lt;code>int64&lt;/code>&lt;/td>
 &lt;td style="text-align:center">✓&lt;/td>
@@ -2034,7 +2034,7 @@
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>access_expire&lt;/td>
+&lt;td>accessExpire&lt;/td>
 &lt;td>int64 (formatted integer)&lt;/td>
 &lt;td>&lt;code>int64&lt;/code>&lt;/td>
 &lt;td style="text-align:center">✓&lt;/td>
@@ -2043,7 +2043,7 @@
 &lt;td>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>access_token&lt;/td>
+&lt;td>accessToken&lt;/td>
 &lt;td>string&lt;/td>
 &lt;td>&lt;code>string&lt;/code>&lt;/td>
 &lt;td style="text-align:center">✓&lt;/td>
@@ -2052,7 +2052,7 @@
 &lt;td>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>refresh_after&lt;/td>
+&lt;td>refreshAfter&lt;/td>
 &lt;td>int64 (formatted integer)&lt;/td>
 &lt;td>&lt;code>int64&lt;/code>&lt;/td>
 &lt;td style="text-align:center">✓&lt;/td>
@@ -2828,7 +2828,7 @@
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td>access_expire&lt;/td>
+&lt;td>accessExpire&lt;/td>
 &lt;td>int64 (formatted integer)&lt;/td>
 &lt;td>&lt;code>int64&lt;/code>&lt;/td>
 &lt;td style="text-align:center">✓&lt;/td>
@@ -2837,7 +2837,7 @@
 &lt;td>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>access_token&lt;/td>
+&lt;td>accessToken&lt;/td>
 &lt;td>string&lt;/td>
 &lt;td>&lt;code>string&lt;/code>&lt;/td>
 &lt;td style="text-align:center">✓&lt;/td>
@@ -2846,7 +2846,7 @@
 &lt;td>&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>refresh_after&lt;/td>
+&lt;td>refreshAfter&lt;/td>
 &lt;td>int64 (formatted integer)&lt;/td>
 &lt;td>&lt;code>int64&lt;/code>&lt;/td>
 &lt;td style="text-align:center">✓&lt;/td>

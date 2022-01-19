@@ -63,9 +63,9 @@ Status: OK
 
 | Name | Type | Go type | Required | Default | Description | Example |
 |------|------|---------|:--------:| ------- |-------------|---------|
-| access_expire | int64 (formatted integer)| `int64` | ✓ | |  |  |
-| access_token | string| `string` | ✓ | |  |  |
-| refresh_after | int64 (formatted integer)| `int64` | ✓ | |  |  |
+| accessExpire | int64 (formatted integer)| `int64` | ✓ | |  |  |
+| accessToken | string| `string` | ✓ | |  |  |
+| refreshAfter | int64 (formatted integer)| `int64` | ✓ | |  |  |
 
 
 
@@ -96,11 +96,11 @@ Status: OK
 
 | Name | Type | Go type | Required | Default | Description | Example |
 |------|------|---------|:--------:| ------- |-------------|---------|
-| email | string| `string` | ✓ | |  |  |
-| firstName | string| `string` | ✓ | |  |  |
-| id | int64 (formatted integer)| `int64` | ✓ | |  |  |
-| lastName | string| `string` | ✓ | |  |  |
-| password | string| `string` | ✓ | |  |  |
+| email | string| `string` | ✓ | | email address |  |
+| firstName | string| `string` | ✓ | | first name |  |
+| id | int64 (formatted integer)| `int64` | ✓ | | user id |  |
+| lastName | string| `string` | ✓ | | last name |  |
+| password | string| `string` | ✓ | | password |  |
 
 
 
@@ -115,8 +115,8 @@ Status: OK
 
 | Name | Type | Go type | Required | Default | Description | Example |
 |------|------|---------|:--------:| ------- |-------------|---------|
-| email | string| `string` | ✓ | |  |  |
-| password | string| `string` | ✓ | |  |  |
+| email | string| `string` | ✓ | | email address |  |
+| password | string| `string` | ✓ | | password |  |
 
 
 
@@ -131,7 +131,6 @@ Status: OK
 
 | Name | Type | Go type | Required | Default | Description | Example |
 |------|------|---------|:--------:| ------- |-------------|---------|
-| jwt | [JwtToken](#jwt-token)| `JwtToken` | ✓ | |  |  |
-| statusCode | int64 (formatted integer)| `int64` | ✓ | |  |  |
-| statusMessage | string| `string` | ✓ | |  |  |
-| user | [User](#user)| `User` | ✓ | |  |  |
+| jwt | [JwtToken](#jwt-token)| `JwtToken` | ✓ | | JwtToken object |  |
+| status | [ResponseStatus](#response-status)| `ResponseStatus` | ✓ | | a ResponseStatus object |  |
+| user | [User](#user)| `User` | ✓ | | User object |  |
